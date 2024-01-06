@@ -1,0 +1,56 @@
+---
+import { getCollection } from "astro:content"
+
+import BaseHead from "../../../components/BaseHead.astro"
+import Header from "../../../components/Header.astro"
+import Footer from "../../../components/Footer.astro"
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../../consts"
+import FormattedDate from "../../../components/FormattedDate.astro"
+
+
+const { trip: tripSlug } = Astro.params
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection("travel")
+  const trips = Array.from(new Set(allPosts.map(post => post.slug.split("/")[0])))
+
+  return trips
+    .map(trip => {
+      const posts = allPosts
+        .filter(post => post.slug.split("/")[0] === trip)
+        .sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf())
+
+      console.log(trip + ": " + posts.length)
+
+      return ({
+        params: { trip },
+        props: { posts },
+      })
+    })
+}
+
+type Props = { posts: CollectionEntry<"travel">[] }
+const { posts } = Astro.props
+
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <h1>Posts from {tripSlug} goes here</h1>
+      <ul>
+        {posts.map(post => (
+          <li>
+            <a href={post.slug}>{post.data.title}</a>
+          </li>
+        ))}
+      </ul>
+    </main>
+    <Footer />
+  </body>
+</html>

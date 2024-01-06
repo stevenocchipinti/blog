@@ -1,0 +1,32 @@
+---
+import { getCollection } from "astro:content"
+
+import BaseHead from "../../components/BaseHead.astro"
+import Header from "../../components/Header.astro"
+import Footer from "../../components/Footer.astro"
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts"
+
+const posts = await getCollection("travel")
+const trips = Array.from(new Set(posts.map(post => post.slug.split("/")[0])))
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <h1>Trips</h1>
+      <ul>
+        {trips.map(trip => (
+          <li>
+            <a href={`travel/${trip}`}>{trip}</a>
+          </li>
+        ))}
+      </ul>
+    </main>
+    <Footer />
+  </body>
+</html>
