@@ -1,12 +1,9 @@
 ---
-import type { CollectionEntry } from "astro:content";
-import FormattedDate from "./FormattedDate.astro";
-
 export interface Props {
   columns: number
 }
 
-const { columns } = Astro.props;
+const { columns } = Astro.props
 ---
 
 <style define:vars={{ columns }}>
