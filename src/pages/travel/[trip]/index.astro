@@ -19,8 +19,6 @@ export async function getStaticPaths() {
       .filter(post => post.slug.split("/")[0] === trip)
       .sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf())
 
-    console.log(trip + ": " + posts.length)
-
     return {
       params: { trip },
       props: { posts },
@@ -40,7 +38,7 @@ const { posts } = Astro.props
   <body>
     <Header />
     <main>
-      <h1>Posts from {tripSlug} goes here</h1>
+      <h1>{tripSlug}</h1>
       <ul>
         {
           posts.map(post => (
