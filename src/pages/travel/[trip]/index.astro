@@ -5,6 +5,7 @@ import BaseHead from "../../../components/BaseHead.astro"
 import Header from "../../../components/Header.astro"
 import Footer from "../../../components/Footer.astro"
 import { SITE_TITLE, SITE_DESCRIPTION } from "../../../consts"
+import CoverImage from "../../../components/CoverImage.astro"
 
 const { trip: tripSlug } = Astro.params
 
@@ -21,16 +22,29 @@ export async function getStaticPaths() {
 
     return {
       params: { trip },
-      props: { posts },
+      props: { posts, trip },
     }
   })
 }
 
-type Props = { posts: CollectionEntry<"travel">[] }
-const { posts } = Astro.props
+type Props = { posts: CollectionEntry<"travel">[] } & { trip: string }
+const { posts, trip } = Astro.props
 ---
 
-<!doctype html>
+<style>
+  ul {
+    display: grid;
+    gap: 1rem;
+    list-style: none;
+  }
+  a {
+    box-shadow: var(--box-shadow);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    text-decoration: none;
+  }
+</style>
+
 <html lang="en">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
@@ -38,6 +52,7 @@ const { posts } = Astro.props
   <body>
     <Header />
     <main>
+      <CoverImage trip={trip} />
       <h1>{tripSlug}</h1>
       <ul>
         {

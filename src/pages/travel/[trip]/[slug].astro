@@ -18,7 +18,7 @@ export async function getStaticPaths() {
 
     return {
       params: { trip, slug },
-      props: { post, prevPost, nextPost },
+      props: { post, prevPost, nextPost, trip },
     }
   })
 }
@@ -27,12 +27,13 @@ type Props = {
   post: CollectionEntry<"travel">
   prevPost: string
   nextPost: string
+  trip: string
 }
 
-const { post, prevPost, nextPost } = Astro.props
+const { post, prevPost, nextPost, trip } = Astro.props
 const { Content } = await post.render()
 ---
 
-<PostLayout {...post.data} prevPost={prevPost} nextPost={nextPost}>
+<PostLayout {...post.data} prevPost={prevPost} nextPost={nextPost} trip={trip}>
   <Content />
 </PostLayout>
