@@ -4,22 +4,35 @@ import BlogPost from "../../../layouts/BlogPost.astro"
 
 export async function getStaticPaths() {
   const posts = await getCollection("travel")
+
   return posts.map(post => {
-    const slugParts = post.slug.split("/")
+    const [trip, slug] = post.slug.split("/")
+    const tripPosts = posts.filter(p => p.slug.split("/")[0] === trip)
+    const indexInTrip = tripPosts.indexOf(post)
+
+    const prevPost =
+      indexInTrip === 0
+        ? undefined
+        : `/travel/${tripPosts[indexInTrip - 1]?.slug}`
+    const nextPost = `/travel/${tripPosts[indexInTrip + 1]?.slug}`
+
     return {
-      params: { trip: slugParts[0], slug: slugParts[1] },
-      props: { post },
+      params: { trip, slug },
+      props: { post, prevPost, nextPost },
     }
   })
 }
+
 type Props = {
   post: CollectionEntry<"travel">
+  prevPost: string
+  nextPost: string
 }
 
-const { post } = Astro.props
+const { post, prevPost, nextPost } = Astro.props
 const { Content } = await post.render()
 ---
 
-<BlogPost {...post.data}>
+<BlogPost {...post.data} prevPost={prevPost} nextPost={nextPost}>
   <Content />
 </BlogPost>
