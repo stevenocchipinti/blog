@@ -58,4 +58,6 @@ I didn't really buy anything but others in the group bought lots! A lot of peopl
 
 We ended up going to a couple more shops that specialised in anime stuff and Rob got to buy some interesting gifts. By this stage everyone was done with shopping and were ready to go home. On the way back we also stopped at the Square Enix shop, which was pretty cool. They had some merchandise for sale on the shelves, but also a little cafe and a showroom. In the showroom was a pretty cool looking water feature that had water droplets falling from the ceiling, but at the top it looked like the water was moving upwards. I'm not much of a fan so I couldn't really relate to what it was unlike others in the group, but it looked cool.
 
+<iframe width="320" height="266" src="https://www.youtube.com/embed/SlKjmIETHrc" title="Square Enix" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 We made our way back to the hotel, unloaded all the shopping and went to a nearby restaurant for some dinner. Massive shopping days are not my favourite, but a lot of people in our group got the things they were after so it was a successful day!

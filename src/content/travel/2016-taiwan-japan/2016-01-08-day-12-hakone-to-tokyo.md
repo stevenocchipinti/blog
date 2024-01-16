@@ -84,9 +84,15 @@ From here we walked around, got some lunch at a nearby ramen place and even cele
 We walked back and took a bus to the train station to go to Tokyo. We took a couple of trains to get there, but one of them was a bullet train. Normally we get the platform and either just pulls up or is already there waiting for us. This time we had a little bit of time to kill, so we waited on the platform. It was fairly quite out here compared to the bustling cities but amongst the silence, every few minutes a bullet train would go speeding past. The first time we saw this we were absolutely shocked. They move so fast that I didn't have enough time to get my camera out and before you know it it was gone.
 The speed is incredible! I managed to capture a video but it looks kind of slow in the video. It's feels much faster when you're there! They look so futuristic too.
 
+<iframe width="320" height="266" src="https://www.youtube.com/embed/Bw-ItB9Gl50" title="Bullet train" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 [![](https://3.bp.blogspot.com/-KtAtoWrxntE/VpHXpVzT0yI/AAAAAAAAD7U/rtBNBwohbYs/s320/DSC_5630-1.jpg)](https://3.bp.blogspot.com/-KtAtoWrxntE/VpHXpVzT0yI/AAAAAAAAD7U/rtBNBwohbYs/s1600/DSC_5630-1.jpg)
 
 After a fairly quick journey we were in Tokyo. Our hotel was in Shinjuku so there was lots happening. We checked in and were very happy to see our bags made it safely and were waiting for us when we arrived. After dumping our stuff we headed out to explore the area, get some food and then ended up at another arcade. The arcade culture here is amazing. There a people here that must spend so many hours playing some of these games because they are extremely good at them! When you think about it, this is probably better than what we have at home because most people that play games don't leave the house. Out here the arcades are 7 storey buildings and groups of friends meet up to play games. Not to mention alot of the are physically demanding, albeit not as much as sport but more than sitting at a playstation.
+
+<iframe width="320" height="266" src="https://www.youtube.com/embed/ExT94BzY2Uw" title="JuBeat" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<iframe width="320" height="266" src="https://www.youtube.com/embed/LK1lMjMRsi4" title="(Not actually) Guitar Hero" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 We've had another long day and yet another late night, but it was pretty cool to be in Tokyo again. There is always something new to see and it does seem like its changed a fair bit since last time, although that could just be because we're spending more time in different areas.
 On the way back from the arcade we saw a food van, but not like our food trucks in Melbourne, this was literally a van that had been modified to have a kitchen, it was pretty cool.

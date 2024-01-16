@@ -91,6 +91,8 @@ We lined up for the show at Olivanders, it was about a 40 minute wait, but the q
 
 The Olivanders show was pretty good. We meet Olivander, who chose someone at random to help find a wand. The actor was really good! He spoke in Japanese and English and picked a little boy from the audience. He would pick a wand for the boy to try and instructed him to cast a spell. The first two wands caused havoc around the shop and the boys face was priceless! The third wand had _chosen_ the boy and there was a bright light when he touched it, this was his wand and he got to keep it! He was overjoyed!
 
+<iframe width="320" height="266" src="https://www.youtube.com/embed/iXC1Wa_vfwE" title="Olivanders" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 There were two more really long queues, one for another show and one for a roller coaster, but these queues were 2-3 hours each! The roller coaster went inside the Hogwarts castle, but because these queues are so nice, they had a separate one for a walking tour! It was such a great idea! We walked along side the hordes of people in queue and got to see a lot of familiar scenes from the movies.
 
 [![](https://4.bp.blogspot.com/-XkoYOcO51lU/VpHxDT0u_WI/AAAAAAAAEEE/tuYaWAzO9cA/s320/DSC_5008-18.jpg)](https://4.bp.blogspot.com/-XkoYOcO51lU/VpHxDT0u_WI/AAAAAAAAEEE/tuYaWAzO9cA/s1600/DSC_5008-18.jpg)
