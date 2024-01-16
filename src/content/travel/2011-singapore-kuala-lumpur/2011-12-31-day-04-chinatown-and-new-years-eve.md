@@ -1,11 +1,7 @@
 ---
 title: Day 4 - Chinatown and New Years Eve
 description: Today was new years eve! Knowing that we would be staying up till late we thought a bit of a sleep in and late start to the day would be ok,...
-featured: false
-seriesId: 2011-singapore-kuala-lumpur
-orderInSeries: 4
 pubDate: "Dec 31 2011"
-tags: []
 source: https://sinkul2012.stevenocchipinti.com/2011/12/day-4-chinatown-and-new-years-eve.html
 ---
 

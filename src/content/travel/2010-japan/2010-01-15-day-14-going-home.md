@@ -1,11 +1,7 @@
 ---
 title: Day 14 - Going home
 description: Today is the day go home, which is both good and bad.  Tokyo is an amazing city and I absolutely loved it. There are so many things I liked ...
-featured: false
-seriesId: 2010-japan
-orderInSeries: 15
 pubDate: "Jan 15 2010"
-tags: []
 source: https://japan2010.stevenocchipinti.com/2010/01/day-14-going-home.html
 ---
 

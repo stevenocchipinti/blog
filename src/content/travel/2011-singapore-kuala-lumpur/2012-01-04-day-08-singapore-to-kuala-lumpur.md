@@ -1,11 +1,7 @@
 ---
 title: Day 8 - Singapore to Kuala Lumpur
 description: Today we fly from Singapore to Kuala Lumpur. Our flight leaves Changi Airport at 12:10 and on the way here the train only took 30 minutes o...
-featured: false
-seriesId: 2011-singapore-kuala-lumpur
-orderInSeries: 8
 pubDate: "Jan 04 2012"
-tags: []
 source: https://sinkul2012.stevenocchipinti.com/2012/01/day-8-singapore-to-kuala-lumpur.html
 ---
 

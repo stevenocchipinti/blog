@@ -1,11 +1,7 @@
 ---
 title: Day 5 - Snorkeling, Traditional Village and Mount Agung
 description: Today Wayan was taking me to a beach called "Blue Lagoon" in Padangbai to go snorkeling.  It was going to take a little over an hour to get ...
-featured: false
-seriesId: 2014-bali
-orderInSeries: 5
 pubDate: "Nov 22 2014"
-tags: []
 source: https://bali2014.stevenocchipinti.com/2014/11/day-5-snorkeling-traditional-village.html
 ---
 

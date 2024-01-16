@@ -1,11 +1,7 @@
 ---
 title: Day 8 - Captain Tama's Lagoon Cruies
 description: ""
-featured: false
-seriesId: 2016-cook-islands
-orderInSeries: 9
 pubDate: "2016-07-20"
-tags: []
 source: https://cookislands2016.stevenocchipinti.com/day-08-captain-tamas-lagoon-cruise/
 ---
 

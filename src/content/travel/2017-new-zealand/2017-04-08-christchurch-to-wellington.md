@@ -1,11 +1,7 @@
 ---
 title: Christchurch To Wellington
 description: ""
-featured: false
-seriesId: 2017-new-zealand
-orderInSeries: 8
 pubDate: 2017-04-08
-tags: []
 source: https://newzealand2017.stevenocchipinti.com/christchurch-to-wellington/
 ---
 

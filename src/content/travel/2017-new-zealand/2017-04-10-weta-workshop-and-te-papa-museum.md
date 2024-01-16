@@ -1,11 +1,7 @@
 ---
 title: Weta Workshop And Te Papa Museum
 description: ""
-featured: false
-seriesId: 2017-new-zealand
-orderInSeries: 10
 pubDate: 2017-04-10
-tags: []
 source: https://newzealand2017.stevenocchipinti.com/weta-workshop-and-te-papa-museum/
 ---
 

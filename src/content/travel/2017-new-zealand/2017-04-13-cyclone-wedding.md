@@ -1,11 +1,7 @@
 ---
 title: Cyclone Wedding
 description: ""
-featured: false
-seriesId: 2017-new-zealand
-orderInSeries: 13
 pubDate: 2017-04-13
-tags: []
 source: https://newzealand2017.stevenocchipinti.com/cyclone-wedding/
 ---
 

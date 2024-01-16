@@ -1,11 +1,7 @@
 ---
 title: Day 9 - Shinjuku
 description: I still have Disney tunes stuck in my head!!  After all that Disney we all needed to have some rest so today we had a bit of a sleep in and ...
-featured: false
-seriesId: 2010-japan
-orderInSeries: 10
 pubDate: "Jan 07 2010"
-tags: []
 source: https://japan2010.stevenocchipinti.com/2010/01/day-9-shinjuku.html
 ---
 

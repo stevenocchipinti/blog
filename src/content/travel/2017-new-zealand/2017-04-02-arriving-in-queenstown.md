@@ -1,11 +1,7 @@
 ---
 title: Arriving in Queenstown
 description: ""
-featured: false
-seriesId: 2017-new-zealand
-orderInSeries: 2
 pubDate: 2017-04-02
-tags: []
 source: https://newzealand2017.stevenocchipinti.com/arriving-in-queenstown/
 ---
 

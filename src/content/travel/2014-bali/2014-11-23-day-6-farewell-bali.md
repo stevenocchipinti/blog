@@ -1,11 +1,7 @@
 ---
 title: Day 6 - Farewell Bali
 description: My holiday in Bali was sadly coming to a close.  Unfortunately the sunburn from yesterdays snorkelling prevented me from having the greatest...
-featured: false
-seriesId: 2014-bali
-orderInSeries: 6
 pubDate: "Nov 23 2014"
-tags: []
 source: https://bali2014.stevenocchipinti.com/2014/11/day-6-farewell-bali.html
 ---
 

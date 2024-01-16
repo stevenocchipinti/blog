@@ -1,11 +1,7 @@
 ---
 title: Hobbiton And Farewell
 description: ""
-featured: false
-seriesId: 2017-new-zealand
-orderInSeries: 16
 pubDate: 2017-04-16
-tags: []
 source: https://newzealand2017.stevenocchipinti.com/hobbiton-and-farewell/
 ---
 

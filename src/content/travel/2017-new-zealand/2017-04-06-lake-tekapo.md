@@ -1,11 +1,7 @@
 ---
 title: Lake Tekapo
 description: ""
-featured: false
-seriesId: 2017-new-zealand
-orderInSeries: 6
 pubDate: 2017-04-06
-tags: []
 source: https://newzealand2017.stevenocchipinti.com/lake-tekapo/
 ---
 

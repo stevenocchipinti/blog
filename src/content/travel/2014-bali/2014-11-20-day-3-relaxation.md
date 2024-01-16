@@ -1,11 +1,7 @@
 ---
 title: Day 3 - Relaxation
 description: Today was a day of relaxation.  We had our last morning yoga session and breakfast as a group before everyone said their goodbyes and headed...
-featured: false
-seriesId: 2014-bali
-orderInSeries: 3
 pubDate: "Nov 20 2014"
-tags: []
 source: https://bali2014.stevenocchipinti.com/2014/11/day-3-relaxation.html
 ---
 

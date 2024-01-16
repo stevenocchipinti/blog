@@ -1,11 +1,7 @@
 ---
 title: Day 8 - Taipei to Osaka
 description: Today was not a very exciting day. We checked out of our hotel and thanked the staff for all their assistance. They were really helpful, th...
-featured: false
-seriesId: 2016-taiwan-japan
-orderInSeries: 8
 pubDate: "Jan 04 2016"
-tags: []
 source: https://taipan2016.stevenocchipinti.com/2016/01/day-8-taipei-to-osaka.html
 ---
 

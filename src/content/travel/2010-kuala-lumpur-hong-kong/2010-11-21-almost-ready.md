@@ -1,11 +1,7 @@
 ---
 title: Almost ready!
 description: So in about 2 and half days I'll be boarding my plane for Kuala Lumpur!   The excitement actually kicked in today. This will be my first tim...
-featured: false
-seriesId: 2010-kuala-lumpur-hong-kong
-orderInSeries: 1
 pubDate: "Nov 21 2010"
-tags: []
 source: https://klhk2010.stevenocchipinti.com/2010/11/almost-ready.html
 ---
 

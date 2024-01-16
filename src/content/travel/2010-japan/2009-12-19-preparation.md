@@ -1,11 +1,7 @@
 ---
 title: Preparation
 description: In about 9 days, we will be leaving leaving for Tokyo, Japan!   I have always wanted to see Japan partially because its the electronics capi...
-featured: false
-seriesId: 2010-japan
-orderInSeries: 1
 pubDate: "Dec 19 2009"
-tags: []
 source: https://japan2010.stevenocchipinti.com/2009/12/preparation_19.html
 ---
 

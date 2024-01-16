@@ -1,11 +1,7 @@
 ---
 title: Day 13 - Harajuku
 description: Today, being a Sunday, we planned on going to Harajuku, famous for the "Cosplay" - the teenagers who dress up in crazy costumes and just han...
-featured: false
-seriesId: 2010-japan
-orderInSeries: 14
 pubDate: "Jan 14 2010"
-tags: []
 source: https://japan2010.stevenocchipinti.com/2010/01/day-13-harajuku.html
 ---
 

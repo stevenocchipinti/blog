@@ -1,11 +1,7 @@
 ---
 title: Day 14 - Farewell
 description: ""
-featured: false
-seriesId: 2016-cook-islands
-orderInSeries: 15
 pubDate: "2016-07-25"
-tags: []
 source: https://cookislands2016.stevenocchipinti.com/day-14-farewell/
 ---
 

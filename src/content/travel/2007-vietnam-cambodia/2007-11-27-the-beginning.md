@@ -1,11 +1,7 @@
 ---
 title: The beginning
 description: On Friday I'm going to Vietnam!!! I thought I'd try to keep a blog going for this trip, its never worked for me in the past, but I thought I...
-featured: false
-seriesId: vietnam-cambodia-2007
-orderInSeries: 6
 pubDate: "Nov 27 2007"
-tags: []
 source: https://vietnam2007.stevenocchipinti.com/2007/11/beginning.html
 ---
 

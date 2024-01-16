@@ -1,11 +1,7 @@
 ---
 title: Day 2 - Shinsaibashi
 description: As promised, the first thing I did after getting up was take a few photos of our hotel.  Jonathan seems to be impressed with the color schem...
-featured: false
-seriesId: 2013-japan
-orderInSeries: 4
 pubDate: "Dec 29 2012"
-tags: []
 source: https://japan2013.stevenocchipinti.com/2012/12/day-2-shinsaibashi.html
 ---
 

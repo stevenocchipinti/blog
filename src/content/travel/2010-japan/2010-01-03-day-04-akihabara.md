@@ -1,11 +1,7 @@
 ---
 title: Day 4 - Akihabara
 description: Akihabara is the Electronics and Manga capital of Tokyo.  It was one of the main reasons I wanted to come to Japan and every new years day t...
-featured: false
-seriesId: 2010-japan
-orderInSeries: 5
 pubDate: "Jan 03 2010"
-tags: []
 source: https://japan2010.stevenocchipinti.com/2010/01/day-4-akihabara.html
 ---
 

@@ -1,11 +1,7 @@
 ---
 title: Day 9 - Universal Studios
 description: Today we went to Universal Studios. To get there, we needed to take a local train to a JR station, then a JR train to the Universal City st...
-featured: false
-seriesId: 2016-taiwan-japan
-orderInSeries: 9
 pubDate: "Jan 05 2016"
-tags: []
 source: https://taipan2016.stevenocchipinti.com/2016/01/day-9-universal-studios.html
 ---
 

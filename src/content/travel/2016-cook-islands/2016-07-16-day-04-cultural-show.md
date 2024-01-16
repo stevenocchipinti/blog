@@ -1,11 +1,7 @@
 ---
 title: Day 4 - Cultural Show
 description: ""
-featured: false
-seriesId: 2016-cook-islands
-orderInSeries: 5
 pubDate: "2016-07-16"
-tags: []
 source: https://cookislands2016.stevenocchipinti.com/day-04-cultural-show/
 ---
 

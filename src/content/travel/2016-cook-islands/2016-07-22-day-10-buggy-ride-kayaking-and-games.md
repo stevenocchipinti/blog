@@ -1,11 +1,7 @@
 ---
 title: Day 10 - Buggy Ride, Kayaking and Games
 description: ""
-featured: false
-seriesId: 2016-cook-islands
-orderInSeries: 11
 pubDate: "2016-07-22"
-tags: []
 source: https://cookislands2016.stevenocchipinti.com/day-10-buggy-ride-kayaking-and-games/
 ---
 

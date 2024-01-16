@@ -1,11 +1,7 @@
 ---
 title: Day 9 - Lagoon Scuba Dive
 description: ""
-featured: false
-seriesId: 2016-cook-islands
-orderInSeries: 10
 pubDate: "2016-07-21"
-tags: []
 source: https://cookislands2016.stevenocchipinti.com/day-09-lagoon-scuba-dive/
 ---
 

@@ -1,11 +1,7 @@
 ---
 title: Day 1 - Melbourne to Singapore
 description: Our first flight was from Melbourne to Darwin where we had a 1 hour stopover before continuing on to Singapore. Both flights were about 4 ho...
-featured: false
-seriesId: 2011-singapore-kuala-lumpur
-orderInSeries: 1
 pubDate: "Dec 28 2011"
-tags: []
 source: https://sinkul2012.stevenocchipinti.com/2011/12/day-1-landing-in-singapore.html
 ---
 

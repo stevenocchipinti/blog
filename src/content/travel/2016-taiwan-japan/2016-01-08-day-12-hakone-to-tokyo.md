@@ -1,11 +1,7 @@
 ---
 title: Day 12 - Hakone to Tokyo
 description: We woke up this morning a little sad that we'd be leaving this amazing place, but we got dressed and got a call from our room maid to let us...
-featured: false
-seriesId: 2016-taiwan-japan
-orderInSeries: 12
 pubDate: "Jan 08 2016"
-tags: []
 source: https://taipan2016.stevenocchipinti.com/2016/01/day-12-hakone-to-tokyo.html
 ---
 

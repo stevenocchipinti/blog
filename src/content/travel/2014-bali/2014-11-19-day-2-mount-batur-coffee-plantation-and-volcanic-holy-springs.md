@@ -1,11 +1,7 @@
 ---
 title: Day 2 - Mount Batur, Coffee Plantation and Volcanic Holy Springs
 description: After a much better sleep than the night before, I was up in time for the morning yoga session today.  Morning yoga here is great, its still...
-featured: false
-seriesId: 2014-bali
-orderInSeries: 2
 pubDate: "Nov 19 2014"
-tags: []
 source: https://bali2014.stevenocchipinti.com/2014/11/day-2-mount-batur-coffee-plantation-and.html
 ---
 

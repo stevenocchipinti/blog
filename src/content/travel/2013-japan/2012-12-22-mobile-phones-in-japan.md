@@ -1,11 +1,7 @@
 ---
 title: Mobile phones in Japan
 description: There are not many things I don't like about Japan, but one of them is the difficulty that foreigners have to set up a SIM card, unlike most...
-featured: false
-seriesId: 2013-japan
-orderInSeries: 2
 pubDate: "Dec 22 2012"
-tags: []
 source: https://japan2013.stevenocchipinti.com/2012/12/mobile-phones-in-japan.html
 ---
 

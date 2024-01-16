@@ -1,11 +1,7 @@
 ---
 title: Lord Of The Rings 4x4 Tour
 description: ""
-featured: false
-seriesId: 2017-new-zealand
-orderInSeries: 5
 pubDate: 2017-04-05
-tags: []
 source: https://newzealand2017.stevenocchipinti.com/lord-of-the-rings-4x4-tour/
 ---
 

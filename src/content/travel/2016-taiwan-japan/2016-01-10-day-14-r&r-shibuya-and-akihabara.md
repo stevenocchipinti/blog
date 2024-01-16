@@ -1,11 +1,7 @@
 ---
 title: Day 14 - R&R, Shibuya and Akihabara
 description: After a massive day of shopping yesterday, I'm all shopped out so I decided to take a day off today while the others went to "Nakano Broadwa...
-featured: false
-seriesId: 2016-taiwan-japan
-orderInSeries: 14
 pubDate: "Jan 10 2016"
-tags: []
 source: https://taipan2016.stevenocchipinti.com/2016/01/day-14-r-shibuya-and-akihabara.html
 ---
 
@@ -53,16 +49,4 @@ We paid about $30 which covered the service fee (about $5) and a "dessert combo"
 
 [![Our keyring and bear ears souvenirs](https://3.bp.blogspot.com/-u7YzX_rsYVA/VpKh506NYhI/AAAAAAAAEOI/XpRLKC6ZNag/s320/20160110_224330.jpg)](https://3.bp.blogspot.com/-u7YzX_rsYVA/VpKh506NYhI/AAAAAAAAEOI/XpRLKC6ZNag/s1600/20160110_224330.jpg)
 
-Every now and then the lights would dim and there would be a little performance where the maids would get on stage to sing and everyone would be clapping, singing and dancing along. Chris even bought a glowstick to join in on the fun. There were even a few people celebrating a birthday so the whole place would sing a [crazy happy birthday song](https://youtu.be/CmA9fEBY3X0) for them, although I get the impression taking someone to a place like this for a birthday is more of a prank than an actual celebration. One of the groups that were there for a birthday were from Melbourne and when everyone was singing happy birthday to him, he seemed pretty embarrassed so its good for that.
-
-It was absolutely bizarre for us but the scary part was how many locals were at these places... and these locals are not kids, they are fully grown adults. It was all safe fun and nothing dodgy, but some of the people there looked a little dodgy although they were drunk and that may have just been our perception because it weirdly seemed like a bunch of adults (including us) were invading a kids party. Either way, at the end of the night we were laughing so much at our experience that it was a hilarious night. We all went home amazed at what we just experience and we all had the songs stuck in our head, especially the happy birthday song!
-
-Chris and Sarma had bought some crazy flavoured KitKats, some of which are supposedly only sold in Japan and offered us some to try, so we all went to their room when we got back. They had bought strawberry, purple sweet potato, green tea and baked potato flavoured KitKats! The strangest of the lot were the baked potato ones which were actually meant to be cooked. We couldn't make out much of the instructions on the pack, but a few people tried them without cooking and thought they were ok. On the pack it looked like the instructions were saying we could microwave them for 3-4 minutes for a 1000W microwave, our rooms actually had kitchens with microwaves so we decided to give it a go. The picture on the pack looked like it had a hard, golden brown surface, but when we tried the chocolate just melted and formed a pool around the wafer biscuit in the middle - we clearly had no idea what we were doing but we were still on a laughing high from the maid cafe. Anyone would have thought we were drunk, but this was all sober! Very interesting day!
-
-[![Potato KitKat that you're meant to bake!](https://4.bp.blogspot.com/-oM1f2vKPP44/VpKh5zb85aI/AAAAAAAAEOI/vDDx303I0aI/s320/20160110_235802.jpg)](https://4.bp.blogspot.com/-oM1f2vKPP44/VpKh5zb85aI/AAAAAAAAEOI/vDDx303I0aI/s1600/20160110_235802.jpg)
-
-[![An attempt at microwaving KitKats](https://4.bp.blogspot.com/-eLGPmXqve4c/VpO38vrcR5I/AAAAAAAAEUs/evS7z2y7wXI/s320/20160111_000953.jpg)](https://4.bp.blogspot.com/-eLGPmXqve4c/VpO38vrcR5I/AAAAAAAAEUs/evS7z2y7wXI/s1600/20160111_000953.jpg)
-
-[![Purple Sweet Potato KitKat](https://3.bp.blogspot.com/-om1zInDJgLo/VpKh5w2UBQI/AAAAAAAAEOI/yBEXhjoJNJ8/s320/20160111_000054.jpg)](https://3.bp.blogspot.com/-om1zInDJgLo/VpKh5w2UBQI/AAAAAAAAEOI/yBEXhjoJNJ8/s1600/20160111_000054.jpg)
-
-[![Strawberry KitKat](https://4.bp.blogspot.com/-ZtrjAOsL5I4/VpO38in-wpI/AAAAAAAAEUs/EMydmYVDUS4/s320/20160111_000212.jpg)](https://4.bp.blogspot.com/-ZtrjAOsL5I4/VpO38in-wpI/AAAAAAAAEUs/EMydmYVDUS4/s1600/20160111_000212.jpg)
+Every now and then the lights would dim and there would be a little performance where the maids would get on stage to sing and everyone would be clapping, singing and dancing along. Chris even bought a glowstick to join in on the fun. There were even a few people celebrating a birthday so the whole place would sing a [crazy happy birthday song](https://youtu.be/CmA9fEBY3X0) for them, although I get the impression taking someone to a place like this for a birthday is more of a prank than an actual celebration. One of the groups that were there for a birthday were from Melbourne and when everyone was singing happy birthda

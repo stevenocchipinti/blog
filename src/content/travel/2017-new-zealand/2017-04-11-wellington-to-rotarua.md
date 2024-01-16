@@ -1,11 +1,7 @@
 ---
 title: Wellington To Rotarua
 description: ""
-featured: false
-seriesId: 2017-new-zealand
-orderInSeries: 11
 pubDate: 2017-04-11
-tags: []
 source: https://newzealand2017.stevenocchipinti.com/wellington-to-rotarua/
 ---
 

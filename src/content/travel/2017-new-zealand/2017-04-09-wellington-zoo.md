@@ -1,11 +1,7 @@
 ---
 title: Wellington Zoo
 description: ""
-featured: false
-seriesId: 2017-new-zealand
-orderInSeries: 9
 pubDate: 2017-04-09
-tags: []
 source: https://newzealand2017.stevenocchipinti.com/wellington-zoo/
 ---
 

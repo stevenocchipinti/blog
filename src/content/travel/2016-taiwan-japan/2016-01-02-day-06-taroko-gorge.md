@@ -1,11 +1,7 @@
 ---
 title: Day 6 - Taroko Gorge
 description: We had to get up really early today! I tried to get an early night before hand but I ended up writing my blogs until midnight. We met downs...
-featured: false
-seriesId: 2016-taiwan-japan
-orderInSeries: 6
 pubDate: "Jan 02 2016"
-tags: []
 source: https://taipan2016.stevenocchipinti.com/2016/01/day-6-taroko-gorge.html
 ---
 

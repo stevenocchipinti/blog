@@ -1,11 +1,7 @@
 ---
 title: Milford Sound
 description: ""
-featured: false
-seriesId: 2017-new-zealand
-orderInSeries: 4
 pubDate: 2017-04-04
-tags: []
 source: https://newzealand2017.stevenocchipinti.com/milford-sound/
 ---
 

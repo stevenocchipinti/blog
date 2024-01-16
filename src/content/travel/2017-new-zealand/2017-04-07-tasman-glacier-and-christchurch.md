@@ -1,11 +1,7 @@
 ---
 title: Tasman Glacier And Christchurch
 description: ""
-featured: false
-seriesId: 2017-new-zealand
-orderInSeries: 7
 pubDate: 2017-04-07
-tags: []
 source: https://newzealand2017.stevenocchipinti.com/tasman-glacier-and-christchurch/
 ---
 

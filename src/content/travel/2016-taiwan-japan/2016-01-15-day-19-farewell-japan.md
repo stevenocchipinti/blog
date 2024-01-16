@@ -1,11 +1,7 @@
 ---
 title: Day 19 - Farewell Japan
 description: Our holiday has sadly come to a close and today is the last day.   As yesterday and today were planned as 'free' days, it was the last chanc...
-featured: false
-seriesId: 2016-taiwan-japan
-orderInSeries: 18
 pubDate: "Jan 15 2016"
-tags: []
 source: https://taipan2016.stevenocchipinti.com/2016/01/day-19-farewell-japan.html
 ---
 

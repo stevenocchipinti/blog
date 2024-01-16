@@ -1,11 +1,7 @@
 ---
 title: Exploring Rotorua
 description: ""
-featured: false
-seriesId: 2017-new-zealand
-orderInSeries: 12
 pubDate: 2017-04-12
-tags: []
 source: https://newzealand2017.stevenocchipinti.com/exploring-rotorua/
 ---
 

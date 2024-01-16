@@ -1,11 +1,7 @@
 ---
 title: Day 3 - Kaiyukan Aquarium
 description: Today was our last full unplanned day in Osaka, because tomorrow we are going to Universal Studios to celebrate new years eve, so today we w...
-featured: false
-seriesId: 2013-japan
-orderInSeries: 5
 pubDate: "Dec 30 2012"
-tags: []
 source: https://japan2013.stevenocchipinti.com/2012/12/day-3-kaiyukan-aquarium.html
 ---
 

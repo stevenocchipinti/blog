@@ -1,11 +1,7 @@
 ---
 title: Day 7 - Universal Studios Singapore
 description: I'm not a big fan of theme parks, mainly because I don't like rides, but if Disney Sea in Tokyo is any example, rides are not the only thin...
-featured: false
-seriesId: 2011-singapore-kuala-lumpur
-orderInSeries: 7
 pubDate: "Jan 03 2012"
-tags: []
 source: https://sinkul2012.stevenocchipinti.com/2012/01/day-7-universal-studios-singapore.html
 ---
 

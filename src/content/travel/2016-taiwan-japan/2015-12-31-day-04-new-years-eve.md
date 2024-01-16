@@ -1,11 +1,7 @@
 ---
 title: Day 4 - New Years Eve
 description: The last day of the year! We knew it was going be a long day so we tried to take it easy today. We didn't try to get up really early becaus...
-featured: false
-seriesId: 2016-taiwan-japan
-orderInSeries: 4
 pubDate: "Dec 31 2015"
-tags: []
 source: https://taipan2016.stevenocchipinti.com/2015/12/day-4-new-years-eve.html
 ---
 

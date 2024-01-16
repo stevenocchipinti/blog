@@ -1,11 +1,7 @@
 ---
 title: Day 5 - Avarua Market and SUP at Muri
 description: ""
-featured: false
-seriesId: 2016-cook-islands
-orderInSeries: 6
 pubDate: "2016-07-17"
-tags: []
 source: https://cookislands2016.stevenocchipinti.com/day-05-avarua-market-and-sup-at-muri/
 ---
 

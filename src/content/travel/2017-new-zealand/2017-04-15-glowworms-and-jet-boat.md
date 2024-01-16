@@ -1,11 +1,7 @@
 ---
 title: Glowworms And Jet Boat
 description: ""
-featured: false
-seriesId: 2017-new-zealand
-orderInSeries: 15
 pubDate: 2017-04-15
-tags: []
 source: https://newzealand2017.stevenocchipinti.com/glowworms-and-jet-boat/
 ---
 

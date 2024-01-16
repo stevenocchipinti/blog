@@ -1,11 +1,7 @@
 ---
 title: Day 11 - Pewter factory, Eagles, Monkeys and Fireflies
 description: Today was a long day! We had planned a day tour from about 2:00 PM to take us out to watch some eagle feeding, see and feed some monkeys an...
-featured: false
-seriesId: 2011-singapore-kuala-lumpur
-orderInSeries: 11
 pubDate: "Jan 07 2012"
-tags: []
 source: https://sinkul2012.stevenocchipinti.com/2012/01/day-11-pewter-factory-eagles-monkeys.html
 ---
 

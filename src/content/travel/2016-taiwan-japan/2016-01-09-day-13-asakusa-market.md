@@ -1,11 +1,7 @@
 ---
 title: Day 13 - Asakusa Market
 description: Today we had a shopping day planned and just about all of us slept in! After so many nights of getting to bed late, it eventually catches u...
-featured: false
-seriesId: 2016-taiwan-japan
-orderInSeries: 13
 pubDate: "Jan 09 2016"
-tags: []
 source: https://taipan2016.stevenocchipinti.com/2016/01/day-13-asakusa-market.html
 ---
 

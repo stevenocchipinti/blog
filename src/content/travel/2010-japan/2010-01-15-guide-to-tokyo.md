@@ -1,11 +1,7 @@
 ---
 title: Guide to Tokyo
 description: Now that I am safely back home, I though I would write another post to look back at our journey in Tokyo and list all the things that stood ...
-featured: false
-seriesId: 2010-japan
-orderInSeries: 15
 pubDate: "Jan 15 2010"
-tags: []
 source: https://japan2010.stevenocchipinti.com/2010/01/guide-to-tokyo.html
 ---
 

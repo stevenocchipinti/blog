@@ -1,11 +1,7 @@
 ---
 title: Travel Money
 description: For most of my overseas trips, I have used the Commonwealth Banks prepaid "Travel Money Card", but my last trip was an exception.   As par...
-featured: false
-seriesId: 2013-japan
-orderInSeries: 1
 pubDate: "Dec 11 2012"
-tags: []
 source: https://japan2013.stevenocchipinti.com/2012/12/travel-money.html
 ---
 

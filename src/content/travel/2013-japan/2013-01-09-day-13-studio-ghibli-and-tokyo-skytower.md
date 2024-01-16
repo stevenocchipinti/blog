@@ -1,11 +1,7 @@
 ---
 title: Day 13 - Studio Ghibli and Tokyo SkyTower
 description: After a big day yesterday, we had a well deserved sleep in. We left my mum at the hotel today as she wasn't feeling up to it and the rest o...
-featured: false
-seriesId: 2013-japan
-orderInSeries: 15
 pubDate: "Jan 09 2013"
-tags: []
 source: https://japan2013.stevenocchipinti.com/2013/01/day-13-studio-ghibli-and-tokyo-skytower.html
 ---
 
@@ -49,26 +45,4 @@ We bought our tickets and took the elevator to the first observation deck whic
 
 [![Inside the first observation deck on the Tokyo SkyTree](https://2.bp.blogspot.com/-Buh1ncDbzag/UPT3tfxUzzI/AAAAAAAAA18/-TNc-RsaIys/s320/DSC_7698.JPG)](https://2.bp.blogspot.com/-Buh1ncDbzag/UPT3tfxUzzI/AAAAAAAAA18/-TNc-RsaIys/s1600/DSC_7698.JPG)
 
-[![The information boards explaining the view](https://2.bp.blogspot.com/-s2SpiPjAMJY/UPT3tco-89I/AAAAAAAAA10/JrVnoViSDMo/s320/DSC_7703.JPG)](https://2.bp.blogspot.com/-s2SpiPjAMJY/UPT3tco-89I/AAAAAAAAA10/JrVnoViSDMo/s1600/DSC_7703.JPG)
-
-After spending some time taking in the views, we paid a little extra to go up to the next level. This level sits at a height of 450 meters and has a spiral shaped "tunnel" wrapping around the tower. The view at this height is not really that much different to the previous level, but walking through the tunnel is quite nice and due to the spiral shape, the feeling of going higher with every step is a nice touch.
-
-[![](https://2.bp.blogspot.com/-pEfw3cm_Nic/UPT5PBmL3zI/AAAAAAAAA2o/yTVliEWnjys/s320/DSC_7731.JPG)](https://2.bp.blogspot.com/-pEfw3cm_Nic/UPT5PBmL3zI/AAAAAAAAA2o/yTVliEWnjys/s1600/DSC_7731.JPG)
-
-[![](https://3.bp.blogspot.com/-8ngMBYNfN6w/UPT5PrhiJlI/AAAAAAAAA2s/LE0AkS6aq6c/s320/DSC_7735.JPG)](https://3.bp.blogspot.com/-8ngMBYNfN6w/UPT5PrhiJlI/AAAAAAAAA2s/LE0AkS6aq6c/s1600/DSC_7735.JPG)
-
-[![](https://1.bp.blogspot.com/-Px__Atf79ok/UPT5O4kdTuI/AAAAAAAAA2k/ttoEyysJi5g/s320/DSC_7733.JPG)](https://1.bp.blogspot.com/-Px__Atf79ok/UPT5O4kdTuI/AAAAAAAAA2k/ttoEyysJi5g/s1600/DSC_7733.JPG)
-
-The last stop was the glass floor where you can walk over a glass panel that looks straight down to the base of the tower.
-
-[![](https://1.bp.blogspot.com/-UyX9jExkbmY/UPT5z451DlI/AAAAAAAAA28/PfOkUfAOCO8/s320/DSC_7770.JPG)](https://1.bp.blogspot.com/-UyX9jExkbmY/UPT5z451DlI/AAAAAAAAA28/PfOkUfAOCO8/s1600/DSC_7770.JPG)
-
-From here we went back to the hotel and ended up in Akihabara again. Having Akihabara so close to our hotel is nice, it's quite easy to spend time there and with a spare hour or two, it's quite likely that we'll get to see something interesting! My brother had other plans, but he asked us to keep an eye out for the PC game "Exile" and I wanted to buy a polariser for my new lens to go with my ND filter for extra darkness, so with that shopping list in mind we headed down.
-
-We went back to the same place I bought the ND filter and found the filter I was after. I ended up buying the polariser and a mini tripod. I spoke to the same sales assistant, who didn't speak much English, but the one word he did get out was "dangerous". This was because I was mounting quite a large dSLR on a tiny tripod, but with good reason. I brought my large tripod, but with a sore back and a low likelihood that I'd need it for many shots, it wasn't worth carrying it everyday, all day, but the mini tripod I can slip into my bag and I'll barely notice it. This would have come in handy for those times where all I need is some stability to get a long exposure, instead of resting it on my wallet or something and trying to get the angle right!
-
-We went into a few other shops and kept an eye out for Rob's game, without much luck. We went to the store Rob found his obscure game and asked the attendant where the PC games where. He casually told us they were on level 3, so we took the lift. When we got there, we realised we where in the wrong place... it was a whole floor of adult PC games... a whole floor! Needless to say we left there (without buying anything) laughing at how normal that is for people there. If that was in Australia, I don't think the sales assistant would have been quite so casual about it.
-
-On our way back to the hotel we thought we would try the last shop before leaving Akihabara. I had typed out 'Exile' on my phone in large font, so we walked in and asked the sales assistant where the PC games where (they were normal PC games this time). I showed him the name of the game on my phone and asked if he had it, where he replied back with a confident "No". But then, out of sheer luck, right behind him I spotted it! Out of all the games on the shelf, it was the only one showing the front cover, the rest were just spine out. So I told the guy, and he turned around, saw it and turned back with a sort of embarrassed smile on his face. He had a bit of a laugh and apologised. In the end we didn't end up getting it, but it was a pretty funny story either way. Goes to show you can get anything in Akihabara!
-
-We ended up getting some Japanese fast food and heading back to the hotel. The fast food is pretty good here, for about $4 you can get enough food to fill you up!
+[![The information boards explaining the view](https://2.bp.blogspot.com/-s2SpiPjA
