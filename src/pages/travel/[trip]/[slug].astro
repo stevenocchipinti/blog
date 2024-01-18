@@ -4,6 +4,7 @@ import PostLayout from "../../../layouts/PostLayout.astro"
 
 export async function getStaticPaths() {
   const posts = await getCollection("travel")
+  const trips = await getCollection("trips")
 
   return posts.map(post => {
     const [trip, slug] = post.slug.split("/")
@@ -18,16 +19,16 @@ export async function getStaticPaths() {
 
     return {
       params: { trip, slug },
-      props: { post, prevPost, nextPost, trip },
+      props: { post, prevPost, nextPost, trip: trips.find(t => t.id === trip) },
     }
   })
 }
 
 type Props = {
   post: CollectionEntry<"travel">
+  trip: CollectionEntry<"trips">
   prevPost: string
   nextPost: string
-  trip: string
 }
 
 const { post, prevPost, nextPost, trip } = Astro.props

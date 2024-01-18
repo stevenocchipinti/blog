@@ -10,4 +10,16 @@ const travel = defineCollection({
   }),
 })
 
-export const collections = { travel }
+const trips = defineCollection({
+  type: "data",
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      years: z.array(z.number()),
+      source: z.string().optional(),
+      cover: image().optional(),
+      coverAlt: z.string().optional(),
+    }),
+})
+
+export const collections = { travel, trips }
