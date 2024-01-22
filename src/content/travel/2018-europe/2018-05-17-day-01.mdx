@@ -6,14 +6,11 @@ pubDate: "May 17 2018"
 
 import Grid from "../../../components/PhotoGrid.astro"
 import Img from "../../../components/PhotoGridPhoto.astro"
+import Travel from "../../../components/Travel.astro"
 
-```
-Melbourne
-by airplane
-Hong Kong
-by airplane
-Paris
-```
+<Travel
+  items={["Melbourne", "--AIRPLANE--", "Hong Kong", "--AIRPLANE--", "Paris"]}
+/>
 
 <Grid columns={2}>
   <Img src="/src/content/travel/2018-europe/assets/3b87b1da-829a-4b08-99d4-5e47db5387bc-b5f32a4f11c128250233648cc58064656478eeed.jpg" />

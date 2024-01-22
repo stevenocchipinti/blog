@@ -1,0 +1,126 @@
+---
+import { Image } from "astro:assets"
+
+import airplane from "../assets/transport-icons/airplane.png"
+import bus from "../assets/transport-icons/bus.png"
+import taxi from "../assets/transport-icons/taxi.png"
+import train from "../assets/transport-icons/tram.png"
+import tram from "../assets/transport-icons/tram.png"
+import walk from "../assets/transport-icons/walk.png"
+
+export interface Props {
+  items: string[]
+}
+
+const { items } = Astro.props
+
+const images = {
+  "--AIRPLANE--": {
+    image: airplane,
+    text: "by airplane"
+  },
+  "--BUS--": {
+    image: bus,
+    text: "by bus"
+  },
+  "--TAXI--": {
+    image: taxi,
+    text: "by taxi"
+  },
+  "--TRAIN--": {
+    image: train,
+    text: "by train"
+  },
+  "--TRAM--": {
+    image: tram,
+    text: "by tram"
+  },
+  "--WALK--": {
+    image: walk,
+    text: "by foot"
+},
+}
+---
+
+<style>
+  .transport {
+    --marker-color: #ccc;
+    --marker-col-size: 3.5rem;
+    --marker-line-size: 2rem;
+    --marker-size: 1rem;
+    display: grid;
+    gap: 0 1.5rem;
+    grid-template-columns: var(--marker-col-size) auto;
+    align-items: center;
+    margin: 1rem auto 2rem;
+  }
+
+  .transport-image {
+    margin: 0 auto;
+  }
+
+  .transport-mode {
+    font-style: italic;
+    color: #777;
+  }
+
+  .location-marker {
+    margin: var(--marker-line-size) auto var(--marker-line-size) auto;
+    border: 1px solid var(--marker-color);
+    height: var(--marker-size);
+    width: var(--marker-size);
+    border-radius: 50%;
+    position: relative;
+  }
+
+  .location-marker-start::before {
+    position: absolute;
+    left: 50%;
+    top: calc(var(--marker-size) / 2);
+    display: block;
+    content: "";
+    height: var(--marker-line-size);
+    width: 0;
+    margin-top: 0.5rem;
+    border-left: 1px dashed var(--marker-color);
+  }
+
+  .location-marker-end::after {
+    position: absolute;
+    left: 50%;
+    bottom: calc(var(--marker-size));
+    display: block;
+    content: "";
+    height: var(--marker-line-size);
+    width: 0;
+    margin-top: 0.5rem;
+    border-left: 1px dashed var(--marker-color);
+  }
+
+  .transport-mode {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+</style>
+
+<div class="transport">
+  {
+    items.map((item, i) => {
+      if (Object.keys(images).includes(item)) {
+        const { image, text } = images[item as keyof typeof images]
+        return (
+          <Image class="transport-image" src={image} alt="" />
+          <div class="transport-mode">{text}</div>
+        ) 
+      } else {
+        const endClass = i !== 0 ? "location-marker-end" : ""
+        const startClass = i !== items.length - 1 ? "location-marker-start" : ""
+        return (
+          <div class=`location-marker ${startClass} ${endClass}`></div>
+          <div class="location">{item}</div>
+        )
+      }
+    })
+  }
+</div>

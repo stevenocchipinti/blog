@@ -6,6 +6,7 @@ pubDate: "May 18 2018"
 
 import Grid from "../../../components/PhotoGrid.astro"
 import Img from "../../../components/PhotoGridPhoto.astro"
+import Travel from "../../../components/Travel.astro"
 
 Made it to our hotel jetlagged and all. So decided to have a nap then head to a Boulangerie for some carby goodness!
 
@@ -16,11 +17,9 @@ Made it to our hotel jetlagged and all. So decided to have a nap then head to a 
 
 Steve's first crouque monsiour.. although a little mustardy then he would have liked 🙄
 
-```
-Hotel ibis budget Paris La Villette 19ème **
-by walk
-Sacré-Cœur
-```
+<Travel
+  items={["Hotel ibis budget Paris La Villette", "--WALK--", "Sacré-Cœur"]}
+/>
 
 <Grid columns={4}>
   <Img

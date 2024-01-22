@@ -6,14 +6,17 @@ pubDate: "April 02 2019"
 
 import Grid from "../../../components/PhotoGrid.astro"
 import Img from "../../../components/PhotoGridPhoto.astro"
+import Travel from "../../../components/Travel.astro"
 
-```
-錦糸町駅
-by tram
-DFS, Tokyo Narita Airport
-by airplane
-Melbourne Airport
-```
+<Travel
+  items={[
+    "錦糸町駅",
+    "--TRAM--",
+    "Tokyo Narita Airport",
+    "--AIRPLANE--",
+    "Melbourne Airport",
+  ]}
+/>
 
 <Grid columns={3}>
   <Img

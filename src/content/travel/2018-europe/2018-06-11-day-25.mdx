@@ -4,10 +4,14 @@ description: ""
 pubDate: "June 10 2018"
 ---
 
-```
-Barcelona
-by airplane
-Hong Kong
-by airplane
-Melbourne
-```
+import Travel from "../../../components/Travel.astro"
+
+<Travel
+  items={[
+    "Barcelona",
+    "--AIRPLANE--",
+    "Hong Kong",
+    "--AIRPLANE--",
+    "Melbourne",
+  ]}
+/>

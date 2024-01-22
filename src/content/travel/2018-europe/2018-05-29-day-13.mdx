@@ -6,6 +6,7 @@ pubDate: "May 29 2018"
 
 import Grid from "../../../components/PhotoGrid.astro"
 import Img from "../../../components/PhotoGridPhoto.astro"
+import Travel from "../../../components/Travel.astro"
 
 <Grid columns={3}>
   <Img
@@ -39,13 +40,7 @@ After about a 45 minute drive we stopped and it seemed like a couple of people m
 Everyone got off at the next stop but there wasn't really anywhere to stand, so everyone just stood on the side of the narrow road. There were quite a few people confused about where to go at this point. I was still feeling sick but Bec was on the ball! She spoke to the traffic director and a local shop owner and worked out we had two options: buy some local bus tickets for €1.50 x 2 and wait 45 minutes with the crowd of people on the side of the road until it arrives or spend €35 on a taxi and wait 10 minutes for it to arrive.
 Because I was feeling sick, there were a lot of people and we were lugging around our suitcases, we choose the taxi which was much easier!
 
-```
-Sorrento
-by bus
-Positano
-by taxi
-Nocelle
-```
+<Travel items={["Sorrento", "--BUS--", "Positano", "--TAXI--", "Nocelle"]} />
 
 <Grid columns={3}>
   <Img

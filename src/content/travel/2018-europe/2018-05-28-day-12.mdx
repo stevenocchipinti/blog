@@ -6,6 +6,7 @@ pubDate: "May 28 2018"
 
 import Grid from "../../../components/PhotoGrid.astro"
 import Img from "../../../components/PhotoGridPhoto.astro"
+import Travel from "../../../components/Travel.astro"
 
 <Grid columns={3}>
   <Img
@@ -45,13 +46,7 @@ Made it to Catania airport. We were both pretty tired as had only 4 hours sleep 
 
 After a short 40min flight we arrived in Naples and followed the instructions of our Airbnb host in Sorrento. We needed to find a bus called Curreri that would take us to Sorrento. After walking around outside the airport we asked people and found the bus Curreri but the driver was sleeping inside. We assumed it was because the bus wasn't leaving for another hour. We waited around talked to some NZ tourists who were heading to Amalfi. It was approaching 2:30pm so we waited for the bus driver to wake up. He saw us and came out to tell us we were at the wrong spot. We had been waiting at the parking spot for those buses not the departure point. With 10mins left before the next departure we rushed to the front of the airport where we found the bus full of people and thankfully got on!
 
-```
-Catania
-by airplane
-Naples
-by bus
-Sorrento
-```
+<Travel items={["Catania", "--AIRPLANE--", "Naples", "--BUS--", "Sorrento"]} />
 
 <Grid columns={3}>
   <Img

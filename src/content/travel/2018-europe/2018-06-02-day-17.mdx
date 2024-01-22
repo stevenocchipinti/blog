@@ -6,6 +6,7 @@ pubDate: "June 02 2018"
 
 import Grid from "../../../components/PhotoGrid.astro"
 import Img from "../../../components/PhotoGridPhoto.astro"
+import Travel from "../../../components/Travel.astro"
 
 <Grid columns={3}>
   <Img
@@ -54,19 +55,21 @@ It finally took off and about an hour later we were in Naples. We were looking f
 
 From there we bought tickets for the local Metro and traveled another 3 stops to Toledo station which was only a 5 minute walk to our hotel. That station was fancy looking, it looked like an aquarium and had a big tunnel leading up to the surface to let light in, looked pretty cool.
 
-```
-Nocelle
-by bus
-Positano
-by bus
-Sorrento
-by train
-Naples
-by tram
-Via Toledo
-by walk
-Renaissance Naples Hotel Mediterraneo
-```
+<Travel
+  items={[
+    "Nocelle",
+    "--BUS--",
+    "Positano",
+    "--BUS--",
+    "Sorrento",
+    "--TRAIN--",
+    "Naples",
+    "--TRAM--",
+    "Via Toledo",
+    "--WALK--",
+    "Renaissance Naples Hotel Mediterraneo",
+  ]}
+/>
 
 <Grid columns={3}>
   <Img

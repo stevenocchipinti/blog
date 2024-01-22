@@ -6,6 +6,7 @@ pubDate: "March 28 2019"
 
 import Grid from "../../../components/PhotoGrid.astro"
 import Img from "../../../components/PhotoGridPhoto.astro"
+import Travel from "../../../components/Travel.astro"
 
 <Grid columns={12}>
   <Img
@@ -47,17 +48,19 @@ This time for breakfast we went to Victor's, which is a fancy French restaurant 
 
 The food was really nice and we almost had the whole place to ourselves. Bec had yoghurt with berries, French toast and minute steak with an egg and veggies. I had a blueberry smoothie, a really fluffy pancake and the minute steak with egg and veggies too.
 
-```
-The Westin Tokyo
-by tram
-Shinagawa
-by train
-三島
-by tram
-Shuzenji
-by bus
-Yugashima
-```
+<Travel
+  items={[
+    "The Westin Tokyo",
+    "--TRAM--",
+    "Shinagawa",
+    "--TRAIN--",
+    "三島",
+    "--TRAM--",
+    "Shuzenji",
+    "--BUS--",
+    "Yugashima",
+  ]}
+/>
 
 <Grid columns={4}>
   <Img

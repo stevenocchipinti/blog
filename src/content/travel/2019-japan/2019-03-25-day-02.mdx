@@ -6,6 +6,7 @@ pubDate: "March 25 2019"
 
 import Grid from "../../../components/PhotoGrid.astro"
 import Img from "../../../components/PhotoGridPhoto.astro"
+import Travel from "../../../components/Travel.astro"
 
 <Grid columns={2}>
   <Img src="/src/content/travel/2019-japan/assets/ee460e23-5535-42dc-8629-804a54f7527d-ba17833eab4596b1b2d84831cabedbf4a45de203.jpg" />
@@ -19,11 +20,7 @@ While we are here we compared prices from a few stalls in the arrival lobby. The
 
 We got a 6GB for 30 days for ¥4500 and an unlimited data for 30 days for ¥5500
 
-```
-DFS, Tokyo Narita Airport
-by bus
-The Westin Tokyo
-```
+<Travel items={["Tokyo Narita Airport", "--BUS--", "The Westin Tokyo"]} />
 
 <Grid columns={2}>
   <Img src="/src/content/travel/2019-japan/assets/d8f0f609-3062-4bc8-b907-c38c99f17868-29b0df638f699ee58db41f8a8649b3c53f90c02e.jpg" />
