@@ -23,7 +23,9 @@ const trips = await getCollection("trips")
       <ul>
         {
           trips
-            .sort((a, b) => b.data.years[0] - a.data.years[0])
+            .sort(
+              (a, b) => b.data.startDate.valueOf() - a.data.startDate.valueOf()
+            )
             .map(trip => (
               <li>
                 <a href={`travel/${trip.id}`}>

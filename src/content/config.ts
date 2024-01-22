@@ -16,6 +16,7 @@ const trips = defineCollection({
     z.object({
       title: z.string(),
       years: z.array(z.number()),
+      startDate: z.coerce.date(),
       source: z.string().optional(),
       cover: image().optional(),
       coverAlt: z.string().optional(),
