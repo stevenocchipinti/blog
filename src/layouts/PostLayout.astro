@@ -15,6 +15,7 @@ type Props = CollectionEntry<"travel">["data"] & {
 }
 
 const { title, description, pubDate, prevPost, nextPost, trip } = Astro.props
+console.table({ nextPost, prevPost })
 ---
 
 <html lang="en">
@@ -22,13 +23,25 @@ const { title, description, pubDate, prevPost, nextPost, trip } = Astro.props
     <BaseHead title={title} description={description} />
     <style>
       main {
-        width: calc(100% - 2em);
+        width: 100%;
         max-width: 100%;
         margin: 0;
       }
+      article {
+        background-color: white;
+        border-radius: 2rem;
+        margin: -10rem auto 0 auto;
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        max-width: 60ch;
+        padding: 1em;
+        color: rgb(var(--gray-dark));
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+      }
       img {
         width: 100%;
-        max-height: 30vh;
+        height: 40vh;
         object-fit: cover;
         border-radius: 0;
       }
@@ -37,13 +50,6 @@ const { title, description, pubDate, prevPost, nextPost, trip } = Astro.props
         margin: 0 auto;
         border-radius: 12px;
         box-shadow: var(--box-shadow);
-      }
-      .prose {
-        width: 720px;
-        max-width: calc(100% - 2em);
-        margin: auto;
-        padding: 1em;
-        color: rgb(var(--gray-dark));
       }
       .title {
         margin-bottom: 1em;
@@ -68,7 +74,14 @@ const { title, description, pubDate, prevPost, nextPost, trip } = Astro.props
         max-width: calc(100% - 2em);
         margin: auto;
         padding: 1em;
-        color: rgb(var(--gray-dark));
+        color: #555;
+      }
+      a {
+        color: currentColor;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
       }
     </style>
   </head>
@@ -80,24 +93,22 @@ const { title, description, pubDate, prevPost, nextPost, trip } = Astro.props
       alt={trip.data.coverAlt || `A photo from the ${trip.data.title} trip`}
     />
     <main>
-      <article>
-        <div class="prose">
-          <div class="title">
-            <div class="date">
-              <FormattedDate date={pubDate} />
-            </div>
-            <h1>{title}</h1>
-            <hr />
-            <div class="prev-next">
-              <div>{prevPost && <a href={prevPost}>« Prev</a>}</div>
-              <div>{nextPost && <a href={nextPost}>Next »</a>}</div>
-            </div>
+      <article class="prose">
+        <div class="title">
+          <div class="date">
+            <FormattedDate date={pubDate} />
           </div>
-          <slot />
+          <h1>{title}</h1>
+          <hr />
+          <div class="prev-next">
+            <div>{prevPost && <a href={prevPost}>◁ Prev</a>}</div>
+            <div>{nextPost && <a href={nextPost}>Next ▷</a>}</div>
+          </div>
         </div>
+        <slot />
         <div class="prev-next">
-          <div>{prevPost && <a href={prevPost}>« Prev</a>}</div>
-          <div>{nextPost && <a href={nextPost}>Next »</a>}</div>
+          <div>{prevPost && <a href={prevPost}>◁ Prev</a>}</div>
+          <div>{nextPost && <a href={nextPost}>Next ▷</a>}</div>
         </div>
       </article>
     </main>
