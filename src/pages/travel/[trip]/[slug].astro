@@ -15,7 +15,9 @@ export async function getStaticPaths() {
       indexInTrip === 0
         ? undefined
         : `/travel/${tripPosts[indexInTrip - 1]?.slug}`
-    const nextPost = `/travel/${tripPosts[indexInTrip + 1]?.slug}`
+    const nextPost = tripPosts[indexInTrip + 1]?.slug
+      ? `/travel/${tripPosts[indexInTrip + 1]?.slug}`
+      : undefined
 
     return {
       params: { trip, slug },
