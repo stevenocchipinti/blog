@@ -49,9 +49,8 @@ body {
 }
 main {
   width: 720px;
-  max-width: calc(100% - 2em);
+  max-width: 100%;
   margin: auto;
-  padding: 3em 1em;
 }
 main.full-width {
   width: 100%;
@@ -136,12 +135,9 @@ hr {
   border: none;
   border-top: 1px solid rgb(var(--gray-light));
 }
-@media (max-width: 720px) {
+@media (max-width: 60ch) {
   body {
     font-size: 18px;
-  }
-  main {
-    padding: 1em;
   }
 }
 
