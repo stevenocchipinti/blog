@@ -98,6 +98,9 @@ p {
 .prose p {
   margin-bottom: 2em;
 }
+iframe {
+  max-width: 100%;
+}
 textarea {
   width: 100%;
   font-size: 16px;
