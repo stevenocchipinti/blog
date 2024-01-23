@@ -41,6 +41,10 @@ const coverBackground = await getImage({
         color: rgb(var(--gray-dark));
         box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
       }
+      .cover-container {
+        max-width: 100%;
+        overflow: clip;
+      }
       .cover {
         display: grid;
         width: 100%;
@@ -106,7 +110,9 @@ const coverBackground = await getImage({
 
   <body>
     <Header />
-    <div class="cover" style={`background-image: url(${coverBackground.src});`}>
+    <div class="cover-container">
+      <div class="cover" style={`background-image: url(${coverBackground.src});`}>
+    </div>
     </div>
     <main>
       <article class="prose">
