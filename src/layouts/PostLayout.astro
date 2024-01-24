@@ -48,18 +48,20 @@ const coverBackground = await getImage({
       .cover {
         display: grid;
         width: 100%;
-        height: 40vh;
+        height: 50svh;
         background-size: cover;
         background-position: center;
         /* border-image: fill 0 linear-gradient(#0003, #000a); */
         border-radius: 0;
       }
-      @media (prefers-reduced-motion: no-preference) {
-        .cover {
-          animation: cover-fade linear forwards;
-          animation-timeline: view();
-          animation-range: exit -80px;
-          transform-origin: bottom;
+      @supports (animation-timeline: view()) {
+        @media (prefers-reduced-motion: no-preference) {
+          .cover {
+            animation: cover-fade linear forwards;
+            animation-timeline: view();
+            animation-range: exit -80px;
+            transform-origin: bottom;
+          }
         }
       }
       .cover h2 {
@@ -111,8 +113,11 @@ const coverBackground = await getImage({
   <body>
     <Header />
     <div class="cover-container">
-      <div class="cover" style={`background-image: url(${coverBackground.src});`}>
-    </div>
+      <div
+        class="cover"
+        style={`background-image: url(${coverBackground.src});`}
+      >
+      </div>
     </div>
     <main>
       <article class="prose">
