@@ -2,9 +2,10 @@
 import type { CollectionEntry } from "astro:content"
 import { getImage } from "astro:assets"
 import BaseHead from "../components/BaseHead.astro"
-import Header from "../components/Header.astro"
 import Footer from "../components/Footer.astro"
 import FormattedDate from "../components/FormattedDate.astro"
+import NextPrev from "../components/NextPrev.astro"
+import BackButtonLink from "../components/BackButtonLink.astro"
 
 import placeholder from "../assets/placeholder-trip.jpg"
 
@@ -41,21 +42,32 @@ const coverBackground = await getImage({
         color: rgb(var(--gray-dark));
         box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
       }
+
       .cover-container {
+        display: grid;
         max-width: 100%;
         overflow: clip;
       }
+
       .cover {
         display: grid;
+        grid-area: 1 / 1 / -1 / -1;
         width: 100%;
         height: 50svh;
         background-size: cover;
         background-position: center;
-        /* border-image: fill 0 linear-gradient(#0003, #000a); */
+        border-image: fill 0 linear-gradient(#0003, #000a);
         border-radius: 0;
       }
+
       @supports (animation-timeline: view()) {
         @media (prefers-reduced-motion: no-preference) {
+          @keyframes cover-fade {
+            to {
+              scale: 1.5;
+              filter: blur(1px) brightness(0.01);
+            }
+          }
           .cover {
             animation: cover-fade linear forwards;
             animation-timeline: view();
@@ -64,79 +76,63 @@ const coverBackground = await getImage({
           }
         }
       }
-      .cover h2 {
-        color: white;
-        margin: auto;
-      }
-      .title {
+
+      .article-header {
         margin-bottom: 1em;
         padding: 1em 0;
         text-align: center;
         line-height: 1;
       }
-      .title h1 {
+
+      h1 {
         margin: 0 0 0.5em 0;
       }
+
+      h2 {
+        grid-area: 1 / 1 / -1 / -1;
+        align-self: center;
+        text-align: center;
+        color: white;
+        margin: auto;
+        z-index: 1;
+      }
+
       .date {
         margin-bottom: 0.5em;
         color: rgb(var(--gray));
       }
+
       .last-updated-on {
         font-style: italic;
-      }
-      .prev-next {
-        display: flex;
-        justify-content: space-between;
-        width: 720px;
-        max-width: 100%;
-        margin: auto;
-        padding: 1em;
-        color: #555;
-      }
-      a {
-        color: currentColor;
-        text-decoration: none;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
-
-      @keyframes cover-fade {
-        to {
-          scale: 1.5;
-          filter: blur(1px) brightness(0.01);
-        }
       }
     </style>
   </head>
 
   <body>
-    <Header />
     <div class="cover-container">
+      <BackButtonLink href={`/travel/${trip.id}`} />
       <div
         class="cover"
         style={`background-image: url(${coverBackground.src});`}
       >
       </div>
+      <h2>{trip.data.title}</h2>
     </div>
+
     <main>
       <article class="prose">
-        <div class="title">
+        <div class="article-header">
           <div class="date">
             <FormattedDate date={pubDate} />
           </div>
           <h1>{title}</h1>
           <hr />
-          <div class="prev-next">
-            <div>{prevPost && <a href={prevPost}>◁ Prev</a>}</div>
-            <div>{nextPost && <a href={nextPost}>Next ▷</a>}</div>
-          </div>
+          <NextPrev prevPost={prevPost} nextPost={nextPost} />
         </div>
+
         <slot />
-        <div class="prev-next">
-          <div>{prevPost && <a href={prevPost}>◁ Prev</a>}</div>
-          <div>{nextPost && <a href={nextPost}>Next ▷</a>}</div>
-        </div>
+
+        <NextPrev prevPost={prevPost} nextPost={nextPost} />
       </article>
     </main>
     <Footer />
