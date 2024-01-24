@@ -5,9 +5,9 @@ import BaseHead from "../components/BaseHead.astro"
 import Footer from "../components/Footer.astro"
 import FormattedDate from "../components/FormattedDate.astro"
 import NextPrev from "../components/NextPrev.astro"
-import BackButtonLink from "../components/BackButtonLink.astro"
 
 import placeholder from "../assets/placeholder-trip.jpg"
+import Cover from "../components/Cover.astro"
 
 type Props = CollectionEntry<"travel">["data"] & {
   nextPost?: string
@@ -43,40 +43,6 @@ const coverBackground = await getImage({
         box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
       }
 
-      .cover-container {
-        display: grid;
-        max-width: 100%;
-        overflow: clip;
-      }
-
-      .cover {
-        display: grid;
-        grid-area: 1 / 1 / -1 / -1;
-        width: 100%;
-        height: 50svh;
-        background-size: cover;
-        background-position: center;
-        border-image: fill 0 linear-gradient(#0003, #000a);
-        border-radius: 0;
-      }
-
-      @supports (animation-timeline: view()) {
-        @media (prefers-reduced-motion: no-preference) {
-          @keyframes cover-fade {
-            to {
-              scale: 1.5;
-              filter: blur(1px) brightness(0.01);
-            }
-          }
-          .cover {
-            animation: cover-fade linear forwards;
-            animation-timeline: view();
-            animation-range: exit -80px;
-            transform-origin: bottom;
-          }
-        }
-      }
-
       .article-header {
         margin-bottom: 1em;
         padding: 1em 0;
@@ -86,15 +52,6 @@ const coverBackground = await getImage({
 
       h1 {
         margin: 0 0 0.5em 0;
-      }
-
-      h2 {
-        grid-area: 1 / 1 / -1 / -1;
-        align-self: center;
-        text-align: center;
-        color: white;
-        margin: auto;
-        z-index: 1;
       }
 
       .date {
@@ -109,15 +66,11 @@ const coverBackground = await getImage({
   </head>
 
   <body>
-    <div class="cover-container">
-      <BackButtonLink href={`/travel/${trip.id}`} />
-      <div
-        class="cover"
-        style={`background-image: url(${coverBackground.src});`}
-      >
-      </div>
-      <h2>{trip.data.title}</h2>
-    </div>
+    <Cover
+      background={coverBackground.src}
+      heading={trip.data.title}
+      backLink={`/travel/${trip.id}`}
+    />
 
     <main>
       <article class="prose">
