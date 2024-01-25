@@ -1,5 +1,6 @@
 ---
-title: Day 16 + 17 - Disneyland and DisneySea
+title: Day 16 + 17
+subtitle: Disneyland and DisneySea
 description: Today we're going to DisneyLand. Anthony and Amy have a massive 4 days of Disney stuff planned, but most of us are just doing a day at each ...
 pubDate: "Jan 12 2016"
 source: https://taipan2016.stevenocchipinti.com/2016/01/day-16-17-disneyland-and-disneysea.html

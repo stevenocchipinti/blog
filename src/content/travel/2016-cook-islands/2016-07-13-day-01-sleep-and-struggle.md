@@ -1,5 +1,6 @@
 ---
-title: Day 1 - Sleep and Struggle
+title: Day 1
+subtitle: Sleep and Struggle
 description: ""
 pubDate: "2016-07-13"
 source: https://cookislands2016.stevenocchipinti.com/day-01-sleep-and-struggle/

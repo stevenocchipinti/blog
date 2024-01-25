@@ -3,7 +3,6 @@ import { getCollection } from "astro:content"
 import { Image } from "astro:assets"
 
 import BaseHead from "../../components/BaseHead.astro"
-import Header from "../../components/Header.astro"
 import Footer from "../../components/Footer.astro"
 import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts"
 
@@ -17,8 +16,7 @@ const trips = await getCollection("trips")
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body>
-    <Header />
-    <main class="full-width">
+    <main>
       <h1>Trips</h1>
       <ul>
         {
@@ -48,23 +46,36 @@ const trips = await getCollection("trips")
     </main>
     <Footer />
     <style>
+      main {
+        width: 100%;
+        max-width: 100%;
+        padding: 1rem;
+      }
+
       ul {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
         justify-items: center;
-        gap: 2rem;
+        gap: 1rem;
         margin: 0;
         padding: 0;
+      }
+      @media (min-width: 700px) {
+        ul {
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 2rem;
+        }
       }
 
       h1 {
         text-align: center;
-        margin-bottom: 4rem;
+        margin-block: 8rem;
       }
 
       h2 {
         font-size: 1.25rem;
         font-weight: 300;
+        margin-bottom: 0.25rem;
       }
 
       h3 {
@@ -83,14 +94,14 @@ const trips = await getCollection("trips")
 
       a {
         display: block;
-        border-radius: 10rem;
         text-decoration: none;
         color: currentColor;
       }
 
       img {
-        aspect-ratio: 1.6;
+        aspect-ratio: 1;
         object-fit: cover;
+        border-radius: 1.5rem;
       }
     </style>
   </body>

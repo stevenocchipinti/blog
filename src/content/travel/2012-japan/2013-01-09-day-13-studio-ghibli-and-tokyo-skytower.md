@@ -1,5 +1,6 @@
 ---
-title: Day 13 - Studio Ghibli and Tokyo SkyTower
+title: Day 13
+subtitle: Studio Ghibli and Tokyo SkyTower
 description: After a big day yesterday, we had a well deserved sleep in. We left my mum at the hotel today as she wasn't feeling up to it and the rest o...
 pubDate: "Jan 09 2013"
 source: https://japan2013.stevenocchipinti.com/2013/01/day-13-studio-ghibli-and-tokyo-skytower.html

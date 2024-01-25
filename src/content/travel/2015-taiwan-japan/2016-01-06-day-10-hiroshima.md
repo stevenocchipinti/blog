@@ -1,5 +1,6 @@
 ---
-title: Day 10 - Hiroshima
+title: Day 10
+subtitle: Hiroshima
 description: We had a really early start today because our destination was a little over 300km away! Luckily Japan has a bullet train for this though. We...
 pubDate: "Jan 06 2016"
 source: https://taipan2016.stevenocchipinti.com/2016/01/day-10-hiroshima.html

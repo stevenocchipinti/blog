@@ -1,5 +1,6 @@
 ---
-title: Day 1 - Introduction to Bali
+title: Day 1
+subtitle: Introduction to Bali
 description: I arrived in Bali fairly late, but luckily I had a transfer from the airport to the hotel already organised.  Once we got off the plane we c...
 pubDate: "Nov 18 2014"
 source: https://bali2014.stevenocchipinti.com/2014/11/day-1-introduction-to-bali.html

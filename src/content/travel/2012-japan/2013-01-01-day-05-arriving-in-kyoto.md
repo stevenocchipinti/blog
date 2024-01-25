@@ -1,5 +1,6 @@
 ---
-title: Day 5 - Arriving in Kyoto
+title: Day 5
+subtitle: Arriving in Kyoto
 description: After very little sleep we met in the lobby and checked out of our hotel. We asked the hotel staff to hold our luggage while we went to Shi...
 pubDate: "Jan 01 2013"
 source: https://japan2013.stevenocchipinti.com/2013/01/day-5-arriving-in-kyoto.html

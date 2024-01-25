@@ -39,7 +39,7 @@ body {
   margin: 0;
   padding: 0;
   text-align: left;
-  background: #fbfbfb;
+  background: #f4f4f4;
   background-size: 100% 600px;
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -51,11 +51,6 @@ main {
   width: 720px;
   max-width: 100%;
   margin: auto;
-}
-main.full-width {
-  width: 100%;
-  max-width: 100%;
-  padding: 3em 1em;
 }
 h1,
 h2,

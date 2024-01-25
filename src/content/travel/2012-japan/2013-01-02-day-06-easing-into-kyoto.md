@@ -1,5 +1,6 @@
 ---
-title: Day 6 - Easing into Kyoto
+title: Day 6
+subtitle: Easing into Kyoto
 description: The plan was to explore the local area today and spend tomorrow at Nara.  Being a quiet time of year, we thought Kyoto would be the easier ...
 pubDate: "Jan 02 2013"
 source: https://japan2013.stevenocchipinti.com/2013/01/day-6-easing-into-kyoto.html

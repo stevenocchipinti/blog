@@ -15,7 +15,8 @@ type Props = CollectionEntry<"travel">["data"] & {
   trip: CollectionEntry<"trips">
 }
 
-const { title, description, pubDate, prevPost, nextPost, trip } = Astro.props
+const { title, subtitle, description, pubDate, prevPost, nextPost, trip } =
+  Astro.props
 
 const coverBackground = await getImage({
   src: trip.data.cover || placeholder,
@@ -50,17 +51,19 @@ const coverBackground = await getImage({
         line-height: 1;
       }
 
-      h1 {
-        margin: 0 0 0.5em 0;
-      }
-
       .date {
         margin-bottom: 0.5em;
         color: rgb(var(--gray));
       }
 
-      .last-updated-on {
-        font-style: italic;
+      .title {
+        display: grid;
+        gap: 0.5rem;
+        margin: 1.5rem 0 2.5rem 0;
+      }
+
+      h2 {
+        color: #555;
       }
     </style>
   </head>
@@ -78,7 +81,10 @@ const coverBackground = await getImage({
           <div class="date">
             <FormattedDate date={pubDate} />
           </div>
-          <h1>{title}</h1>
+          <div class="title">
+            <h1>{title}</h1>
+            <h2>{subtitle}</h2>
+          </div>
           <hr />
           <NextPrev prevPost={prevPost} nextPost={nextPost} />
         </div>

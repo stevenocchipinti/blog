@@ -1,5 +1,6 @@
 ---
-title: Day 6 - Duck Tour
+title: Day 6
+subtitle: Duck Tour
 description: Today was the day where Sarma left us to go back to KL for work the next day.  We got up to have breakfast together and walked him down to ...
 pubDate: "Jan 02 2012"
 source: https://sinkul2012.stevenocchipinti.com/2012/01/day-6-duck-tour.html

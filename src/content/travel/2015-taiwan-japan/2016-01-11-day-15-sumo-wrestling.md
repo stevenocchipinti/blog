@@ -1,5 +1,6 @@
 ---
-title: Day 15 - Sumo Wrestling
+title: Day 15
+subtitle: Sumo Wrestling
 description: Today we had an easy morning and met up for a late breakfast at a cafe down the street. Ended up having some sandwiches, juice and a chocol...
 pubDate: "Jan 11 2016"
 source: https://taipan2016.stevenocchipinti.com/2016/01/day-15-sumo-wrestling.html

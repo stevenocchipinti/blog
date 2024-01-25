@@ -1,5 +1,6 @@
 ---
-title: Day 18 - Shinjuku
+title: Day 18
+subtitle: Shinjuku
 description: After two big days at the Disney theme parks, today was a free day. Chris, Sarma and Rob were going to Nakano Broadway and I was tempted to ...
 pubDate: "Jan 14 2016"
 source: https://taipan2016.stevenocchipinti.com/2016/01/day-18-shinjuku.html

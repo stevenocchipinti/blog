@@ -1,5 +1,6 @@
 ---
-title: Day 13 - Last full day in KL
+title: Day 13
+subtitle: Last full day in KL
 description: Today was our last full day in KL and so we took it easy. It had been a great trip and we had seen and done quite a lot so far, so today we ...
 pubDate: "Jan 09 2012"
 source: https://sinkul2012.stevenocchipinti.com/2012/01/day-13-last-full-day-in-kl.html

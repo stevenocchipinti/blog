@@ -1,5 +1,6 @@
 ---
-title: Day 13 - Just Chillin
+title: Day 13
+subtitle: Just Chillin
 description: ""
 pubDate: "2016-07-24"
 source: https://cookislands2016.stevenocchipinti.com/day-13-just-chillin/

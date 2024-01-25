@@ -1,5 +1,6 @@
 ---
-title: Day 9 - Arriving in Tokyo
+title: Day 9
+subtitle: Arriving in Tokyo
 description: Today we are leaving Kyoto and going to Tokyo. Checkout time is 11:00AM at our hotel, but there was one thing that we didn't get around to d...
 pubDate: "Jan 05 2013"
 source: https://japan2013.stevenocchipinti.com/2013/01/day-9-arriving-in-tokyo.html

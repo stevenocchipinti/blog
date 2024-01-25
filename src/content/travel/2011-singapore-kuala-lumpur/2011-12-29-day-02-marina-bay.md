@@ -1,5 +1,6 @@
 ---
-title: Day 2 - Marina Bay
+title: Day 2
+subtitle: Marina Bay
 description: A buffet breakfast is included with our accommodation and closes at 10:30, so we made sure we got down there in time. As is typical with int...
 pubDate: "Dec 29 2011"
 source: https://sinkul2012.stevenocchipinti.com/2011/12/day-2-marina-bay.html

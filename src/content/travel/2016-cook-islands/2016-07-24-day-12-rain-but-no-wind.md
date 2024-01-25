@@ -1,5 +1,6 @@
 ---
-title: Day 12 - Rain, but no wind
+title: Day 12
+subtitle: Rain, but no wind
 description: ""
 pubDate: "2016-07-24"
 source: https://cookislands2016.stevenocchipinti.com/day-12-rain-but-no-wind/

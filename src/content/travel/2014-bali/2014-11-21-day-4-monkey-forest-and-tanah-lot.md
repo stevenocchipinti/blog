@@ -1,5 +1,6 @@
 ---
-title: Day 4 - Monkey Forest and Tanah Lot
+title: Day 4
+subtitle: Monkey Forest and Tanah Lot
 description: Yesterday I spoke to a tour organizer about going snorkeling and it seems like there are three good options The Gilli Islands (best), Blue ...
 pubDate: "Nov 21 2014"
 source: https://bali2014.stevenocchipinti.com/2014/11/day-4-monkey-forest-and-tanah-lot.html

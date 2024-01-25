@@ -1,5 +1,6 @@
 ---
-title: Day 9 - Lagoon Scuba Dive
+title: Day 9
+subtitle: Lagoon Scuba Dive
 description: ""
 pubDate: "2016-07-21"
 source: https://cookislands2016.stevenocchipinti.com/day-09-lagoon-scuba-dive/

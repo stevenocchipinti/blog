@@ -1,5 +1,6 @@
 ---
-title: Day 14 - Kuala Lumpur to Melbourne
+title: Day 14
+subtitle: Kuala Lumpur to Melbourne
 description: We got up bright and early this morning to do some last minute packing and exchanging of photos and had our last buffet breakfast at the hot...
 pubDate: "Jan 10 2012"
 source: https://sinkul2012.stevenocchipinti.com/2012/01/day-14-kuala-lumpur-to-melbourne.html

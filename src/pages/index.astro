@@ -1,45 +1,17 @@
 ---
-import { Image } from "astro:assets"
 import BaseHead from "../components/BaseHead.astro"
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts"
-
-import cover from "../assets/cover.jpg"
 ---
-
-<style>
-  div {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    height: 100vh;
-  }
-
-  img {
-    width: 100%;
-    height: 100%;
-    grid-row: 1 / -1;
-    grid-column: 1 / -1;
-    border-radius: 0;
-    object-fit: cover;
-  }
-
-  main {
-    grid-area: 1 / 1;
-  }
-</style>
 
 <html lang="en">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <meta http-equiv="refresh" content="0; url=/travel" />
   </head>
   <body>
     <div>
-      <Image width={2000} src={cover} alt="A nice photo" />
       <main>
-        <h1>🌍 Travel blog</h1>
-        <p>
-          There really is only the <a href="/travel">travel blog</a> section.
-        </p>
+        <p>Redirecting to the travel blogs...</p>
       </main>
     </div>
   </body>

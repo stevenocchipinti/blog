@@ -1,5 +1,6 @@
 ---
-title: Day 15 - Coming home
+title: Day 15
+subtitle: Coming home
 description: Sadly, we leave Japan today.   There were no plans for today, just a few last minute things here and there, check out of our hotel and head ...
 pubDate: "Jan 16 2013"
 source: https://japan2013.stevenocchipinti.com/2013/01/day-15-coming-home.html

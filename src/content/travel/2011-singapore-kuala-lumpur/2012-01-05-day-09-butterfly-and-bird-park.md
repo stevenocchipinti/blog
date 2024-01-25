@@ -1,5 +1,6 @@
 ---
-title: Day 9 - Butterfly and Bird Park
+title: Day 9
+subtitle: Butterfly and Bird Park
 description: Kuala Lumpur has a " Hop On Hop Off Bus " that goes to all the main tourist attractions. It costs 38 Ringgits and the ticket lasts 1 day whe...
 pubDate: "Jan 05 2012"
 source: https://sinkul2012.stevenocchipinti.com/2012/01/day-9-butterfly-and-bird-park.html

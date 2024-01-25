@@ -1,5 +1,6 @@
 ---
-title: Day 6 - Garden Photography and Night Market
+title: Day 6
+subtitle: Garden Photography and Night Market
 description: ""
 pubDate: "2016-07-18"
 source: https://cookislands2016.stevenocchipinti.com/day-06-garden-photography-and-night-market/

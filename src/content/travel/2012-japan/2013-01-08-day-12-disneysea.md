@@ -1,5 +1,6 @@
 ---
-title: Day 12 - DisneySea
+title: Day 12
+subtitle: DisneySea
 description: Today we went to DisneySea! This is another place we went to on our last trip, but it is a pretty impressive park and Rob had such a good ti...
 pubDate: "Jan 08 2013"
 source: https://japan2013.stevenocchipinti.com/2013/01/day-12-disneysea.html

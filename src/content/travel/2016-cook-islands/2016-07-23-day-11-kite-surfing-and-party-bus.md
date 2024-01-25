@@ -1,5 +1,6 @@
 ---
-title: Day 11 - Kite Surfing and Party Bus
+title: Day 11
+subtitle: Kite Surfing and Party Bus
 description: ""
 pubDate: "2016-07-23"
 source: https://cookislands2016.stevenocchipinti.com/day-11-kite-surfing-and-party-bus/

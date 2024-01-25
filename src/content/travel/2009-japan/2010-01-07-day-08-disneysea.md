@@ -1,5 +1,6 @@
 ---
-title: Day 8 - DisneySea
+title: Day 8
+subtitle: DisneySea
 description: Today was the continuation of yesterday - DisneySea.  This theme park is even bigger than DisneyLand and is apparently the most expensive th...
 pubDate: "Jan 07 2010"
 source: https://japan2010.stevenocchipinti.com/2010/01/day-8-disneysea.html

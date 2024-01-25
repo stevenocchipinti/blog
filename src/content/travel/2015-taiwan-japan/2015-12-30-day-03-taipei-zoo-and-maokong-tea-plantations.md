@@ -1,5 +1,6 @@
 ---
-title: Day 3 - Taipei Zoo and Maokong Tea Plantations
+title: Day 3
+subtitle: Taipei Zoo and Maokong Tea Plantations
 description: Today we ventured out to the Maokong area which is famous for tea growing and the Taipei Zoo. After leaving our hotel we got some breakfast...
 pubDate: "Dec 30 2015"
 source: https://taipan2016.stevenocchipinti.com/2015/12/day-3-taipei-zoo-and-maokong-tea.html

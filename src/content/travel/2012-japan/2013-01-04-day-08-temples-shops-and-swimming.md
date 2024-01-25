@@ -1,5 +1,6 @@
 ---
-title: Day 8 - Temples, shops and swimming
+title: Day 8
+subtitle: Temples, shops and swimming
 description: Today was a bit of an unplanned day where the group kind of split up and went their own ways. We had a bit of a sleep in, which was definite...
 pubDate: "Jan 04 2013"
 source: https://japan2013.stevenocchipinti.com/2013/01/day-8-temples-shops-and-swimming.html

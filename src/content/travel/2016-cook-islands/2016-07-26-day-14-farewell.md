@@ -1,5 +1,6 @@
 ---
-title: Day 14 - Farewell
+title: Day 14
+subtitle: Farewell
 description: ""
 pubDate: "2016-07-25"
 source: https://cookislands2016.stevenocchipinti.com/day-14-farewell/

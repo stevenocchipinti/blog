@@ -1,5 +1,6 @@
 ---
-title: Day 12 - Batu Caves and The Elephant Santuary
+title: Day 12
+subtitle: Batu Caves and The Elephant Santuary
 description: As we got along so well with Ambi our taxi driver, we booked him again to see the Elephant Sanctuary today. Because we mentioned we wanted t...
 pubDate: "Jan 08 2012"
 source: https://sinkul2012.stevenocchipinti.com/2012/01/day-12-batu-caves-and-elephant-santuary.html

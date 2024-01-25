@@ -1,5 +1,6 @@
 ---
-title: Day 7 - Shifen, Juifen and toilets!
+title: Day 7
+subtitle: Shifen, Juifen and toilets!
 description: Today was out last full day in Taiwan and we had planned a day trip to Shifen and Juifen with a Driver named Peter Wang. The weather forecas...
 pubDate: "Jan 03 2016"
 source: https://taipan2016.stevenocchipinti.com/2016/01/day-7-shifen-juifen-and-toilets.html

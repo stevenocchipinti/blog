@@ -3,9 +3,10 @@ import { defineCollection, z } from "astro:content"
 const travel = defineCollection({
   type: "content",
   schema: z.object({
-    title: z.string(),
-    description: z.string(),
     pubDate: z.coerce.date(),
+    title: z.string(),
+    subtitle: z.string().optional(),
+    description: z.string().optional(),
     source: z.string().optional(),
   }),
 })

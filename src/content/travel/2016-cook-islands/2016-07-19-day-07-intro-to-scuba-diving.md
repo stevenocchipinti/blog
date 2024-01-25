@@ -1,5 +1,6 @@
 ---
-title: Day 7 - Intro to Scuba Diving
+title: Day 7
+subtitle: Intro to Scuba Diving
 description: ""
 pubDate: "2016-07-19"
 source: https://cookislands2016.stevenocchipinti.com/day-07-intro-to-scuba-diving/

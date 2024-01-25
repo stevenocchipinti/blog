@@ -1,5 +1,6 @@
 ---
-title: Day 8 - Captain Tama's Lagoon Cruies
+title: Day 8
+subtitle: Captain Tama's Lagoon Cruies
 description: ""
 pubDate: "2016-07-20"
 source: https://cookislands2016.stevenocchipinti.com/day-08-captain-tamas-lagoon-cruise/

@@ -1,5 +1,6 @@
 ---
-title: Day 1 - Arriving in Taipei
+title: Day 1
+subtitle: Arriving in Taipei
 description: What a long day. Today we left Melbourne for Taipei via Hong Kong. We made it, but quite a few things went wrong! Here is a summary.
 pubDate: "Dec 28 2015"
 source: https://taipan2016.stevenocchipinti.com/2015/12/day-1-arriving-in-taipei.html

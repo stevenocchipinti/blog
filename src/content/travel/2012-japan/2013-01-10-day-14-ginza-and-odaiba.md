@@ -1,5 +1,6 @@
 ---
-title: Day 14 - Ginza and Odaiba
+title: Day 14
+subtitle: Ginza and Odaiba
 description: Today is our last full day in Japan, tomorrow we will just be slowly making our way to the airport and going home.   As we wanted to make s...
 pubDate: "Jan 10 2013"
 source: https://japan2013.stevenocchipinti.com/2013/01/day-14-ginza-and-odaiba.html

@@ -1,5 +1,6 @@
 ---
-title: Day 1 - Arriving in Osaka
+title: Day 1
+subtitle: Arriving in Osaka
 description: We made it!   The plan was to get to bed early, so we could leave our place at 3:30AM to get our 6:00AM flight from Melbourne. Jonathan was ...
 pubDate: "Dec 28 2012"
 source: https://japan2013.stevenocchipinti.com/2012/12/day-1-arriving-in-osaka.html

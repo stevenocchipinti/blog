@@ -1,5 +1,6 @@
 ---
-title: Day 2 - Taipei City
+title: Day 2
+subtitle: Taipei City
 description: After a good night sleep we decided to explore the city today.   Our hotel doesn't provide breakfast, so the first item on the agenda was t...
 pubDate: "Dec 29 2015"
 source: https://taipan2016.stevenocchipinti.com/2015/12/day-2-taipei-city.html

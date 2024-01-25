@@ -1,5 +1,6 @@
 ---
-title: Day 14 - R&R, Shibuya and Akihabara
+title: Day 14
+subtitle: R&R, Shibuya and Akihabara
 description: After a massive day of shopping yesterday, I'm all shopped out so I decided to take a day off today while the others went to "Nakano Broadwa...
 pubDate: "Jan 10 2016"
 source: https://taipan2016.stevenocchipinti.com/2016/01/day-14-r-shibuya-and-akihabara.html

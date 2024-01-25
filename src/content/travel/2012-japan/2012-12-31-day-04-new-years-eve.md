@@ -1,5 +1,6 @@
 ---
-title: Day 4 - New Years Eve
+title: Day 4
+subtitle: New Years Eve
 description: This morning was the usual routine, we tried to find a new place for breakfast. This time we walked through Shinsaibashi and thought we'd fi...
 pubDate: "Dec 31 2012"
 source: https://japan2013.stevenocchipinti.com/2012/12/day-4-new-years-eve.html

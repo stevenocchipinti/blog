@@ -1,5 +1,6 @@
 ---
-title: Day 5 - The Singapore Zoo and Night Safari
+title: Day 5
+subtitle: The Singapore Zoo and Night Safari
 description: After a big night, we all slept in till around 11:40 AM this morning.  When we finally got up and were ready to go we had to try to find som...
 pubDate: "Jan 01 2012"
 source: https://sinkul2012.stevenocchipinti.com/2012/01/day-5-singapore-zoo-and-night-safari.html
