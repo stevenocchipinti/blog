@@ -27,7 +27,7 @@ const { variant = "background", background, heading, backLink } = Astro.props
     display: grid;
     grid-area: 1 / 1 / -1 / -1;
     width: 100%;
-    height: 50lvh;
+    height: 70lvh;
     background-size: cover;
     background-position: center;
     border-image: fill 0 linear-gradient(#0003, #000a);
@@ -61,7 +61,11 @@ const { variant = "background", background, heading, backLink } = Astro.props
   }
 </style>
 
-<div class:list={["cover-container", { inset: variant === "inset" }]}>
+<div
+  transition:name="cover"
+  transition:animate="none"
+  class:list={["cover-container", { inset: variant === "inset" }]}
+>
   {backLink && <BackButtonLink href={backLink} />}
   <div class="cover" style={`background-image: url(${background});`}></div>
   <h2>{heading}</h2>

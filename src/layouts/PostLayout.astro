@@ -76,7 +76,11 @@ const coverBackground = await getImage({
     />
 
     <main>
-      <article class="prose">
+      <article
+        transition:animate="none"
+        transition:name="article"
+        class="prose"
+      >
         <div class="article-header">
           <div class="date">
             <FormattedDate date={pubDate} />
