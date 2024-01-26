@@ -1,18 +1,19 @@
 ---
-import BaseHead from "../components/BaseHead.astro"
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts"
+import BaseLayout from "../layouts/BaseLayout.astro"
 ---
 
-<html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-    <meta http-equiv="refresh" content="0; url=/travel" />
-  </head>
-  <body>
-    <div>
-      <main>
-        <p>Redirecting to the travel blogs...</p>
-      </main>
-    </div>
-  </body>
-</html>
+<BaseLayout>
+  <meta http-equiv="refresh" content="0; url=/travel" slot="head" />
+
+  <main>
+    <p>Redirecting to the travel blogs...</p>
+  </main>
+</BaseLayout>
+
+<style>
+  main {
+    display: grid;
+    place-items: center;
+    height: calc(100svh - 200px);
+  }
+</style>

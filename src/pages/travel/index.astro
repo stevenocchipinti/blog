@@ -2,107 +2,100 @@
 import { getCollection } from "astro:content"
 import { Image } from "astro:assets"
 
-import BaseHead from "../../components/BaseHead.astro"
-import Footer from "../../components/Footer.astro"
-import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts"
-
 import placeholder from "../../assets/placeholder-trip.jpg"
+import BaseLayout from "../../layouts/BaseLayout.astro"
 
 const trips = await getCollection("trips")
 ---
 
-<html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
-  <body>
-    <main>
-      <h1>Trips</h1>
-      <ul>
-        {
-          trips
-            .sort(
-              (a, b) => b.data.startDate.valueOf() - a.data.startDate.valueOf()
-            )
-            .map(trip => (
-              <li>
-                <a href={`travel/${trip.id}`}>
-                  <Image
-                    width={400}
-                    height={100}
-                    src={trip.data.cover || placeholder}
-                    alt={
-                      trip.data.coverAlt ||
-                      `A photo from the ${trip.data.title} trip`
-                    }
-                  />
-                  <h2>{trip.data.title}</h2>
-                  <h3>{trip.data.years.join(" - ")}</h3>
-                </a>
-              </li>
-            ))
-        }
-      </ul>
-    </main>
-    <Footer />
-    <style>
-      main {
-        width: 100%;
-        max-width: 100%;
-        padding: 1rem;
+<BaseLayout>
+  <main>
+    <h1>Trips</h1>
+    <ul>
+      {
+        trips
+          .sort(
+            (a, b) => b.data.startDate.valueOf() - a.data.startDate.valueOf()
+          )
+          .map(trip => (
+            <li>
+              <a href={`travel/${trip.id}`}>
+                <Image
+                  transition:name={`cover-${trip.id}`}
+                  width={400}
+                  height={100}
+                  src={trip.data.cover || placeholder}
+                  alt={
+                    trip.data.coverAlt ||
+                    `A photo from the ${trip.data.title} trip`
+                  }
+                />
+                <h2>{trip.data.title}</h2>
+                <h3>{trip.data.years.join(" - ")}</h3>
+              </a>
+            </li>
+          ))
       }
+    </ul>
+  </main>
+</BaseLayout>
 
-      ul {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-        justify-items: center;
-        gap: 1rem;
-        margin: 0;
-        padding: 0;
-      }
-      @media (min-width: 700px) {
-        ul {
-          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-          gap: 2rem;
-        }
-      }
+<style>
+  main {
+    width: 100%;
+    max-width: 100%;
+    padding: 1rem;
+  }
 
-      h1 {
-        text-align: center;
-        margin-block: 8rem;
-      }
+  ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    justify-items: center;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+  @media (min-width: 700px) {
+    ul {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+  }
 
-      h2 {
-        font-size: 1.25rem;
-        font-weight: 300;
-        margin-bottom: 0.25rem;
-      }
+  h1 {
+    text-align: center;
+    margin-block: 8rem;
+  }
 
-      h3 {
-        font-size: 1rem;
-        font-weight: 100;
-      }
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-bottom: 0.25rem;
+  }
 
-      li {
-        list-style: none;
-        transition: scale 0.15s;
-      }
+  h3 {
+    font-size: 1rem;
+    font-weight: 100;
+  }
 
-      li:hover {
-        scale: 1.03;
-      }
+  li {
+    list-style: none;
+    transition: scale 0.15s;
+  }
 
-      a {
-        display: block;
-        text-decoration: none;
-        color: currentColor;
-      }
+  li:hover {
+    scale: 1.03;
+  }
 
-      img {
-        aspect-ratio: 1;
-        object-fit: cover;
-        border-radius: 1.5rem;
-      }
-    </style>
-  </body>
-</html>
+  a {
+    display: block;
+    text-decoration: none;
+    color: currentColor;
+  }
+
+  img {
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 1.5rem;
+  }
+</style>

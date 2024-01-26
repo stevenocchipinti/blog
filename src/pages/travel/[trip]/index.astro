@@ -1,12 +1,10 @@
 ---
 import { getCollection, type CollectionEntry } from "astro:content"
 
-import BaseHead from "../../../components/BaseHead.astro"
-import Footer from "../../../components/Footer.astro"
-import { SITE_TITLE, SITE_DESCRIPTION } from "../../../consts"
 import placeholder from "../../../assets/placeholder-trip.jpg"
 import Cover from "../../../components/Cover.astro"
 import { getImage } from "astro:assets"
+import BaseLayout from "../../../layouts/BaseLayout.astro"
 
 export async function getStaticPaths() {
   const allPosts = await getCollection("travel")
@@ -35,153 +33,147 @@ const coverBackground = await getImage({
 })
 ---
 
-<html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
-  <body>
-    <Cover
-      variant="inset"
-      background={coverBackground.src}
-      heading={trip.data.title}
-      backLink="/travel"
-    />
+<BaseLayout>
+  <Cover
+    variant="inset"
+    background={coverBackground.src}
+    heading={trip.data.title}
+    backLink="/travel"
+    id={trip.id}
+  />
 
-    <main>
-      <h1>{trip.data.title}</h1>
-      <h2>{trip.data.years.join(" - ")}</h2>
-      <ul>
-        {
-          posts.map(post => {
-            const date = post.data.pubDate.toLocaleString("default", {
-              day: "2-digit",
-            })
-            const month = post.data.pubDate.toLocaleString("default", {
-              month: "short",
-            })
-
-            return (
-              <li>
-                <a href={post.slug}>
-                  <span class="post-date">{date}</span>
-                  <span class="post-month">{month}</span>
-                  <div class="post-name">
-                    <span class="post-title">{post.data.title}</span>
-                    {post.data.subtitle && (
-                      <span class="post-subtitle">{post.data.subtitle}</span>
-                    )}
-                  </div>
-                </a>
-              </li>
-            )
+  <main>
+    <h1>{trip.data.title}</h1>
+    <h2>{trip.data.years.join(" - ")}</h2>
+    <ul>
+      {
+        posts.map(post => {
+          const date = post.data.pubDate.toLocaleString("default", {
+            day: "2-digit",
           })
-        }
-      </ul>
-    </main>
+          const month = post.data.pubDate.toLocaleString("default", {
+            month: "short",
+          })
 
-    <Footer />
+          return (
+            <li>
+              <a href={post.slug}>
+                <span class="post-date">{date}</span>
+                <span class="post-month">{month}</span>
+                <div class="post-name">
+                  <span class="post-title">{post.data.title}</span>
+                  {post.data.subtitle && (
+                    <span class="post-subtitle">{post.data.subtitle}</span>
+                  )}
+                </div>
+              </a>
+            </li>
+          )
+        })
+      }
+    </ul>
+  </main>
+</BaseLayout>
 
-    <style>
-      main {
-        width: 100%;
-        max-width: 100%;
-        padding: 3rem 1rem 1rem;
-      }
+<style>
+  main {
+    width: 100%;
+    max-width: 100%;
+    padding: 3rem 1rem 1rem;
+  }
 
-      img {
-        width: 100%;
-        max-height: 30vh;
-        object-fit: cover;
-        border-radius: 0;
-      }
+  img {
+    width: 100%;
+    max-height: 30vh;
+    object-fit: cover;
+    border-radius: 0;
+  }
 
-      h1 {
-        color: #222;
-        text-align: center;
-      }
+  h1 {
+    color: #222;
+    text-align: center;
+  }
 
-      h2 {
-        color: #222;
-        font-size: 2rem;
-        text-align: center;
-        margin-bottom: 4rem;
-      }
+  h2 {
+    color: #222;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 4rem;
+  }
 
-      ul {
-        display: grid;
-        gap: 1rem;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        max-width: 60ch;
-        margin-inline: auto;
-      }
+  ul {
+    display: grid;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-width: 60ch;
+    margin-inline: auto;
+  }
 
-      li {
-        background-color: white;
-        border: 1px solid #e4e4e4;
-        border-radius: 1.5rem;
-        overflow: hidden;
-        font-size: 1.25rem;
-      }
+  li {
+    background-color: white;
+    border: 1px solid #e4e4e4;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    font-size: 1.25rem;
+  }
 
-      a {
-        display: grid;
-        grid-template-columns: 60px 1fr;
-        grid-template-areas:
-          "date name"
-          "month name";
-        grid-gap: 0 0.5rem;
-        background-color: white;
-        padding: 0.5rem;
-        text-decoration: none;
-        color: currentColor;
-        min-height: 80px;
-        -webkit-tap-highlight-color: transparent;
-      }
+  a {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    grid-template-areas:
+      "date name"
+      "month name";
+    grid-gap: 0 0.5rem;
+    background-color: white;
+    padding: 0.5rem;
+    text-decoration: none;
+    color: currentColor;
+    min-height: 80px;
+    -webkit-tap-highlight-color: transparent;
+  }
 
-      .post-date {
-        grid-area: date;
-        font-size: 1.75rem;
-        color: #999;
-        text-align: center;
-        line-height: 2rem;
-        transform: translateY(7px);
-      }
+  .post-date {
+    grid-area: date;
+    font-size: 1.75rem;
+    color: #999;
+    text-align: center;
+    line-height: 2rem;
+    transform: translateY(7px);
+  }
 
-      .post-month {
-        grid-area: month;
-        font-size: 1rem;
-        color: #999;
-        text-align: center;
-        text-transform: uppercase;
-      }
+  .post-month {
+    grid-area: month;
+    font-size: 1rem;
+    color: #999;
+    text-align: center;
+    text-transform: uppercase;
+  }
 
-      .post-name {
-        display: grid;
-        grid-area: name;
-        line-height: 2rem;
-        align-self: center;
-        transform: translateY(0.25rem);
-        text-wrap: balance;
-      }
+  .post-name {
+    display: grid;
+    grid-area: name;
+    line-height: 2rem;
+    align-self: center;
+    transform: translateY(0.25rem);
+    text-wrap: balance;
+  }
 
-      .post-title {
-        font-size: 1.5rem;
-        line-height: 2rem;
-        color: #222;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
-      }
-      .post-subtitle {
-        font-size: 1rem;
-        line-height: 1.5rem;
-        color: #666;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
-      }
-    </style>
-  </body>
-</html>
+  .post-title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: #222;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .post-subtitle {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #666;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+</style>

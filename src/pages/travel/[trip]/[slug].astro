@@ -1,6 +1,12 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content"
-import PostLayout from "../../../layouts/PostLayout.astro"
+import { getImage } from "astro:assets"
+import FormattedDate from "../../../components/FormattedDate.astro"
+import NextPrev from "../../../components/NextPrev.astro"
+
+import placeholder from "../../../assets/placeholder-trip.jpg"
+import Cover from "../../../components/Cover.astro"
+import BaseLayout from "../../../layouts/BaseLayout.astro"
 
 export async function getStaticPaths() {
   const posts = await getCollection("travel")
@@ -33,10 +39,81 @@ type Props = {
   nextPost: string
 }
 
-const { post, prevPost, nextPost, trip } = Astro.props
+const { post, trip, prevPost, nextPost } = Astro.props
+const { title, subtitle, pubDate } = post.data
 const { Content } = await post.render()
+
+const coverBackground = await getImage({
+  src: trip.data.cover || placeholder,
+})
 ---
 
-<PostLayout {...post.data} prevPost={prevPost} nextPost={nextPost} trip={trip}>
-  <Content />
-</PostLayout>
+<BaseLayout>
+  <Cover
+    id={trip.id}
+    background={coverBackground.src}
+    heading={trip.data.title}
+    backLink={`/travel/${trip.id}`}
+  />
+
+  <main>
+    <article transition:animate="none" transition:name="article" class="prose">
+      <div class="article-header">
+        <div class="date">
+          <FormattedDate date={pubDate} />
+        </div>
+        <div class="title">
+          <h1>{title}</h1>
+          <h2>{subtitle}</h2>
+        </div>
+        <hr />
+        <NextPrev prevPost={prevPost} nextPost={nextPost} />
+      </div>
+
+      <Content />
+
+      <NextPrev prevPost={prevPost} nextPost={nextPost} />
+    </article>
+  </main>
+</BaseLayout>
+
+<style>
+  main {
+    width: 100%;
+    max-width: 100%;
+  }
+  article {
+    background-color: white;
+    border-radius: 2rem;
+    margin: -3.5rem auto 0 auto;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 60ch;
+    padding: 1em;
+    color: rgb(var(--gray-dark));
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  }
+
+  .article-header {
+    margin-bottom: 1em;
+    padding: 1em 0;
+    text-align: center;
+    line-height: 1;
+  }
+
+  .date {
+    margin: 1rem 0 2rem 0;
+    color: rgb(var(--gray));
+  }
+
+  .title {
+    display: grid;
+    gap: 0.5rem;
+    margin: 1.5rem 0 2.5rem 0;
+  }
+
+  h2 {
+    color: #555;
+  }
+</style>

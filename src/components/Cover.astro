@@ -6,9 +6,16 @@ type Props = {
   background: string
   heading: string
   backLink: string
+  id: string
 }
 
-const { variant = "background", background, heading, backLink } = Astro.props
+const {
+  variant = "background",
+  background,
+  heading,
+  backLink,
+  id,
+} = Astro.props
 ---
 
 <style>
@@ -62,7 +69,7 @@ const { variant = "background", background, heading, backLink } = Astro.props
 </style>
 
 <div
-  transition:name="cover"
+  transition:name=`cover-${id}`
   transition:animate="none"
   class:list={["cover-container", { inset: variant === "inset" }]}
 >
