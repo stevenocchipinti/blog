@@ -4,27 +4,31 @@ const { prevPost, nextPost } = Astro.props
 
 <style>
   .prev-next {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
     width: 720px;
     max-width: 100%;
     margin: auto;
-    padding: 1em;
     color: #555;
   }
   a {
     display: flex;
+    padding: 1rem;
     align-items: center;
     color: currentColor;
     text-decoration: none;
+    border-radius: 1rem;
     -webkit-tap-highlight-color: transparent;
   }
   a:hover {
-    text-decoration: underline;
-    span {
-      text-decoration: underline;
-    }
+    color: currentColor;
+    background-color: #f5f5f5;
   }
+  .next {
+    justify-content: flex-end;
+  }
+
   span {
     transform: translateY(1px);
   }
@@ -35,49 +39,45 @@ const { prevPost, nextPost } = Astro.props
 </style>
 
 <div class="prev-next">
-  <div>
-    {
-      prevPost && (
-        <a href={prevPost}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M15.75 19.5 8.25 12l7.5-7.5"
-            />
-          </svg>
-          <span>Prev</span>
-        </a>
-      )
-    }
-  </div>
-  <div>
-    {
-      nextPost && (
-        <a href={nextPost}>
-          <span>Next</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-6 h-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="m8.25 4.5 7.5 7.5-7.5 7.5"
-            />
-          </svg>
-        </a>
-      )
-    }
-  </div>
+  {
+    prevPost && (
+      <a class="prev" href={prevPost}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 19.5 8.25 12l7.5-7.5"
+          />
+        </svg>
+        <span>Prev</span>
+      </a>
+    )
+  }
+  {
+    nextPost && (
+      <a class="next" href={nextPost}>
+        <span>Next</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m8.25 4.5 7.5 7.5-7.5 7.5"
+          />
+        </svg>
+      </a>
+    )
+  }
 </div>
