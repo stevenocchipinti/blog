@@ -38,13 +38,12 @@ const coverBackground = await getImage({
     variant="inset"
     background={coverBackground.src}
     heading={trip.data.title}
+    subheading={trip.data.years.join(" - ")}
     backLink="/travel"
     id={trip.id}
   />
 
   <main>
-    <h1>{trip.data.title}</h1>
-    <h2>{trip.data.years.join(" - ")}</h2>
     <ul>
       {
         posts.map(post => {
@@ -79,7 +78,7 @@ const coverBackground = await getImage({
   main {
     width: 100%;
     max-width: 100%;
-    padding: 3rem 1rem 1rem;
+    padding: 5rem 1rem 1rem;
   }
 
   img {
@@ -99,6 +98,7 @@ const coverBackground = await getImage({
     font-size: 2rem;
     text-align: center;
     margin-bottom: 4rem;
+    font-weight: 100;
   }
 
   ul {

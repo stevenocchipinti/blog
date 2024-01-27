@@ -4,17 +4,19 @@ import BackButtonLink from "../components/BackButtonLink.astro"
 type Props = {
   variant?: "inset" | "background"
   background: string
-  heading: string
-  backLink: string
   id: string
+  heading?: string
+  subheading?: string
+  backLink?: string
 }
 
 const {
   variant = "background",
   background,
-  heading,
-  backLink,
   id,
+  heading,
+  subheading,
+  backLink,
 } = Astro.props
 ---
 
@@ -41,13 +43,21 @@ const {
     border-radius: 0;
   }
 
-  h2 {
+  .headings {
     grid-area: 1 / 1 / -1 / -1;
+    z-index: 1;
     align-self: center;
     text-align: center;
-    color: white;
     margin: 1rem;
-    z-index: 1;
+  }
+
+  h2 {
+    color: white;
+  }
+
+  h3 {
+    color: white;
+    font-weight: 100;
   }
 
   @supports (animation-timeline: view()) {
@@ -75,5 +85,8 @@ const {
 >
   {backLink && <BackButtonLink href={backLink} />}
   <div class="cover" style={`background-image: url(${background});`}></div>
-  <h2>{heading}</h2>
+  <div class="headings">
+    {heading && <h2>{heading}</h2>}
+    {subheading && <h3>{subheading}</h3>}
+  </div>
 </div>

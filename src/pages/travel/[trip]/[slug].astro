@@ -53,6 +53,7 @@ const coverBackground = await getImage({
     id={trip.id}
     background={coverBackground.src}
     heading={trip.data.title}
+    subheading={trip.data.years.join(" - ")}
     backLink={`/travel/${trip.id}`}
   />
 
