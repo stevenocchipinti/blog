@@ -1,0 +1,37 @@
+---
+const buildSrc = (id: string, size: number) =>
+  `https://res.cloudinary.com/` +
+  `stevenocchipinti/image/upload/` +
+  `f_auto,c_fill,g_auto,w_${size}/` +
+  id
+
+export interface Props {
+  src: string
+  alt?: string
+}
+
+const { src: id, alt } = Astro.props
+const size = 600
+const src = buildSrc(id, size)
+const blur = buildSrc(id, 20)
+---
+
+<style define:vars={{ size: `${size}px` }}>
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    border-radius: 1rem;
+    background-size: cover;
+    object-fit: cover;
+  }
+</style>
+
+<img
+  style={{ backgroundImage: `url(${blur})` }}
+  src={src}
+  alt={alt || ""}
+  height={size}
+  width={size}
+/>
