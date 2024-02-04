@@ -16,6 +16,7 @@
     "@astrojs/sitemap": "^3.0.4",
     "@fontsource-variable/mada": "^5.0.3",
     "astro": "^4.1.1",
+    "glightbox": "^3.2.0",
     "prettier": "^3.2.2",
     "prettier-plugin-astro": "^0.12.3",
     "typescript": "^5.3.3"

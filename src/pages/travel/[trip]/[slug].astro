@@ -48,6 +48,12 @@ const coverBackground = await getImage({
 })
 ---
 
+<script>
+  import GLightbox from "glightbox"
+  import "glightbox/dist/css/glightbox.min.css"
+  GLightbox()
+</script>
+
 <BaseLayout>
   <Cover
     id={trip.id}

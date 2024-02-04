@@ -1,8 +1,8 @@
 ---
-const buildSrc = (id: string, size: number) =>
+const buildUrl = (id: string, resize: boolean, size: number) =>
   `https://res.cloudinary.com/` +
   `stevenocchipinti/image/upload/` +
-  `f_auto,c_fill,g_auto,w_${size}/` +
+  (resize ? `f_auto,c_fill,g_auto,w_${size}/` : "f_auto/") +
   id
 
 export interface Props {
@@ -10,10 +10,20 @@ export interface Props {
   alt?: string
 }
 
+// If I ever want to use this component for local images, I should use this
+// except instead of throwing an error, fallback to Cloudinary ... or something
+//
+// const glob = "/src/content/**/*.{jpeg,jpg,png,gif}"
+// const images = import.meta.glob<{ default: ImageMetadata }>(
+//   "/src/content/**/*.{jpeg,jpg,png,gif}"
+// )
+// if (!images[src]) throw new Error(`"${src}" does not exist in glob: "${glob}"`)
+
 const { src: id, alt } = Astro.props
 const size = 600
-const src = buildSrc(id, size)
-const blur = buildSrc(id, 20)
+const href = buildUrl(id, false, size)
+const src = buildUrl(id, true, size)
+const blur = buildUrl(id, true, 20)
 ---
 
 <style define:vars={{ size: `${size}px` }}>
@@ -28,10 +38,12 @@ const blur = buildSrc(id, 20)
   }
 </style>
 
-<img
-  style={{ backgroundImage: `url(${blur})` }}
-  src={src}
-  alt={alt || ""}
-  height={size}
-  width={size}
-/>
+<a href={href} class="glightbox">
+  <img
+    style={{ backgroundImage: `url(${blur})` }}
+    src={src}
+    alt={alt || ""}
+    height={size}
+    width={size}
+  />
+</a>
