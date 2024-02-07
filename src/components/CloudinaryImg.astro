@@ -1,8 +1,8 @@
 ---
-const buildUrl = (id: string, resize: boolean, size: number) =>
+const buildUrl = (id: string, size: number) =>
   `https://res.cloudinary.com/` +
   `stevenocchipinti/image/upload/` +
-  (resize ? `f_auto,c_fill,g_auto,w_${size}/` : "f_auto/") +
+  `f_auto,c_fill,g_auto,w_${size}/` +
   id
 
 export interface Props {
@@ -20,13 +20,15 @@ export interface Props {
 // if (!images[src]) throw new Error(`"${src}" does not exist in glob: "${glob}"`)
 
 const { src: id, alt } = Astro.props
-const size = 600
-const href = buildUrl(id, false, size)
-const src = buildUrl(id, true, size)
-const blur = buildUrl(id, true, 20)
+const thumbSize = 600
+const fullSize = 1200
+
+const href = buildUrl(id, fullSize)
+const src = buildUrl(id, thumbSize)
+const blur = buildUrl(id, 20)
 ---
 
-<style define:vars={{ size: `${size}px` }}>
+<style>
   img {
     display: block;
     width: 100%;
@@ -43,7 +45,7 @@ const blur = buildUrl(id, true, 20)
     style={{ backgroundImage: `url(${blur})` }}
     src={src}
     alt={alt || ""}
-    height={size}
-    width={size}
+    height={thumbSize}
+    width={thumbSize}
   />
 </a>
