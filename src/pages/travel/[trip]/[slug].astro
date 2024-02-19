@@ -51,7 +51,8 @@ const coverBackground = await getImage({
 <script>
   import GLightbox from "glightbox"
   import "glightbox/dist/css/glightbox.min.css"
-  GLightbox()
+
+  document.addEventListener("astro:page-load", () => GLightbox())
 </script>
 
 <BaseLayout>
