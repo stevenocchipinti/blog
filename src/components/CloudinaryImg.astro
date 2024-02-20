@@ -5,6 +5,7 @@ const buildUrl = (id: string, options: string) =>
 export interface Props {
   src: string
   alt?: string
+  originalAspectRatio?: boolean
 }
 
 // If I ever want to use this component for local images, I should use this
@@ -16,13 +17,16 @@ export interface Props {
 // )
 // if (!images[src]) throw new Error(`"${src}" does not exist in glob: "${glob}"`)
 
-const { src: id, alt } = Astro.props
+const { src: id, alt, originalAspectRatio } = Astro.props
+const aspect = originalAspectRatio ? "" : ",ar_1"
+
+const fullSize = 1600
 const thumbSize = 600
-const fullSize = 1200
+const blurSize = 20
 
 const href = buildUrl(id, `f_auto,w_${fullSize}`)
-const src = buildUrl(id, `f_auto,c_fill,g_auto,w_${thumbSize}`)
-const blur = buildUrl(id, `f_auto,c_fill,g_auto,w_20`)
+const src = buildUrl(id, `f_auto,c_fill,g_auto,w_${thumbSize}${aspect}`)
+const blur = buildUrl(id, `f_auto,c_fill,g_auto,w_${blurSize}${aspect}`)
 ---
 
 <style>
@@ -42,7 +46,7 @@ const blur = buildUrl(id, `f_auto,c_fill,g_auto,w_20`)
     style={{ backgroundImage: `url(${blur})` }}
     src={src}
     alt={alt || ""}
-    height={thumbSize}
+    height={originalAspectRatio ? undefined : thumbSize}
     width={thumbSize}
   />
 </a>

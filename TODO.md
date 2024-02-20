@@ -1,6 +1,6 @@
 ## Approach
 
-- Start with Europe blog
+- Start with one blog
 - Upload all photos to Cloudinary
 - Make sure lightbox works
 - Repeat for all other blogs

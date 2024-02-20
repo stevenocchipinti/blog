@@ -4,17 +4,15 @@ description: ""
 pubDate: "December 15 2019"
 ---
 
-import Grid from "../../../components/PhotoGrid.astro"
-import Img from "../../../components/PhotoGridPhoto.astro"
+import Grid from "../../../components/AutoPhotoGrid.astro"
+import Img from "../../../components/CloudinaryImg.astro"
 
 Got to Taipei station and waiting to start our day tour to Yehliu Geopark, Jiufen and Shifen
 
-<Grid>
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/75f5a33626e04e689ffdba1e50f424dd.jpg"
-    aspectRatio={1}
-  />
-</Grid>
+<Img
+  originalAspectRatio
+  src="2019-taiwan-vietnam/75f5a33626e04e689ffdba1e50f424dd.jpg"
+/>
 
 ## The rock formations of Yehliu Geopark
 
@@ -22,51 +20,17 @@ The first stop on the tour was Yehliu Geopark, a UNESCO World heritage site full
 It's kind of like finding shapes in clouds, you have to use your imagination a bit to understand how they got some of their names but they were pretty interesting none the less.
 There was even a fossil among the list of rocks to check out.
 
-<Grid columns={4}>
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/2864ab223f0940c2aa5cff2bfe6971a2.jpg"
-    aspectRatio={1}
-    colSpan={2}
-    rowSpan={2}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/52ff873661b443d294d082420dfc8fda.jpg"
-    aspectRatio={1}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/3c0f68918134410f9206d6ab2a22c17e.jpg"
-    aspectRatio={1}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/7c5d5e9f2b0d4c988ff7880e3f91cbe5.jpg"
-    aspectRatio={1}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/c11e16cb4e8046d288e2180ab305120f.jpg"
-    aspectRatio={1}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/c8209ac84e6b4247b2b0c73cfeeb884c.jpg"
-    aspectRatio={1}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/7902ebf15c75444b899d086dfe711dd7.jpg"
-    aspectRatio={1}
-    colSpan={2}
-    rowSpan={2}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/857ff646e3e54f28aca51bee9f304dbd.jpg"
-    aspectRatio={1}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/d9d894e95b474cdca867d55fea1816ed.jpg"
-    aspectRatio={1}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/36e8b8fdbc144f2688e4a7defea97d1c.jpg"
-    aspectRatio={1}
-  />
+<Grid>
+  <Img src="2019-taiwan-vietnam/2864ab223f0940c2aa5cff2bfe6971a2.jpg" />
+  <Img src="2019-taiwan-vietnam/52ff873661b443d294d082420dfc8fda.jpg" />
+  <Img src="2019-taiwan-vietnam/3c0f68918134410f9206d6ab2a22c17e.jpg" />
+  <Img src="2019-taiwan-vietnam/7c5d5e9f2b0d4c988ff7880e3f91cbe5.jpg" />
+  <Img src="2019-taiwan-vietnam/c11e16cb4e8046d288e2180ab305120f.jpg" />
+  <Img src="2019-taiwan-vietnam/c8209ac84e6b4247b2b0c73cfeeb884c.jpg" />
+  <Img src="2019-taiwan-vietnam/7902ebf15c75444b899d086dfe711dd7.jpg" />
+  <Img src="2019-taiwan-vietnam/857ff646e3e54f28aca51bee9f304dbd.jpg" />
+  <Img src="2019-taiwan-vietnam/d9d894e95b474cdca867d55fea1816ed.jpg" />
+  <Img src="2019-taiwan-vietnam/36e8b8fdbc144f2688e4a7defea97d1c.jpg" />
 </Grid>
 
 "Cute Princess rock" looked more like a rat on a rock, "candle rocks", "potholes"and a fossilized sea urchin
@@ -82,81 +46,28 @@ We ended up eating vegetarian balls in a broth and a strange vegetarian dumpling
 After that we had xiaolongbao and some fried soft-shell crab on the way back to the bus. It was very crowded but timed it well to get back through the crowds to the bus just in time!
 We even had a couple of minutes to get some fresh pineapple.
 
-<Grid columns={12}>
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/a4f81b8c2cad40a8b4df1d595567da22.jpg"
-    aspectRatio={1}
-    colSpan={3}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/e98b351dea0f4e98a7f32e546c6ff885.jpg"
-    aspectRatio={1}
-    colSpan={3}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/b4a99571a9764e13aaef2d8344e28232.jpg"
-    aspectRatio={1}
-    colSpan={6}
-    rowSpan={2}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/3066c134e34a41889382e5bc4b0048ce.jpg"
-    aspectRatio={1}
-    colSpan={3}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/12ce9bd30c7c45da819c0448bd33141e.jpg"
-    aspectRatio={1}
-    colSpan={3}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/95a8dff839074844b2dee79fdedf807a.jpg"
-    aspectRatio={1}
-    colSpan={4}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/8ae94fe872764ddaa5f7c4c6b3ca60d2.jpg"
-    aspectRatio={1}
-    colSpan={4}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/cfdccc62b18b442097e557fdba51ec05.jpg"
-    aspectRatio={1}
-    colSpan={4}
-  />
+<Grid>
+  <Img src="2019-taiwan-vietnam/a4f81b8c2cad40a8b4df1d595567da22.jpg" />
+  <Img src="2019-taiwan-vietnam/e98b351dea0f4e98a7f32e546c6ff885.jpg" />
+  <Img src="2019-taiwan-vietnam/b4a99571a9764e13aaef2d8344e28232.jpg" />
+  <Img src="2019-taiwan-vietnam/3066c134e34a41889382e5bc4b0048ce.jpg" />
+  <Img src="2019-taiwan-vietnam/12ce9bd30c7c45da819c0448bd33141e.jpg" />
+  <Img src="2019-taiwan-vietnam/95a8dff839074844b2dee79fdedf807a.jpg" />
+  <Img src="2019-taiwan-vietnam/8ae94fe872764ddaa5f7c4c6b3ca60d2.jpg" />
+  <Img src="2019-taiwan-vietnam/cfdccc62b18b442097e557fdba51ec05.jpg" />
 </Grid>
 
 ## Shifen Waterfall
 
 Next up is Shifen waterfall, the locals say it has a similar shape to Niagara Falls just much smaller. It's very nice either way. We had to walk over a bridge to get there and it was swaying quite a lot from all the people!
 
-<Grid columns={3}>
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/43eb5e41e73347db9b9749c38a7ce8f5.jpg"
-    aspectRatio={1}
-    colSpan={2}
-    rowSpan={2}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/64f50f5377e94efd9b42d900a56773a5.jpg"
-    aspectRatio={1}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/645c58938cc945b38ed3c968690a5849.jpg"
-    aspectRatio={1}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/cb8af67503f04e6f8c6e63054ed19996.jpg"
-    aspectRatio={1}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/61c8aa240e954947b4d4d73134f03c95.jpg"
-    aspectRatio={1}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/eba245e009b74ef184b59d3233cd5eb8.jpg"
-    aspectRatio={1}
-  />
+<Grid>
+  <Img src="2019-taiwan-vietnam/43eb5e41e73347db9b9749c38a7ce8f5.jpg" />
+  <Img src="2019-taiwan-vietnam/64f50f5377e94efd9b42d900a56773a5.jpg" />
+  <Img src="2019-taiwan-vietnam/645c58938cc945b38ed3c968690a5849.jpg" />
+  <Img src="2019-taiwan-vietnam/cb8af67503f04e6f8c6e63054ed19996.jpg" />
+  <Img src="2019-taiwan-vietnam/61c8aa240e954947b4d4d73134f03c95.jpg" />
+  <Img src="2019-taiwan-vietnam/eba245e009b74ef184b59d3233cd5eb8.jpg" />
 </Grid>
 
 ## Shifen Old Street
@@ -166,43 +77,18 @@ The other thing is famous for is it's chicken wings stuffed with sticky rice! We
 
 We choose not to release a lantern this time but we ate the chicken and a dessert that has ice cream coated with peanuts and honey shavings, wrapped in a crepe and walked around the quaint little town as the sun was setting. The sky lanterns looked even better as the sky got darker, it's a much nicer atmosphere here compared to Jiufen!
 
-<Grid columns={6}>
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/89ad6b5e67de44dda402a8b2ca380b7c.jpg"
-    aspectRatio={1}
-    colSpan={2}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/a7da41954dd3459b8a3ad3f1fb23f391.jpg"
-    aspectRatio={1}
-    colSpan={2}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/fcafe68627704958a3f483e6a504c2fc.jpg"
-    aspectRatio={1}
-    colSpan={2}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/4760525ea6414617842bd2ec4e256548.jpg"
-    aspectRatio={1}
-    colSpan={3}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/07ee7acb6bc7442696c43b9f9fc6d7ac.jpg"
-    aspectRatio={1}
-    colSpan={3}
-  />
+<Grid>
+  <Img src="2019-taiwan-vietnam/89ad6b5e67de44dda402a8b2ca380b7c.jpg" />
+  <Img src="2019-taiwan-vietnam/a7da41954dd3459b8a3ad3f1fb23f391.jpg" />
+  <Img src="2019-taiwan-vietnam/fcafe68627704958a3f483e6a504c2fc.jpg" />
+  <Img src="2019-taiwan-vietnam/4760525ea6414617842bd2ec4e256548.jpg" />
+  <Img src="2019-taiwan-vietnam/07ee7acb6bc7442696c43b9f9fc6d7ac.jpg" />
 </Grid>
 
 ## Taipei 101
 
 From Shifen we boarded the bus back to the city and after about an hour and a half of battling with traffic we arrived, thanked our tour guide and explored the mall there for a bit.
 
-<Grid>
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/3239620a7e96417da67eb0bf23faa554.jpg"
-    aspectRatio={1}
-  />
-</Grid>
+<Img src="2019-taiwan-vietnam/3239620a7e96417da67eb0bf23faa554.jpg" />
 
 The mall reminds me of Singapore where there are little stalls around the grocery stores offering samples of their goods. We tried a few random bits and pieces, bought some fresh fruit and then headed back to the hotel with a stop by 711 for some nuts and soda water, our typical dessert!

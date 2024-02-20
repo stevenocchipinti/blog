@@ -4,8 +4,8 @@ description: ""
 pubDate: "December 18 2019"
 ---
 
-import Grid from "../../../components/PhotoGrid.astro"
-import Img from "../../../components/PhotoGridPhoto.astro"
+import Grid from "../../../components/AutoPhotoGrid.astro"
+import Img from "../../../components/CloudinaryImg.astro"
 
 ## Big buffet breakfast
 
@@ -17,51 +17,26 @@ We pretty much tried a bit of everything between us but Bec mainly had the healt
 
 > I indulged in vegetables and nuts<br /> &mdash; <cite>Bec</cite>
 
-<Grid columns={6}>
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/a1c5a03b3575484f8b9ec55211da3459.jpg"
-    aspectRatio={1}
-    colSpan={2}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/86d34b7642d14b9597c004d84fd4075a.jpg"
-    aspectRatio={1}
-    colSpan={2}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/b90fdf3124d84072b7d4cb7303611f03.jpg"
-    aspectRatio={1}
-    colSpan={2}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/e5790fb97e3d49989cf56030841698bb.jpg"
-    aspectRatio={1}
-    colSpan={3}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/4968bd0d069b4f50add6e08547b735fb.jpg"
-    aspectRatio={1}
-    colSpan={3}
-  />
+<Grid>
+  <Img src="2019-taiwan-vietnam/a1c5a03b3575484f8b9ec55211da3459.jpg" />
+  <Img src="2019-taiwan-vietnam/86d34b7642d14b9597c004d84fd4075a.jpg" />
+  <Img src="2019-taiwan-vietnam/b90fdf3124d84072b7d4cb7303611f03.jpg" />
+  <Img src="2019-taiwan-vietnam/e5790fb97e3d49989cf56030841698bb.jpg" />
+  <Img src="2019-taiwan-vietnam/4968bd0d069b4f50add6e08547b735fb.jpg" />
 </Grid>
 
 ## Hot Springs
 
 The weather has turned, it's been raining all day and while all the mist looks nice from inside, Bec was pretty disappointed we didn't get to go out and explore the national park so we ended up spending time in the outdoor hot springs around the resort and chilling out in our room until dinner.
 
-<Grid>
-  <Img src="/src/content/travel/2019-taiwan-vietnam/assets/06d29685c94945eebb445f113d99707f.jpg" />
-</Grid>
+<Img
+  originalAspectRatio
+  src="2019-taiwan-vietnam/06d29685c94945eebb445f113d99707f.jpg"
+/>
 
 After resting in the room we didn't feel that hungry and we're too lazy to go to the restaurant as the weather was still bad. So for dinner we decided to eat our typical dessert on this trip; banana and almonds!
 
-<Grid columns={2}>
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/cc7a54004ead4b779159e8464f7fd56d.jpg"
-    aspectRatio={1}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/cb4027c88f384037999bc0e62ac6dff7.jpg"
-    aspectRatio={1}
-  />
+<Grid>
+  <Img src="2019-taiwan-vietnam/cc7a54004ead4b779159e8464f7fd56d.jpg" />
+  <Img src="2019-taiwan-vietnam/cb4027c88f384037999bc0e62ac6dff7.jpg" />
 </Grid>

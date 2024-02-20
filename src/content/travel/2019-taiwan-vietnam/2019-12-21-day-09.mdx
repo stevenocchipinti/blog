@@ -4,8 +4,8 @@ description: ""
 pubDate: "December 21 2019"
 ---
 
-import Grid from "../../../components/PhotoGrid.astro"
-import Img from "../../../components/PhotoGridPhoto.astro"
+import Grid from "../../../components/AutoPhotoGrid.astro"
+import Img from "../../../components/CloudinaryImg.astro"
 
 ## Flying to Vietnam
 
@@ -13,9 +13,10 @@ We caught our early taxi and made it to the airport in record time thanks to our
 
 We got to catchup for a bit before getting on our flight to Vietnam!
 
-<Grid>
-  <Img src="/src/content/travel/2019-taiwan-vietnam/assets/5fd8cb47e7b04e9b9405dd022181b475.jpg" />
-</Grid>
+<Img
+  originalAspectRatio
+  src="2019-taiwan-vietnam/5fd8cb47e7b04e9b9405dd022181b475.jpg"
+/>
 
 ## Hanoi airport transfer
 
@@ -23,21 +24,10 @@ We arrived and made our way through the airport, changed our leftover Taiwanese 
 
 When we meet with our driver he had a concerned look on his face as he counted our bags. We ordered an airport transfer for 5 people and 5 suitcases but he couldn't really fit all of us and our bags in the 7 seater minivan. He almost refused but with a bit of persistence we convinced him that we'd be ok with loading up the back of the car as best we could and putting a couple of suitcases on our laps in the back seat.
 
-<Grid columns={3}>
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/1011dd2083384e89a322fecc3b21da91.jpg"
-    aspectRatio={1}
-    colSpan={2}
-    rowSpan={2}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/a2e7235f74a04dbeb0fef6071cca191b.jpg"
-    aspectRatio={1}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/1fb1c7b72632435a8d3ff4c095ee2255.jpg"
-    aspectRatio={1}
-  />
+<Grid>
+  <Img src="2019-taiwan-vietnam/1011dd2083384e89a322fecc3b21da91.jpg" />
+  <Img src="2019-taiwan-vietnam/a2e7235f74a04dbeb0fef6071cca191b.jpg" />
+  <Img src="2019-taiwan-vietnam/1fb1c7b72632435a8d3ff4c095ee2255.jpg" />
 </Grid>
 
 ## Checking in to our hotel
@@ -46,23 +36,11 @@ Once we arrived at the hotel, our first challenge was crossing the road. Bec and
 
 We checked in and we welcomed with some nice tea while they prepared our rooms.
 
-<Grid columns={2}>
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/0237350b75c44df2939224f336b110db.jpg"
-    aspectRatio={1}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/b6577585772448d88c252a55c91f40e0.jpg"
-    aspectRatio={1}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/096308e360d74998b52bd40d647764fa.jpg"
-    aspectRatio={1}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/d6285632f8324d0a9fc5fbe9c3cfc5f1.jpg"
-    aspectRatio={1}
-  />
+<Grid>
+  <Img src="2019-taiwan-vietnam/0237350b75c44df2939224f336b110db.jpg" />
+  <Img src="2019-taiwan-vietnam/b6577585772448d88c252a55c91f40e0.jpg" />
+  <Img src="2019-taiwan-vietnam/096308e360d74998b52bd40d647764fa.jpg" />
+  <Img src="2019-taiwan-vietnam/d6285632f8324d0a9fc5fbe9c3cfc5f1.jpg" />
 </Grid>
 
 ## First meal in Hanoi
@@ -77,95 +55,37 @@ This has tourist prices so it was more expensive than what we read it should cos
 
 Bec got a vermicelli beef noodle salad and I got a duck dish although I didn't realise it came with French fries and rice!
 
-<Grid columns={2}>
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/5a32f8d9d20340be80ea22ee1f1f9ac3.jpg"
-    aspectRatio={1}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/d8d1378e65234af89ae20ee9835c39d1.jpg"
-    aspectRatio={1}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/cf97343b1a1c4e28b2543f288fed9ea9.jpg"
-    aspectRatio={1}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/d8bc8c3ca0914f64b3a5530e7c7cf0d5.jpg"
-    aspectRatio={1}
-  />
+<Grid>
+  <Img src="2019-taiwan-vietnam/5a32f8d9d20340be80ea22ee1f1f9ac3.jpg" />
+  <Img src="2019-taiwan-vietnam/d8d1378e65234af89ae20ee9835c39d1.jpg" />
+  <Img src="2019-taiwan-vietnam/cf97343b1a1c4e28b2543f288fed9ea9.jpg" />
+  <Img src="2019-taiwan-vietnam/d8bc8c3ca0914f64b3a5530e7c7cf0d5.jpg" />
 </Grid>
 
 ## Ngoc Son Temple
 
 We walked down to the Ngoc Son temple which was dedicated to the turtle that found a sword and left it in the lake. The lake surrounding it was called Turtle lake dedicated to that turtle.
 
-<Grid columns={2}>
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/ad2a93ee061541e79d488854558f8aba.jpg"
-    aspectRatio={1}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/4f14716e58934b89860dfbbcdb9eadfb.jpg"
-    aspectRatio={1}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/79c847ae08b84ef1aa1f2a290317007b.jpg"
-    aspectRatio={1}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/f387d5e8b02b4f5996bcb5bd9f430c40.jpg"
-    aspectRatio={1}
-  />
+<Grid>
+  <Img src="2019-taiwan-vietnam/ad2a93ee061541e79d488854558f8aba.jpg" />
+  <Img src="2019-taiwan-vietnam/4f14716e58934b89860dfbbcdb9eadfb.jpg" />
+  <Img src="2019-taiwan-vietnam/79c847ae08b84ef1aa1f2a290317007b.jpg" />
+  <Img src="2019-taiwan-vietnam/f387d5e8b02b4f5996bcb5bd9f430c40.jpg" />
 </Grid>
 
 ## Hoam Kiem Lake (aka Turtle Lake)
 
-<Grid columns={4}>
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/38b672b320344bd0903f1f790253b231.jpg"
-    aspectRatio={1}
-    colSpan={2}
-    rowSpan={2}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/64d9ea27bd584049adc28525104a2015.jpg"
-    aspectRatio={1}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/7edbaacab7ff4c14ad6f4da9126e4870.jpg"
-    aspectRatio={1}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/b61d10555ecf409395edd189b1f1818b.jpg"
-    aspectRatio={1}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/9beb67dbe4344e5c8299af277aafb3b3.jpg"
-    aspectRatio={1}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/e04ef56bd51847a2a387c38bb5c54287.jpg"
-    aspectRatio={1}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/cda3008b0efc42c3980baf86ca03a814.jpg"
-    aspectRatio={1}
-    colSpan={2}
-    rowSpan={2}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/f9881147bd194f1999d4dbb8423bb753.jpg"
-    aspectRatio={1}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/2441f01e03454bfba377b733781d01a2.jpg"
-    aspectRatio={1}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/fbf4ee45a02d41b6b99bb38f16de69c4.jpg"
-    aspectRatio={1}
-  />
+<Grid>
+  <Img src="2019-taiwan-vietnam/38b672b320344bd0903f1f790253b231.jpg" />
+  <Img src="2019-taiwan-vietnam/64d9ea27bd584049adc28525104a2015.jpg" />
+  <Img src="2019-taiwan-vietnam/7edbaacab7ff4c14ad6f4da9126e4870.jpg" />
+  <Img src="2019-taiwan-vietnam/b61d10555ecf409395edd189b1f1818b.jpg" />
+  <Img src="2019-taiwan-vietnam/9beb67dbe4344e5c8299af277aafb3b3.jpg" />
+  <Img src="2019-taiwan-vietnam/e04ef56bd51847a2a387c38bb5c54287.jpg" />
+  <Img src="2019-taiwan-vietnam/cda3008b0efc42c3980baf86ca03a814.jpg" />
+  <Img src="2019-taiwan-vietnam/f9881147bd194f1999d4dbb8423bb753.jpg" />
+  <Img src="2019-taiwan-vietnam/2441f01e03454bfba377b733781d01a2.jpg" />
+  <Img src="2019-taiwan-vietnam/fbf4ee45a02d41b6b99bb38f16de69c4.jpg" />
 </Grid>
 
 ## #freetolove festival
@@ -173,58 +93,34 @@ We walked down to the Ngoc Son temple which was dedicated to the turtle that fou
 While we were out and about there was a big festival or concert happening. There were big crowds waiting for some sort of concert to begin. Between that there was loud music pumping and a celebrity like person from Hanoi getting the crowd to say free to love.
 
 <Grid>
-  <Img src="/src/content/travel/2019-taiwan-vietnam/assets/397f56dc284f40bc9528e6a7fa95ace4.jpg" />
+  <Img src="2019-taiwan-vietnam/397f56dc284f40bc9528e6a7fa95ace4.jpg" />
 </Grid>
 
 ## Cafe for coconuts
 
 We had booked a traditional Hanoi puppet play at 6:30pm so had some time to kill and were fairly tired from the travel. We found a cafe next to the theatre and ordered some coconuts for ourselves. It was the first time for Rob having a fresh coconut!
 
-<Grid columns={2}>
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/ee235f36ade0444b8835a3ea0cc9cebb.jpg"
-    aspectRatio={1}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/fba71eb1e8794926bdd26e91fe5a93c0.jpg"
-    aspectRatio={1}
-  />
+<Grid>
+  <Img src="2019-taiwan-vietnam/ee235f36ade0444b8835a3ea0cc9cebb.jpg" />
+  <Img src="2019-taiwan-vietnam/fba71eb1e8794926bdd26e91fe5a93c0.jpg" />
 </Grid>
 
 ## Tang Long Puppet Theatre
 
 The play was completely full of tourists. When we got in there was traditional Vietnamese music being played on instruments and then the play began. It was all in Vietnamese so we didn't understand anything but they were doing folk stories. The puppets were on water the whole time but because it was a long day and hot in the theatre there were some droopy eyes.
 
-<Grid columns={2}>
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/3e990295efde4a9aa8d5d7b3f98746f5.jpg"
-    aspectRatio={1}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/1facf71246124bf6a4af25c2a2f532d3.jpg"
-    aspectRatio={1}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/6112c9870c074a83bd198705be5e0a75.jpg"
-    aspectRatio={1}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/0ef6ea423966472bb57e052379f40026.jpg"
-    aspectRatio={1}
-  />
+<Grid>
+  <Img src="2019-taiwan-vietnam/3e990295efde4a9aa8d5d7b3f98746f5.jpg" />
+  <Img src="2019-taiwan-vietnam/1facf71246124bf6a4af25c2a2f532d3.jpg" />
+  <Img src="2019-taiwan-vietnam/6112c9870c074a83bd198705be5e0a75.jpg" />
+  <Img src="2019-taiwan-vietnam/0ef6ea423966472bb57e052379f40026.jpg" />
 </Grid>
 
 ## Night Market
 
 After the play we decided we needed to go home and rest early as it had been a long day. We went home via the night market that opens on Saturday and Sunday from 6pm and the road is closed off. We only briefly looked but will properly explore tomorrow when we're not so tired. We stocked up on water from the convenience store and headed back to the hotel for an early night 😴.
 
-<Grid columns={2}>
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/c0b04cbeb6f94fd6ac4c449626f5b193.jpg"
-    aspectRatio={1}
-  />
-  <Img
-    src="/src/content/travel/2019-taiwan-vietnam/assets/9c867f176ef24b6db284cf6eecf79348.jpg"
-    aspectRatio={1}
-  />
+<Grid>
+  <Img src="2019-taiwan-vietnam/c0b04cbeb6f94fd6ac4c449626f5b193.jpg" />
+  <Img src="2019-taiwan-vietnam/9c867f176ef24b6db284cf6eecf79348.jpg" />
 </Grid>
