@@ -4,13 +4,14 @@ description: ""
 pubDate: "March 24 2019"
 ---
 
-import Grid from "../../../components/PhotoGrid.astro"
-import Img from "../../../components/PhotoGridPhoto.astro"
+import Grid from "../../../components/AutoPhotoGrid.astro"
+import Img from "../../../components/CloudinaryImg.astro"
 import Travel from "../../../components/Travel.astro"
 
-<Grid columns={2}>
-  <Img src="/src/content/travel/2019-japan/assets/47f95594-f062-4908-87be-9f566a708a3a-912b95018362165b48b9d55b4798b124da44d4f1.jpg" />
-</Grid>
+<Img
+  originalAspectRatio
+  src="2019-japan/47f95594-f062-4908-87be-9f566a708a3a-912b95018362165b48b9d55b4798b124da44d4f1.jpg"
+/>
 
 We left home at 9:53pm, got to the airport, checked in our bags, got through security, slowly walked through the gift shops and sitting at the gate by 10:30pm!
 

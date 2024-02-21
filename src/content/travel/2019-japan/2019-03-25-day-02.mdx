@@ -4,13 +4,14 @@ description: ""
 pubDate: "March 25 2019"
 ---
 
-import Grid from "../../../components/PhotoGrid.astro"
-import Img from "../../../components/PhotoGridPhoto.astro"
+import Grid from "../../../components/AutoPhotoGrid.astro"
+import Img from "../../../components/CloudinaryImg.astro"
 import Travel from "../../../components/Travel.astro"
 
-<Grid columns={2}>
-  <Img src="/src/content/travel/2019-japan/assets/ee460e23-5535-42dc-8629-804a54f7527d-ba17833eab4596b1b2d84831cabedbf4a45de203.jpg" />
-</Grid>
+<Img
+  originalAspectRatio
+  src="2019-japan/ee460e23-5535-42dc-8629-804a54f7527d-ba17833eab4596b1b2d84831cabedbf4a45de203.jpg"
+/>
 
 Arrived at Narita Airport, sorted out transport to the hotel and sim cards.
 
@@ -22,70 +23,53 @@ We got a 6GB for 30 days for ¥4500 and an unlimited data for 30 days for ¥5500
 
 <Travel items={["Tokyo Narita Airport", "--BUS--", "The Westin Tokyo"]} />
 
-<Grid columns={2}>
-  <Img src="/src/content/travel/2019-japan/assets/d8f0f609-3062-4bc8-b907-c38c99f17868-29b0df638f699ee58db41f8a8649b3c53f90c02e.jpg" />
-  <Img src="/src/content/travel/2019-japan/assets/0cbb8fa6-fe6d-4c2e-8536-26b61ae09312-c36c0754fff1a96e5d9849830e095d8756338aac.jpg" />
-  <Img src="/src/content/travel/2019-japan/assets/c1c10ce8-6f1a-47dd-8240-276e6d46fbe9-d433a6c500598ac3ce43e594ec5b07f365f15604.jpg" />
-  <Img src="/src/content/travel/2019-japan/assets/d2c768e4-3bf2-49c6-962a-0a4d55b4af66-b389c9c9c62cdfbd710ba5348e5aa704e94db992.jpg" />
+<Grid>
+  <Img src="2019-japan/d8f0f609-3062-4bc8-b907-c38c99f17868-29b0df638f699ee58db41f8a8649b3c53f90c02e.jpg" />
+  <Img src="2019-japan/0cbb8fa6-fe6d-4c2e-8536-26b61ae09312-c36c0754fff1a96e5d9849830e095d8756338aac.jpg" />
+  <Img src="2019-japan/c1c10ce8-6f1a-47dd-8240-276e6d46fbe9-d433a6c500598ac3ce43e594ec5b07f365f15604.jpg" />
+  <Img src="2019-japan/d2c768e4-3bf2-49c6-962a-0a4d55b4af66-b389c9c9c62cdfbd710ba5348e5aa704e94db992.jpg" />
 </Grid>
 
 Arrived at the Westin and got upgraded to an executive room overlooking Tokyo tower thanks to Rach. The Westin host took us to our room and made sure we settled in nicely. We were also greeted with a welcome platter of sweets which we quickly enjoyed. I couldn't rest too long as my heart was set on getting Tonkatsu at a place I had googled in Melbourne near Ebisu station.
 
-<Grid columns={3}>
-  <Img
-    src="/src/content/travel/2019-japan/assets/09612764-c9e4-464a-98d8-ca995920bb4e-3883d71518a227fd584efa0a3116425dceb731e2.jpg"
-    colSpan={2}
-    rowSpan={2}
-  />
-  <Img src="/src/content/travel/2019-japan/assets/9fe6ad23-4856-4e19-91a1-f6b3f281ccda-3883d71518a227fd584efa0a3116425dceb731e2.jpg" />
-  <Img src="/src/content/travel/2019-japan/assets/4cddfe57-3561-4682-9acb-cf3cd822ec76-2610dbcccdd2f6de143e631738557ffed96153cc.jpg" />
+<Grid>
+  <Img src="2019-japan/09612764-c9e4-464a-98d8-ca995920bb4e-3883d71518a227fd584efa0a3116425dceb731e2.jpg" />
+  <Img src="2019-japan/9fe6ad23-4856-4e19-91a1-f6b3f281ccda-3883d71518a227fd584efa0a3116425dceb731e2.jpg" />
+  <Img src="2019-japan/4cddfe57-3561-4682-9acb-cf3cd822ec76-2610dbcccdd2f6de143e631738557ffed96153cc.jpg" />
 </Grid>
 
 We went to Kimukatsu. The tonkatsu specialty is 25 layers of pork fried. We got the original set and the pork fillet set too and shared. It hit the spot and was just what I needed after a long trip into Tokyo.
 
-<Grid columns={3}>
-  <Img src="/src/content/travel/2019-japan/assets/dca723e9-3442-4df3-b060-0072a3c54141-5b79270226e3293ca643433beecaf81a605555f3.jpg" />
-  <Img
-    src="/src/content/travel/2019-japan/assets/39ab3f53-0dc5-4a0a-8c2c-a31b137fafd7-ad8161821a8d9855337f41275490712540c398f8.jpg"
-    colSpan={2}
-    rowSpan={2}
-  />
-  <Img src="/src/content/travel/2019-japan/assets/4b3fec31-2330-44da-85c4-6040d1db345f-5b79270226e3293ca643433beecaf81a605555f3.jpg" />
+<Grid>
+  <Img src="2019-japan/dca723e9-3442-4df3-b060-0072a3c54141-5b79270226e3293ca643433beecaf81a605555f3.jpg" />
+  <Img src="2019-japan/39ab3f53-0dc5-4a0a-8c2c-a31b137fafd7-ad8161821a8d9855337f41275490712540c398f8.jpg" />
+  <Img src="2019-japan/4b3fec31-2330-44da-85c4-6040d1db345f-5b79270226e3293ca643433beecaf81a605555f3.jpg" />
 </Grid>
 
 Now that we had our savoury hit we had to have something sweet to satisfy our cravings and there is so much to be tempted by in Tokyo! First stop Steve wanted a hot chocolate from the vending machine and boy it was hot when it came out he couldn't hold it for long! Then we went by Dean and Deluca and couldn't resist a cream cheese and strawberry muffin 😍. We then explored Ebisu a little more (well for me it means looking at food) and then made it back to the hotel.
 
-<Grid columns={2}>
-  <Img src="/src/content/travel/2019-japan/assets/bfab87af-4fbc-48b3-8794-037b18e51ba5-dcd3e79dbc5d3146e0c2aaaed48310462d974511.jpg" />
-  <Img src="/src/content/travel/2019-japan/assets/427d54b3-c419-426e-adae-ce84628def01-9ea4802f754bd7ecb76880585d3369e236991701.jpg" />
+<Grid>
+  <Img src="2019-japan/bfab87af-4fbc-48b3-8794-037b18e51ba5-dcd3e79dbc5d3146e0c2aaaed48310462d974511.jpg" />
+  <Img src="2019-japan/427d54b3-c419-426e-adae-ce84628def01-9ea4802f754bd7ecb76880585d3369e236991701.jpg" />
 </Grid>
 
 Made it back to the hotel and noticed our other welcome gift of a mini bottle of Yamazaki whisky. Can't thank Rach enough for this amazing hotel and perks, including buffet breakfasts and happy hour from 5:30pm-7:30pm. We're going to head there after freshening up in the room and then off to Nakameguro to see the cherry blossom promenade by night!
 
-<Grid>
-  <Img src="/src/content/travel/2019-japan/assets/4bede37f-ca9b-4e5d-867e-3b3378a59bfc-14b81cc8a657b921d9d2dce7d8c3a585152f5a52.jpg" />
-</Grid>
+<Img
+  originalAspectRatio
+  src="2019-japan/4bede37f-ca9b-4e5d-867e-3b3378a59bfc-14b81cc8a657b921d9d2dce7d8c3a585152f5a52.jpg"
+/>
 
 After a bath, a nap and freshening up we went to the lounge on our floor for complimentary snacks and drinks. They had sushi, cookies, nuts, chips, beer and other small canapes. The sushi looked cool with little decorations for the cherry blossoms.
 
-<Grid columns={4}>
-  <Img
-    src="/src/content/travel/2019-japan/assets/e2f9035b-8a73-41a7-828c-89ff6b34d13c-b18084b3909a38d92d5f50b12d9f4754a9a72e01.jpg"
-    colSpan={2}
-  />
-  <Img
-    src="/src/content/travel/2019-japan/assets/e9fd3b49-de5a-4e41-bf12-cb5166c874f6-03c1bee60478c6da9394817c6f93f1d1113d7579.jpg"
-    colSpan={2}
-  />
-  <Img src="/src/content/travel/2019-japan/assets/fd179613-547d-46c3-bc7f-15f245725881-812f348868fcb8359b93b2a022f099e15ba8b265.jpg" />
-  <Img src="/src/content/travel/2019-japan/assets/b64a171a-2e9b-4d1d-b524-57b3fb851b00-e52768baac35f6f1308bb8e513b69435d2359aec.jpg" />
-  <Img
-    src="/src/content/travel/2019-japan/assets/e1f35833-713a-472b-bdd5-69e59e8fc993-3c1de9a2ce5dbdb70fbdbc308dd2311a31e34dfd.jpg"
-    colSpan={2}
-    rowSpan={2}
-  />
-  <Img src="/src/content/travel/2019-japan/assets/c40e89e3-6c69-4c0b-bf61-2aa1d0d08597-e1562dde9f936e5871ec9417fe5b22345a859619.jpg" />
-  <Img src="/src/content/travel/2019-japan/assets/12e48367-e570-44e6-93f2-16cad78e6429-946976051ddd9042c3e34502cae0d18d27de41e6.jpg" />
+<Grid>
+  <Img src="2019-japan/e2f9035b-8a73-41a7-828c-89ff6b34d13c-b18084b3909a38d92d5f50b12d9f4754a9a72e01.jpg" />
+  <Img src="2019-japan/e9fd3b49-de5a-4e41-bf12-cb5166c874f6-03c1bee60478c6da9394817c6f93f1d1113d7579.jpg" />
+  <Img src="2019-japan/fd179613-547d-46c3-bc7f-15f245725881-812f348868fcb8359b93b2a022f099e15ba8b265.jpg" />
+  <Img src="2019-japan/b64a171a-2e9b-4d1d-b524-57b3fb851b00-e52768baac35f6f1308bb8e513b69435d2359aec.jpg" />
+  <Img src="2019-japan/e1f35833-713a-472b-bdd5-69e59e8fc993-3c1de9a2ce5dbdb70fbdbc308dd2311a31e34dfd.jpg" />
+  <Img src="2019-japan/c40e89e3-6c69-4c0b-bf61-2aa1d0d08597-e1562dde9f936e5871ec9417fe5b22345a859619.jpg" />
+  <Img src="2019-japan/12e48367-e570-44e6-93f2-16cad78e6429-946976051ddd9042c3e34502cae0d18d27de41e6.jpg" />
 </Grid>
 
 From the hotel we went for a twenty minute walk down to Nakameguro to look at the cherry blossoms at night. The weather wasn't too bad and the walk was really pleasant. On the way back we went via some backstreets, seeing the quiet suburban streets was pretty nice too.
