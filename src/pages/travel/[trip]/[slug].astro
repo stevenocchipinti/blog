@@ -52,7 +52,11 @@ const coverBackground = await getImage({
   import GLightbox from "glightbox"
   import "glightbox/dist/css/glightbox.min.css"
 
-  document.addEventListener("astro:page-load", () => GLightbox())
+  document.addEventListener("astro:page-load", () =>
+    GLightbox({
+      dragToleranceY: 10, // This doesn't seem to work
+    })
+  )
 </script>
 
 <BaseLayout>
@@ -65,7 +69,7 @@ const coverBackground = await getImage({
   />
 
   <main>
-    <article transition:animate="none" transition:name="article" class="prose">
+    <article transition:animate="none" transition:name="article">
       <div class="article-header">
         <div class="date">
           <FormattedDate date={pubDate} />
@@ -78,7 +82,9 @@ const coverBackground = await getImage({
         <NextPrev prevPost={prevPost} nextPost={nextPost} />
       </div>
 
-      <Content />
+      <div class="prose">
+        <Content />
+      </div>
 
       <NextPrev prevPost={prevPost} nextPost={nextPost} />
     </article>
@@ -98,14 +104,12 @@ const coverBackground = await getImage({
     z-index: 1;
     width: 100%;
     max-width: 70ch;
-    text-wrap: pretty;
     padding: 1em;
-    color: rgb(var(--gray-dark));
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
   }
 
   .article-header {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     padding-top: 1.5rem;
     text-align: center;
     line-height: 1;
@@ -113,13 +117,13 @@ const coverBackground = await getImage({
 
   .date {
     margin: 1rem 0 2rem 0;
-    color: rgb(var(--gray));
+    color: var(--secondary-text);
   }
 
   .title {
     display: grid;
-    gap: 0.5rem;
-    margin: 1.5rem 0 2.5rem 0;
+    gap: 1.5rem;
+    margin: 3rem 0 4rem 0;
   }
 
   h2 {
