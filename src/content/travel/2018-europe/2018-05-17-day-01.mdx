@@ -4,30 +4,29 @@ description: ""
 pubDate: "May 17 2018"
 ---
 
-import Grid from "../../../components/PhotoGrid.astro"
-import Img from "../../../components/PhotoGridPhoto.astro"
+import Grid from "../../../components/AutoPhotoGrid.astro"
+import Img from "../../../components/CloudinaryImg.astro"
 import Travel from "../../../components/Travel.astro"
 
 <Travel
   items={["Melbourne", "--AIRPLANE--", "Hong Kong", "--AIRPLANE--", "Paris"]}
 />
 
-<Grid columns={2}>
-  <Img src="/src/content/travel/2018-europe/assets/3b87b1da-829a-4b08-99d4-5e47db5387bc-b5f32a4f11c128250233648cc58064656478eeed.jpg" />
-  <Img src="/src/content/travel/2018-europe/assets/48a9838c-5ce2-4e4a-b3f9-7c3af36cdbfa-7f5cc4502630a67c476c1bd321b0b64b0ca7a0b2.jpg" />
+<Grid>
+  <Img src="2018-europe/3b87b1da-829a-4b08-99d4-5e47db5387bc-b5f32a4f11c128250233648cc58064656478eeed.jpg" />
+  <Img src="2018-europe/48a9838c-5ce2-4e4a-b3f9-7c3af36cdbfa-7f5cc4502630a67c476c1bd321b0b64b0ca7a0b2.jpg" />
 </Grid>
 
 Ready for the big trip!
 
 <Grid>
-  <Img src="/src/content/travel/2018-europe/assets/5c63cea3-a207-4d6c-890c-b83731b8aaed-3ed177b6cef9420341a301b4f2ac079d7a2cb179.jpg" />
+  <Img src="2018-europe/5c63cea3-a207-4d6c-890c-b83731b8aaed-3ed177b6cef9420341a301b4f2ac079d7a2cb179.jpg" />
 </Grid>
 
 Including some small goods from the plane and lounge in Melbourne!
 
-<Grid>
-  <Img
-    alt="Hotel ibis budget Paris La Villette 19ème ** - Île-de-France"
-    src="/src/content/travel/2018-europe/assets/23338b21-d3b5-4bfd-b3f7-0d9f366489f1.jpg"
-  />
-</Grid>
+<Img
+  originalAspectRatio
+  alt="Hotel ibis budget Paris La Villette 19ème ** - Île-de-France"
+  src="2018-europe/23338b21-d3b5-4bfd-b3f7-0d9f366489f1.jpg"
+/>

@@ -4,14 +4,12 @@ description: ""
 pubDate: "May 20 2018"
 ---
 
-import Grid from "../../../components/PhotoGrid.astro"
-import Img from "../../../components/PhotoGridPhoto.astro"
+import Grid from "../../../components/AutoPhotoGrid.astro"
+import Img from "../../../components/CloudinaryImg.astro"
 
 Today Mel and Edu were hosting a post-wedding picnic and it was the perfect day for it, the best weather we've seen and it's apparently quite unusual for such great weather at this time of the year.
 
-<Grid>
-  <Img src="/src/content/travel/2018-europe/assets/6026d612-557d-44e5-9df1-30c07ca6e36f-fa92ef7417a05be123e8607a22ade7f9cf23d81a.jpg" />
-</Grid>
+<Img src="2018-europe/6026d612-557d-44e5-9df1-30c07ca6e36f-fa92ef7417a05be123e8607a22ade7f9cf23d81a.jpg" />
 
 Everyone was bringing something to the picnic so we thought we'd get the typical French baguette and cheese from the grocery store out the front of our accommodation but it was closed on Sundays along with most of the bakeries!
 
@@ -21,27 +19,12 @@ Luckily we came across a market on the way that was just finishing up and we got
 
 This photo of us rushing down the street with bakery goods looking for cheese sums up our morning pretty well, haha
 
-<Grid columns={6}>
-  <Img
-    src="/src/content/travel/2018-europe/assets/16121ceb-b396-43d4-84ee-04748bc02733-b580a184de74a7abb39b2a55b7e141df150ec89b.jpg"
-    colSpan={2}
-  />
-  <Img
-    src="/src/content/travel/2018-europe/assets/5982e170-2680-4955-a593-fcad498471fd-6727617ad0c317ebee1d8f5d2876105021ab05d0.jpg"
-    colSpan={2}
-  />
-  <Img
-    src="/src/content/travel/2018-europe/assets/e5d00644-56c4-4393-8ef1-1968387b6742-9822d298971b0c9fb7e93f854956bcb153f9b1c3.jpg"
-    colSpan={2}
-  />
-  <Img
-    src="/src/content/travel/2018-europe/assets/faf20c53-a031-42b0-b7d0-6e8077c0362a-f72f7d704e8908749770187c9fca050d2d0ba984.jpg"
-    colSpan={3}
-  />
-  <Img
-    src="/src/content/travel/2018-europe/assets/986c56f7-378b-4c05-a74d-c85d7f482bdf-53f7d505d68b5c1fa909cdfb200790bc54048eca.jpg"
-    colSpan={3}
-  />
+<Grid>
+  <Img src="2018-europe/16121ceb-b396-43d4-84ee-04748bc02733-b580a184de74a7abb39b2a55b7e141df150ec89b.jpg" />
+  <Img src="2018-europe/5982e170-2680-4955-a593-fcad498471fd-6727617ad0c317ebee1d8f5d2876105021ab05d0.jpg" />
+  <Img src="2018-europe/e5d00644-56c4-4393-8ef1-1968387b6742-9822d298971b0c9fb7e93f854956bcb153f9b1c3.jpg" />
+  <Img src="2018-europe/faf20c53-a031-42b0-b7d0-6e8077c0362a-f72f7d704e8908749770187c9fca050d2d0ba984.jpg" />
+  <Img src="2018-europe/986c56f7-378b-4c05-a74d-c85d7f482bdf-53f7d505d68b5c1fa909cdfb200790bc54048eca.jpg" />
 </Grid>
 
 The picnic was in Parc de la Villette, a really nice park along the canal. Everyone brought deliciously fresh food, there were lots of different breads, cheeses, meats and fruits, yet another feast!
@@ -50,25 +33,17 @@ The tomatoes taste like real tomatoes, the strawberries were perfectly soft and 
 
 The group are all incredibly friendly, I've never met any of them and we were all like one big, happy, multi-cultural family gathering from all over the world.
 
-<Grid columns={4}>
-  <Img
-    src="/src/content/travel/2018-europe/assets/917ad14d-44d4-4dd9-8d6d-e0bd43c363ac-54691cedc713ba911b78b39b845b06a3991fa17b.jpg"
-    colSpan={2}
-    rowSpan={2}
-  />
-  <Img src="/src/content/travel/2018-europe/assets/11e552ef-f7a9-4ad1-815f-b765f49acb15-e6e2e498ba2b036682eacc40e46d4901c61a4e66.jpg" />
-  <Img src="/src/content/travel/2018-europe/assets/3235de84-2067-4ce4-a4ba-9b1c03b29ac1-709850ace4c192fb49062e833b021e3e193534b3.jpg" />
-  <Img src="/src/content/travel/2018-europe/assets/57c97aa9-9f4b-4bf4-afd7-67afb3faedce-7dacb639406c9b572acceb1c9a6faafc1bc5f586.jpg" />
-  <Img src="/src/content/travel/2018-europe/assets/923abc4d-7a27-44f6-894e-dcbd138df8c3-9a581e3b6c044735e14ca9232579f5e8d5d47c20.jpg" />
-  <Img src="/src/content/travel/2018-europe/assets/61e92f8a-b49b-44c2-8092-c80cb72edbb9-7c8c913715cafa525d3da8e7751029ec072f4e01.jpg" />
-  <Img
-    src="/src/content/travel/2018-europe/assets/fcc3813e-6e68-475b-b072-46179db11b4b-d2eefe7e9aa9054f8b51199fee3645bb09c98182.jpg"
-    colSpan={2}
-    rowSpan={2}
-  />
-  <Img src="/src/content/travel/2018-europe/assets/749fa9a8-7206-4b05-a78e-0f36354d883f-3070fc0e72ea65e8ab3553d9f9aff29dfd451b91.jpg" />
-  <Img src="/src/content/travel/2018-europe/assets/31c870c4-db47-4af9-be41-d5cca0861a63-ab9933cc1bf1e5ce61b4370a0d71b4f889087747.jpg" />
-  <Img src="/src/content/travel/2018-europe/assets/5ec0d5f0-d4c6-47c1-99ab-3c57c1803f4e-b623b924869665c41a367258ae49392c14bd5ba7.jpg" />
+<Grid>
+  <Img src="2018-europe/917ad14d-44d4-4dd9-8d6d-e0bd43c363ac-54691cedc713ba911b78b39b845b06a3991fa17b.jpg" />
+  <Img src="2018-europe/11e552ef-f7a9-4ad1-815f-b765f49acb15-e6e2e498ba2b036682eacc40e46d4901c61a4e66.jpg" />
+  <Img src="2018-europe/3235de84-2067-4ce4-a4ba-9b1c03b29ac1-709850ace4c192fb49062e833b021e3e193534b3.jpg" />
+  <Img src="2018-europe/57c97aa9-9f4b-4bf4-afd7-67afb3faedce-7dacb639406c9b572acceb1c9a6faafc1bc5f586.jpg" />
+  <Img src="2018-europe/923abc4d-7a27-44f6-894e-dcbd138df8c3-9a581e3b6c044735e14ca9232579f5e8d5d47c20.jpg" />
+  <Img src="2018-europe/61e92f8a-b49b-44c2-8092-c80cb72edbb9-7c8c913715cafa525d3da8e7751029ec072f4e01.jpg" />
+  <Img src="2018-europe/fcc3813e-6e68-475b-b072-46179db11b4b-d2eefe7e9aa9054f8b51199fee3645bb09c98182.jpg" />
+  <Img src="2018-europe/749fa9a8-7206-4b05-a78e-0f36354d883f-3070fc0e72ea65e8ab3553d9f9aff29dfd451b91.jpg" />
+  <Img src="2018-europe/31c870c4-db47-4af9-be41-d5cca0861a63-ab9933cc1bf1e5ce61b4370a0d71b4f889087747.jpg" />
+  <Img src="2018-europe/5ec0d5f0-d4c6-47c1-99ab-3c57c1803f4e-b623b924869665c41a367258ae49392c14bd5ba7.jpg" />
 </Grid>
 
 After the picnic, on Edu's advice, we continued to walk down the canal along the way to our hotel, it's a really nice area and the weather was perfect.
@@ -77,25 +52,17 @@ The canal is home to a bunch of very popular restaurants, some of which were rec
 
 There is a big mechanical bridge that rises up to let boats through which looked pretty cool and a sandy area along the canal where people play games so we just sat along there and watched for a bit before heading back home to drop off some stuff and have a quick nap then head out to explore the canal a bit more.
 
-<Grid columns={4}>
-  <Img
-    src="/src/content/travel/2018-europe/assets/1d8a15b2-3ab0-442e-b2dc-85a5e044e383-9123589d27238155652cf3ae478a00cfca3ea47e.jpg"
-    colSpan={2}
-    rowSpan={2}
-  />
-  <Img src="/src/content/travel/2018-europe/assets/0dd12631-f0c3-4d88-b185-52e74e851de1-4c987087496b7da2a7188ae98cbc1aafc5f2f380.jpg" />
-  <Img src="/src/content/travel/2018-europe/assets/219dfb7b-b4c5-4655-b6ff-b5f4415292c9-a89a73a7f8714a2470332bcbfe2d118a7a45fb63.jpg" />
-  <Img src="/src/content/travel/2018-europe/assets/9edf20c1-ecad-4545-a636-cef2515bc9d1-bfaed17268fc6c9f37dbee49f004d3a98f192584.jpg" />
-  <Img src="/src/content/travel/2018-europe/assets/ed8cb0dd-4f79-4e1c-99da-0fa928ef2e09-066d04d7291ff833fa8ffd91460b724695a457ce.jpg" />
-  <Img src="/src/content/travel/2018-europe/assets/15c64fe1-a592-4d80-8520-10a2a6e5f7df-1f75421abf779fb1c05d1524d173d045bdfaea2a.jpg" />
-  <Img
-    src="/src/content/travel/2018-europe/assets/7087e5bb-c452-4e26-acca-d3c341a65ed1-b9066ab6ac6ed6d3b4357a3b6f0ad2feda5455a1.jpg"
-    colSpan={2}
-    rowSpan={2}
-  />
-  <Img src="/src/content/travel/2018-europe/assets/5446b736-c595-48e8-ac76-d904c15482b1-c715ff2622e14572b19abce5cf26e32e0ee8eca5.jpg" />
-  <Img src="/src/content/travel/2018-europe/assets/1109f113-5c32-4ed0-bcca-1452223ea721-24ac23aab06146811e1d25dda96d808a42b13085.jpg" />
-  <Img src="/src/content/travel/2018-europe/assets/513a13f1-cf5b-49a1-8328-1e97799bcf49-eea3c16299c1af6592160925e3e3fd7b2e042479.jpg" />
+<Grid>
+  <Img src="2018-europe/1d8a15b2-3ab0-442e-b2dc-85a5e044e383-9123589d27238155652cf3ae478a00cfca3ea47e.jpg" />
+  <Img src="2018-europe/0dd12631-f0c3-4d88-b185-52e74e851de1-4c987087496b7da2a7188ae98cbc1aafc5f2f380.jpg" />
+  <Img src="2018-europe/219dfb7b-b4c5-4655-b6ff-b5f4415292c9-a89a73a7f8714a2470332bcbfe2d118a7a45fb63.jpg" />
+  <Img src="2018-europe/9edf20c1-ecad-4545-a636-cef2515bc9d1-bfaed17268fc6c9f37dbee49f004d3a98f192584.jpg" />
+  <Img src="2018-europe/ed8cb0dd-4f79-4e1c-99da-0fa928ef2e09-066d04d7291ff833fa8ffd91460b724695a457ce.jpg" />
+  <Img src="2018-europe/15c64fe1-a592-4d80-8520-10a2a6e5f7df-1f75421abf779fb1c05d1524d173d045bdfaea2a.jpg" />
+  <Img src="2018-europe/7087e5bb-c452-4e26-acca-d3c341a65ed1-b9066ab6ac6ed6d3b4357a3b6f0ad2feda5455a1.jpg" />
+  <Img src="2018-europe/5446b736-c595-48e8-ac76-d904c15482b1-c715ff2622e14572b19abce5cf26e32e0ee8eca5.jpg" />
+  <Img src="2018-europe/1109f113-5c32-4ed0-bcca-1452223ea721-24ac23aab06146811e1d25dda96d808a42b13085.jpg" />
+  <Img src="2018-europe/513a13f1-cf5b-49a1-8328-1e97799bcf49-eea3c16299c1af6592160925e3e3fd7b2e042479.jpg" />
 </Grid>
 
 After a nap it was a little hard to get going again but it was still nice weather outside and the sun doesn't set until 9:30pm here so we were fine once we started walking around.
