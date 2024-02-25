@@ -46,6 +46,9 @@ main {
   p {
     margin: 2rem 0;
   }
+  li {
+    margin-left: 3rem;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -57,10 +60,6 @@ h3 { font-size: 2rem }
 h4 { font-size: 1.5rem }
 h5 { font-size: 1.25rem; }
 h6 { font-size: 1rem; }
-
-li {
-  margin-left: 3rem;
-}
 
 strong, b {
   font-weight: 700;
