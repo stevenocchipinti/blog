@@ -118,7 +118,8 @@ These places stock bread, fruit and veges, alcohol, batteries, cd's, hot food, m
 Another minor thing we noticed, which was kinda fun, is that everything is "cutified"! Everything from the street signs, warning signs, advertisements and construction signs to the anime, the way the girls speak and act, and the costumes warn in the streets are all made to look "cute".  
 I doubt you would ever see Connex (or now "Metro") use a furry cartoon critter in a sign to warn people to watch their fingers on the trains, but in Tokyo you cant avoid it, its everywhere!
 
-[![](https://1.bp.blogspot.com/_l2YQkMP1pOU/S087y4o85rI/AAAAAAAAAe4/9TphT4rIlcg/s320/DSC_0043.JPG)](https://1.bp.blogspot.com/_l2YQkMP1pOU/S087y4o85rI/AAAAAAAAAe4/9TphT4rIlcg/s1600-h/DSC_0043.JPG)[![](https://1.bp.blogspot.com/_l2YQkMP1pOU/S08-WZki5XI/AAAAAAAAAfY/ib2uJ9jSUmg/s320/DSC_0007.JPG)](https://1.bp.blogspot.com/_l2YQkMP1pOU/S08-WZki5XI/AAAAAAAAAfY/ib2uJ9jSUmg/s1600-h/DSC_0007.JPG)
+[![](https://1.bp.blogspot.com/_l2YQkMP1pOU/S087y4o85rI/AAAAAAAAAe4/9TphT4rIlcg/s320/DSC_0043.JPG)](https://1.bp.blogspot.com/_l2YQkMP1pOU/S087y4o85rI/AAAAAAAAAe4/9TphT4rIlcg/s1600-h/DSC_0043.JPG)
+[![](https://1.bp.blogspot.com/_l2YQkMP1pOU/S08-WZki5XI/AAAAAAAAAfY/ib2uJ9jSUmg/s320/DSC_0007.JPG)](https://1.bp.blogspot.com/_l2YQkMP1pOU/S08-WZki5XI/AAAAAAAAAfY/ib2uJ9jSUmg/s1600-h/DSC_0007.JPG)
 
 ## Mobile Phones
 

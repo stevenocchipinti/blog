@@ -27,7 +27,9 @@ As there weren't many other dressed up people, we decided to follow the crowd to
 As we followed the massive crowd through the park, we found a gift store, so we quickly ducked in before continuing through.  
 The further into the park we went, the more people there were. Eventually we came across alot of ice sculptures! There were at least 50 of these massive models that were taller than me.
 
-[![](https://3.bp.blogspot.com/_l2YQkMP1pOU/S08G9TgUEaI/AAAAAAAAAb4/zm4QvKocUSY/s320/DSC_0418.JPG)](https://3.bp.blogspot.com/_l2YQkMP1pOU/S08G9TgUEaI/AAAAAAAAAb4/zm4QvKocUSY/s1600-h/DSC_0418.JPG)[![](https://4.bp.blogspot.com/_l2YQkMP1pOU/S08HAGmGeAI/AAAAAAAAAcA/5XUCFHV3ct4/s320/DSC_0423.JPG)](https://4.bp.blogspot.com/_l2YQkMP1pOU/S08HAGmGeAI/AAAAAAAAAcA/5XUCFHV3ct4/s1600-h/DSC_0423.JPG)[![](https://3.bp.blogspot.com/_l2YQkMP1pOU/S08HCL2Bb7I/AAAAAAAAAcI/NY0U-ngil1g/s320/DSC_0445.JPG)](https://3.bp.blogspot.com/_l2YQkMP1pOU/S08HCL2Bb7I/AAAAAAAAAcI/NY0U-ngil1g/s1600-h/DSC_0445.JPG)
+[![](https://3.bp.blogspot.com/_l2YQkMP1pOU/S08G9TgUEaI/AAAAAAAAAb4/zm4QvKocUSY/s320/DSC_0418.JPG)](https://3.bp.blogspot.com/_l2YQkMP1pOU/S08G9TgUEaI/AAAAAAAAAb4/zm4QvKocUSY/s1600-h/DSC_0418.JPG)
+[![](https://4.bp.blogspot.com/_l2YQkMP1pOU/S08HAGmGeAI/AAAAAAAAAcA/5XUCFHV3ct4/s320/DSC_0423.JPG)](https://4.bp.blogspot.com/_l2YQkMP1pOU/S08HAGmGeAI/AAAAAAAAAcA/5XUCFHV3ct4/s1600-h/DSC_0423.JPG)
+[![](https://3.bp.blogspot.com/_l2YQkMP1pOU/S08HCL2Bb7I/AAAAAAAAAcI/NY0U-ngil1g/s320/DSC_0445.JPG)](https://3.bp.blogspot.com/_l2YQkMP1pOU/S08HCL2Bb7I/AAAAAAAAAcI/NY0U-ngil1g/s1600-h/DSC_0445.JPG)
 
 We slowly made our way through admiring all these extremely intricate carvings and eventually got to the Meiji Jingu shrine in the middle of the Yoyogo Park.
 
@@ -57,7 +59,8 @@ We arrived a little before 7 and waited around for Kazue and her friend (that we
 
 After I had mentioned that we have had trouble finding places to eat, and then when we did find places, the meal sizes were really small, Kazue decided to take us to an all-you-can-eat Italian buffet, which was actually fairly well priced.
 
-[![](https://2.bp.blogspot.com/_l2YQkMP1pOU/S08IKQmPzBI/AAAAAAAAAcw/3FXYmlBnwbY/s320/DSC_0527.JPG)](https://2.bp.blogspot.com/_l2YQkMP1pOU/S08IKQmPzBI/AAAAAAAAAcw/3FXYmlBnwbY/s1600-h/DSC_0527.JPG)[![](https://4.bp.blogspot.com/_l2YQkMP1pOU/S08IokwA7zI/AAAAAAAAAdI/SrRv68tJulY/s320/DSC_0528.JPG)](https://4.bp.blogspot.com/_l2YQkMP1pOU/S08IokwA7zI/AAAAAAAAAdI/SrRv68tJulY/s1600-h/DSC_0528.JPG)
+[![](https://2.bp.blogspot.com/_l2YQkMP1pOU/S08IKQmPzBI/AAAAAAAAAcw/3FXYmlBnwbY/s320/DSC_0527.JPG)](https://2.bp.blogspot.com/_l2YQkMP1pOU/S08IKQmPzBI/AAAAAAAAAcw/3FXYmlBnwbY/s1600-h/DSC_0527.JPG)
+[![](https://4.bp.blogspot.com/_l2YQkMP1pOU/S08IokwA7zI/AAAAAAAAAdI/SrRv68tJulY/s320/DSC_0528.JPG)](https://4.bp.blogspot.com/_l2YQkMP1pOU/S08IokwA7zI/AAAAAAAAAdI/SrRv68tJulY/s1600-h/DSC_0528.JPG)
 
 We got to know each other better and met "Aya" (not 100% sure with that spelling). She was also very nice.
 

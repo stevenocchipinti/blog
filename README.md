@@ -32,3 +32,9 @@ export CLOUDINARY_URL=cloudinary://NUMBER:SECRET@stevenocchipinti
 
 cld uploader upload ./src/content/travel/2019-taiwan-vietnam/assets/3f69d771d8824ffe992991f4a6139544.jpg folder=2019-taiwan-vietnam use_filename=true unique_filename=false
 ```
+
+- This craziness!
+
+```
+:g/!\[/s/.*\/\(.*\)\..*)/\="<Img src=\"" .. system("cat ~\/Downloads\/2015-taiwan-japan\/log | jq -r 'select(.original_filename==\"".submatch(1)."\").public_id' | tr -d '\n'") .. ".jpg\" \/\>"
+```

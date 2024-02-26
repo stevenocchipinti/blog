@@ -38,7 +38,8 @@ Last time we went to Tokyo, the main observation tower was Tokyo Tower, but sinc
 
 From Asakusa we caught the Tobu SkyTree line (a private train line) to the Tokyo SkyTree. The walk to the entrance includes a few shops (with more inside) and some nice gardens, all with a sort of "tree" theme.
 
-[![](https://4.bp.blogspot.com/-fCyak1afbCc/UPTzi-RYUyI/AAAAAAAAA1E/aBuduwD_14g/s320/DSC_7678.JPG)](https://4.bp.blogspot.com/-fCyak1afbCc/UPTzi-RYUyI/AAAAAAAAA1E/aBuduwD_14g/s1600/DSC_7678.JPG)[![](https://2.bp.blogspot.com/-Tg6XKDPYJc8/UPTzxkOPIiI/AAAAAAAAA1M/UqYBRY9uCH4/s320/DSC_7686.JPG)](https://2.bp.blogspot.com/-Tg6XKDPYJc8/UPTzxkOPIiI/AAAAAAAAA1M/UqYBRY9uCH4/s1600/DSC_7686.JPG)
+[![](https://4.bp.blogspot.com/-fCyak1afbCc/UPTzi-RYUyI/AAAAAAAAA1E/aBuduwD_14g/s320/DSC_7678.JPG)](https://4.bp.blogspot.com/-fCyak1afbCc/UPTzi-RYUyI/AAAAAAAAA1E/aBuduwD_14g/s1600/DSC_7678.JPG)
+[![](https://2.bp.blogspot.com/-Tg6XKDPYJc8/UPTzxkOPIiI/AAAAAAAAA1M/UqYBRY9uCH4/s320/DSC_7686.JPG)](https://2.bp.blogspot.com/-Tg6XKDPYJc8/UPTzxkOPIiI/AAAAAAAAA1M/UqYBRY9uCH4/s1600/DSC_7686.JPG)
 
 We bought our tickets and took the elevator to the first observation deck which sits at a height of 350 meters. When the doors open you're greeted with a nice panoramic view of Tokyo and it makes you realise just how big this city is, especially in comparison to Melbourne! The lights at night looked very nice and makes it easy to see just how far the city spans, but as the windows where angled up, not only is it hard to get a photo without reflections but there are purple lights everywhere that reflect down along the window. I also didn't have a tripod (and don't think they were actually allowed) so the photos don't do the view justice.
 

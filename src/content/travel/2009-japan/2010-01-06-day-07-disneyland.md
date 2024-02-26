@@ -30,7 +30,8 @@ I really wanted to get a good shot of the Disney Castle, which I did, but then w
 
 There was another parade during the night as well, this time the floats were all lit up with very fancy lights. It was called the "Electric Parade" and I think it was alot nicer at night. I took a photo of every float, even if alot of the photos are blurry.
 
-[![](https://1.bp.blogspot.com/_l2YQkMP1pOU/S0NXCQSq1sI/AAAAAAAAASE/KUMr19DhJ-4/s400/DSC_0422.JPG)](https://1.bp.blogspot.com/_l2YQkMP1pOU/S0NXCQSq1sI/AAAAAAAAASE/KUMr19DhJ-4/s1600-h/DSC_0422.JPG)[![](https://1.bp.blogspot.com/_l2YQkMP1pOU/S0NXC1bM1nI/AAAAAAAAASM/1DxxgoX5yeU/s400/DSC_0425.JPG)](https://1.bp.blogspot.com/_l2YQkMP1pOU/S0NXC1bM1nI/AAAAAAAAASM/1DxxgoX5yeU/s1600-h/DSC_0425.JPG)
+[![](https://1.bp.blogspot.com/_l2YQkMP1pOU/S0NXCQSq1sI/AAAAAAAAASE/KUMr19DhJ-4/s400/DSC_0422.JPG)](https://1.bp.blogspot.com/_l2YQkMP1pOU/S0NXCQSq1sI/AAAAAAAAASE/KUMr19DhJ-4/s1600-h/DSC_0422.JPG)
+[![](https://1.bp.blogspot.com/_l2YQkMP1pOU/S0NXC1bM1nI/AAAAAAAAASM/1DxxgoX5yeU/s400/DSC_0425.JPG)](https://1.bp.blogspot.com/_l2YQkMP1pOU/S0NXC1bM1nI/AAAAAAAAASM/1DxxgoX5yeU/s1600-h/DSC_0425.JPG)
 
 After all this was meant to be a fireworks display, but apparently due to weather conditions, they were canceled. This didn't make sense to us, as there wasn't that much wind and it wasn't raining, but we still missed out.
 

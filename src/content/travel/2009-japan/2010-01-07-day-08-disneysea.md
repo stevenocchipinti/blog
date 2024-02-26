@@ -15,7 +15,8 @@ We all knew our way to the Disney Gateway and from there we caught a special "Di
 
 Once we got in the gates, it was as if we were in Italy. There were street performers along the shore of a huge lake and on the otherside of the lake was a massive volcano with smoke coming out and a pirate ship. Coming out of the lake were little rivers with gondola rides and Italian restaurants.
 
-[![](https://3.bp.blogspot.com/_l2YQkMP1pOU/S0ShNFigq4I/AAAAAAAAASs/lzBG-uO9ccA/s320/DSC_0019.JPG)](https://3.bp.blogspot.com/_l2YQkMP1pOU/S0ShNFigq4I/AAAAAAAAASs/lzBG-uO9ccA/s1600-h/DSC_0019.JPG)[![](https://2.bp.blogspot.com/_l2YQkMP1pOU/S0SkQ10YixI/AAAAAAAAAUk/dFAbAqb_54c/s320/DSC_0179.JPG)](https://2.bp.blogspot.com/_l2YQkMP1pOU/S0SkQ10YixI/AAAAAAAAAUk/dFAbAqb_54c/s1600-h/DSC_0179.JPG)
+[![](https://3.bp.blogspot.com/_l2YQkMP1pOU/S0ShNFigq4I/AAAAAAAAASs/lzBG-uO9ccA/s320/DSC_0019.JPG)](https://3.bp.blogspot.com/_l2YQkMP1pOU/S0ShNFigq4I/AAAAAAAAASs/lzBG-uO9ccA/s1600-h/DSC_0019.JPG)
+[![](https://2.bp.blogspot.com/_l2YQkMP1pOU/S0SkQ10YixI/AAAAAAAAAUk/dFAbAqb_54c/s320/DSC_0179.JPG)](https://2.bp.blogspot.com/_l2YQkMP1pOU/S0SkQ10YixI/AAAAAAAAAUk/dFAbAqb_54c/s1600-h/DSC_0179.JPG)
 
 Once again, Rob, Lee, Anthony and Amy all went on the rides while Sarma and I explored this huge park. There were still the standard expensive food carts and restaurants and every now and then we would see Disney characters flood the streets just like in DisneyLand. This park however had these large lakes and rivers that flowed through different "worlds" with the volcano right in the middle.
 
@@ -59,7 +60,8 @@ Sarma and I set off to explore the park and planned to meet the others in the Lo
 Mickey giving his message wasn't that great, but the parade was amazing!  
 There was an island in the middle with huge water jets and jet skis making patterns in the water to music while these big floats paraded around the Mediterranean Bay with fireworks and flame throwers. There were also these massive kites that filled the sky doing somersaults that were attached to speeding jet-skis. It was very impressive and well choreographed.
 
-[![](https://2.bp.blogspot.com/_l2YQkMP1pOU/S0Sjmeu-PXI/AAAAAAAAAT8/bMsCTIdk4UA/s320/DSC_0111.JPG)](https://2.bp.blogspot.com/_l2YQkMP1pOU/S0Sjmeu-PXI/AAAAAAAAAT8/bMsCTIdk4UA/s1600-h/DSC_0111.JPG)[![](https://2.bp.blogspot.com/_l2YQkMP1pOU/S0Sjqs9ROSI/AAAAAAAAAUE/htWxcUZzVfs/s320/DSC_0109.JPG)](https://2.bp.blogspot.com/_l2YQkMP1pOU/S0Sjqs9ROSI/AAAAAAAAAUE/htWxcUZzVfs/s1600-h/DSC_0109.JPG)
+[![](https://2.bp.blogspot.com/_l2YQkMP1pOU/S0Sjmeu-PXI/AAAAAAAAAT8/bMsCTIdk4UA/s320/DSC_0111.JPG)](https://2.bp.blogspot.com/_l2YQkMP1pOU/S0Sjmeu-PXI/AAAAAAAAAT8/bMsCTIdk4UA/s1600-h/DSC_0111.JPG)
+[![](https://2.bp.blogspot.com/_l2YQkMP1pOU/S0Sjqs9ROSI/AAAAAAAAAUE/htWxcUZzVfs/s320/DSC_0109.JPG)](https://2.bp.blogspot.com/_l2YQkMP1pOU/S0Sjqs9ROSI/AAAAAAAAAUE/htWxcUZzVfs/s1600-h/DSC_0109.JPG)
 
 As this took longer that we expected, we thought we may have missed the others at the Lost River Delta, so we headed there and started exploring the nearby worlds. These included the Amazon, a futuristic water-world looking place and Aladdin's Arabian home.
 
@@ -68,7 +70,8 @@ Then after getting food and lots of photos, amazing we saw Robert and Amy in the
 The night show was pretty good too. Apparently it was a love story between a fire spirit and a water spirit. This all took place in the Mediterranean Bay as well and the water spirit was a huge (moving) water fountain that was shaped like a lady, and the fire spirit was a massive bird looking robot on fire.  
 The whole bay had flame throwers for the fire spirit and huge glowing water jet displays for the water spirit.
 
-[![](https://3.bp.blogspot.com/_l2YQkMP1pOU/S0Sj5lGGkHI/AAAAAAAAAUM/njfZtcWuvX4/s320/DSC_0237.JPG)](https://3.bp.blogspot.com/_l2YQkMP1pOU/S0Sj5lGGkHI/AAAAAAAAAUM/njfZtcWuvX4/s1600-h/DSC_0237.JPG)[![](https://3.bp.blogspot.com/_l2YQkMP1pOU/S0Sj_siu3CI/AAAAAAAAAUU/WnMHzOznoCk/s320/DSC_0242.JPG)](https://3.bp.blogspot.com/_l2YQkMP1pOU/S0Sj_siu3CI/AAAAAAAAAUU/WnMHzOznoCk/s1600-h/DSC_0242.JPG)
+[![](https://3.bp.blogspot.com/_l2YQkMP1pOU/S0Sj5lGGkHI/AAAAAAAAAUM/njfZtcWuvX4/s320/DSC_0237.JPG)](https://3.bp.blogspot.com/_l2YQkMP1pOU/S0Sj5lGGkHI/AAAAAAAAAUM/njfZtcWuvX4/s1600-h/DSC_0237.JPG)
+[![](https://3.bp.blogspot.com/_l2YQkMP1pOU/S0Sj_siu3CI/AAAAAAAAAUU/WnMHzOznoCk/s320/DSC_0242.JPG)](https://3.bp.blogspot.com/_l2YQkMP1pOU/S0Sj_siu3CI/AAAAAAAAAUU/WnMHzOznoCk/s1600-h/DSC_0242.JPG)
 
 After the show was meant to be a "fireworks extravaganza", but it was a bit of a let down. I was expecting the fireworks over the bay like in the shows, but instead it was on top of a big building, and they weren't that impressive. It still looked ok, but our view was not the best.
 
