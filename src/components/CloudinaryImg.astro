@@ -41,7 +41,7 @@ const blur = buildUrl(id, `f_auto,c_fill,g_auto,w_${blurSize}${aspect}`)
   }
 </style>
 
-<a href={href} class="glightbox">
+<a href={href} class="glightbox" data-description={alt}>
   <img
     style={{ backgroundImage: `url(${blur})` }}
     src={src}
