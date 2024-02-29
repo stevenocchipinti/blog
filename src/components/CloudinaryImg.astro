@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+
 const buildUrl = (id: string, options: string) =>
   `https://res.cloudinary.com/stevenocchipinti/image/upload/${options}/${id}`
 
@@ -42,11 +44,10 @@ const blur = buildUrl(id, `f_auto,c_fill,g_auto,w_${blurSize}${aspect}`)
 </style>
 
 <a href={href} class="glightbox" data-description={alt}>
-  <img
+  <Image
     style={{ backgroundImage: `url(${blur})` }}
     src={src}
     alt={alt || ""}
-    height={originalAspectRatio ? undefined : thumbSize}
-    width={thumbSize}
+    inferSize
   />
 </a>
