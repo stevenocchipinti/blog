@@ -1,14 +1,26 @@
 ---
 const today = new Date()
+
+const { originalLink } = Astro.props
 ---
 
 <footer>
-  &copy; {today.getFullYear()} Steven Occhipinti - All rights reserved.
+  {originalLink && <p class="original-link"><a href={originalLink}>Original link</a></p>}
+  <p>&copy; {today.getFullYear()} Steven Occhipinti - All rights reserved.</p>
 </footer>
+
 <style>
   footer {
     padding: 2em 1em 6em 1em;
     color: var(--secondary-text);
     text-align: center;
+  }
+
+  .original-link {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+
+    a { text-decoration: none; }
+    a:hover { text-decoration: underline; }
   }
 </style>

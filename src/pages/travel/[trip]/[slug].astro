@@ -40,7 +40,7 @@ type Props = {
 }
 
 const { post, trip, prevPost, nextPost } = Astro.props
-const { title, subtitle, pubDate } = post.data
+const { title, subtitle, pubDate, source } = post.data
 const { Content } = await post.render()
 
 const coverBackground = await getImage({
@@ -59,7 +59,7 @@ const coverBackground = await getImage({
   )
 </script>
 
-<BaseLayout>
+<BaseLayout originalLink={source}>
   <Cover
     id={trip.id}
     background={coverBackground.src}

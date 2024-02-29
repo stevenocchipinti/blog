@@ -14,6 +14,8 @@ const description = Astro.props.description || SITE_DESCRIPTION
 // TODO: Use a proper placeholder image
 // TODO: Use a proper favicon
 const image = Astro.props.image || "/blog-placeholder-1.jpg"
+
+const { originalLink } = Astro.props
 ---
 
 <html lang="en">
@@ -53,6 +55,6 @@ const image = Astro.props.image || "/blog-placeholder-1.jpg"
 
   <body>
     <slot />
-    <Footer />
+    <Footer originalLink={originalLink} />
   </body>
 </html>
