@@ -6,7 +6,9 @@
   --gray-light: #e5e9f0;
 }
 
-*, ::after, ::before {
+*,
+::after,
+::before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -25,6 +27,7 @@ body {
   text-wrap: pretty;
   line-height: 1.7;
 }
+
 @media (max-width: 60ch) {
   body {
     font-size: 18px;
@@ -37,93 +40,114 @@ main {
   margin: auto;
 }
 
-.prose {
-  h1, h2, h3, h4, h5, h6 {
-    margin: 4rem 0 1rem 0;
-    color: var(--heading-text);
-    line-height: 1.2;
-  }
-  p {
-    margin: 2rem 0;
-  }
-  li {
-    margin-left: 3rem;
-  }
+/* Prose styles for mdx content */
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  margin: 4rem 0 1rem 0;
+  color: var(--heading-text);
+  line-height: 1.2;
 }
 
-h1, h2, h3, h4, h5, h6 {
+.prose p {
+  margin: 2rem 0;
+}
+
+.prose li {
+  margin-left: 3rem;
+}
+
+/* Global styles */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-wrap: balance;
 }
-h1 { font-size: 4rem }
-h2 { font-size: 3rem }
-h3 { font-size: 2rem }
-h4 { font-size: 1.5rem }
-h5 { font-size: 1.25rem; }
-h6 { font-size: 1rem; }
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 3rem;
+}
+h3 {
+  font-size: 2rem;
+}
+h4 {
+  font-size: 1.5rem;
+}
+h5 {
+  font-size: 1.25rem;
+}
+h6 {
+  font-size: 1rem;
+}
 
-strong, b {
+strong,
+b {
   font-weight: 700;
 }
-a, a:hover {
+
+a,
+a:hover {
   color: var(--accent);
 }
+
 iframe {
   margin: 2rem auto;
   max-width: 100%;
 }
+
 textarea {
   width: 100%;
   font-size: 16px;
 }
+
 input {
   font-size: 16px;
 }
+
 table {
   width: 100%;
 }
+
 img {
   max-width: 100%;
   height: auto;
   border-radius: 1rem;
 }
+
 code {
   padding: 2px 5px;
   background-color: var(--gray-light);
   border-radius: 2px;
 }
+
 pre {
   padding: 1.5rem;
   border-radius: 8px;
 }
+
 pre > code {
   all: unset;
 }
+
 blockquote {
   border-left: 4px solid var(--accent);
   padding: 0 0 0 20px;
   margin: 0px;
   font-size: 1.25rem;
 }
+
 hr {
   border: none;
   border-top: 1px solid var(--gray-light);
   margin: 1rem 0;
-}
-
-.sr-only {
-  border: 0;
-  padding: 0;
-  margin: 0;
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  /* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
-  clip: rect(1px 1px 1px 1px);
-  /* maybe deprecated but we need to support legacy browsers */
-  clip: rect(1px, 1px, 1px, 1px);
-  /* modern browsers, clip-path works inwards from each corner */
-  clip-path: inset(50%);
-  /* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
-  white-space: nowrap;
 }
