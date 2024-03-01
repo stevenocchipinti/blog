@@ -14,6 +14,7 @@ const trips = await getCollection("trips")
     <ul>
       {
         trips
+          .filter(trip => !trip.data.hidden)
           .sort(
             (a, b) => b.data.startDate.valueOf() - a.data.startDate.valueOf()
           )

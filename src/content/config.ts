@@ -8,6 +8,7 @@ const travel = defineCollection({
     subtitle: z.string().optional(),
     description: z.string().optional(),
     source: z.string().optional(),
+    hidden: z.boolean().optional(),
   }),
 })
 
@@ -21,6 +22,7 @@ const trips = defineCollection({
       source: z.string().optional(),
       cover: image().optional(),
       coverAlt: z.string().optional(),
+      hidden: z.boolean().optional(),
     }),
 })
 

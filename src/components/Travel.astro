@@ -1,12 +1,12 @@
 ---
 import { Image } from "astro:assets"
 
-import airplane from "../assets/transport-icons/airplane.png"
-import bus from "../assets/transport-icons/bus.png"
-import taxi from "../assets/transport-icons/taxi.png"
-import train from "../assets/transport-icons/tram.png"
-import tram from "../assets/transport-icons/tram.png"
-import walk from "../assets/transport-icons/walk.png"
+import airplane from "../assets/transport-icons/airplane.svg?raw"
+import bus from "../assets/transport-icons/bus.svg?raw"
+import taxi from "../assets/transport-icons/taxi.svg?raw"
+import train from "../assets/transport-icons/tram.svg?raw"
+import tram from "../assets/transport-icons/tram.svg?raw"
+import walk from "../assets/transport-icons/walk.svg?raw"
 
 export interface Props {
   items: string[]
@@ -41,6 +41,27 @@ const images = {
 },
 }
 ---
+
+<div class="transport">
+  {
+    items.map((item, i) => {
+      if (Object.keys(images).includes(item)) {
+        const { image, text } = images[item as keyof typeof images]
+        return (
+          <Fragment set:html={image} />
+          <div class="transport-mode">{text}</div>
+        ) 
+      } else {
+        const endClass = i !== 0 ? "location-marker-end" : ""
+        const startClass = i !== items.length - 1 ? "location-marker-start" : ""
+        return (
+          <div class=`location-marker ${startClass} ${endClass}`></div>
+          <div class="location">{item}</div>
+        )
+      }
+    })
+  }
+</div>
 
 <style>
   .transport {
@@ -103,24 +124,3 @@ const images = {
     gap: 1rem;
   }
 </style>
-
-<div class="transport">
-  {
-    items.map((item, i) => {
-      if (Object.keys(images).includes(item)) {
-        const { image, text } = images[item as keyof typeof images]
-        return (
-          <Image class="transport-image" src={image} alt="" />
-          <div class="transport-mode">{text}</div>
-        ) 
-      } else {
-        const endClass = i !== 0 ? "location-marker-end" : ""
-        const startClass = i !== items.length - 1 ? "location-marker-start" : ""
-        return (
-          <div class=`location-marker ${startClass} ${endClass}`></div>
-          <div class="location">{item}</div>
-        )
-      }
-    })
-  }
-</div>
