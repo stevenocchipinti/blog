@@ -1,9 +1,31 @@
 :root {
-  --accent: #0077d7;
-  --body-text: #222939;
-  --secondary-text: #60739f;
-  --heading-text: #0f1219;
-  --gray-light: #e5e9f0;
+  --page-background-color: hsl(0 0% 95%);
+  --surface-background-color: hsl(0 0% 100%);
+  --subtle-background-color: hsl(221 26% 91%);
+  --subtler-background-color: hsl(0 0% 96%);
+
+  --body-text-color-01: hsl(221 25% 20%);
+  --body-text-color-02: hsl(221 0% 40%);
+  --body-text-color-03: hsl(221 0% 60%);
+
+  --secondary-text-color: hsl(221 24% 50%);
+  --accent-color: hsl(221 38% 36%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page-background-color: hsl(197 65% 6%);
+    --surface-background-color: hsl(197 65% 10%);
+    --subtle-background-color: hsl(197 30% 20%);
+    --subtler-background-color: hsl(197 52% 13%);
+
+    --body-text-color-01: hsl(197 50% 85%);
+    --body-text-color-02: hsl(197 0% 75%);
+    --body-text-color-03: hsl(197 0% 70%);
+
+    --secondary-text-color: hsl(197 50% 70%);
+    --accent-color: hsl(221 100% 75%);
+  }
 }
 
 *,
@@ -20,9 +42,9 @@ body {
   margin: 0;
   padding: 0;
   text-align: left;
-  background: #f4f4f4;
+  background: var(--page-background-color);
   background-size: 100% 600px;
-  color: var(--body-text);
+  color: var(--body-text-color-01);
   font-size: 20px;
   text-wrap: pretty;
   line-height: 1.7;
@@ -49,7 +71,6 @@ main {
 .prose h5,
 .prose h6 {
   margin: 4rem 0 1rem 0;
-  color: var(--heading-text);
   line-height: 1.2;
 }
 
@@ -97,7 +118,7 @@ b {
 
 a,
 a:hover {
-  color: var(--accent);
+  color: var(--accent-color);
 }
 
 iframe {
@@ -126,7 +147,7 @@ img {
 
 code {
   padding: 2px 5px;
-  background-color: var(--gray-light);
+  background-color: var(--subtle-background-color);
   border-radius: 2px;
 }
 
@@ -140,7 +161,7 @@ pre > code {
 }
 
 blockquote {
-  border-left: 4px solid var(--accent);
+  border-left: 4px solid var(--accent-color);
   padding: 0 0 0 20px;
   margin: 0px;
   font-size: 1.25rem;
@@ -148,6 +169,6 @@ blockquote {
 
 hr {
   border: none;
-  border-top: 1px solid var(--gray-light);
+  border-top: 1px solid var(--subtle-background-color);
   margin: 1rem 0;
 }

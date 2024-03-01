@@ -97,7 +97,7 @@ const coverBackground = await getImage({
     max-width: 100%;
   }
   article {
-    background-color: white;
+    background-color: var(--surface-background-color);
     border-radius: 2rem;
     margin: -3.5rem auto 0 auto;
     position: relative;
@@ -121,7 +121,7 @@ const coverBackground = await getImage({
 
   .date {
     margin: 1rem 0 2rem 0;
-    color: var(--secondary-text);
+    color: var(--secondary-text-color);
   }
 
   .title {
@@ -131,6 +131,6 @@ const coverBackground = await getImage({
   }
 
   h2 {
-    color: #555;
+    color: var(--body-text-color-03);
   }
 </style>

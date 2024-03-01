@@ -112,8 +112,8 @@ const coverBackground = await getImage({
   }
 
   li {
-    background-color: white;
-    border: 1px solid #e4e4e4;
+    background-color: var(--surface-background-color);
+    border: 1px solid var(--subtle-background-color);
     border-radius: 1.5rem;
     overflow: hidden;
     font-size: 1.25rem;
@@ -126,7 +126,6 @@ const coverBackground = await getImage({
       "date name"
       "month name";
     grid-gap: 0 0.5rem;
-    background-color: white;
     padding: 0.5rem;
     text-decoration: none;
     color: currentColor;
@@ -137,7 +136,7 @@ const coverBackground = await getImage({
   .post-date {
     grid-area: date;
     font-size: 1.75rem;
-    color: #999;
+    color: var(--body-text-color-03);
     text-align: center;
     line-height: 2rem;
     transform: translateY(7px);
@@ -146,7 +145,7 @@ const coverBackground = await getImage({
   .post-month {
     grid-area: month;
     font-size: 1rem;
-    color: #999;
+    color: var(--body-text-color-03);
     text-align: center;
     text-transform: uppercase;
   }
@@ -163,15 +162,16 @@ const coverBackground = await getImage({
   .post-title {
     font-size: 1.5rem;
     line-height: 2rem;
-    color: #222;
+
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
   }
+
   .post-subtitle {
     font-size: 1rem;
     line-height: 1.5rem;
-    color: #666;
+    color: var(--body-text-color-02);
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
