@@ -48,6 +48,7 @@ body {
   font-size: 20px;
   text-wrap: pretty;
   line-height: 1.7;
+  color-scheme: dark light;
 }
 
 @media (max-width: 60ch) {
