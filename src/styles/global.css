@@ -7,6 +7,7 @@
   --body-text-color-01: hsl(221 25% 20%);
   --body-text-color-02: hsl(221 0% 40%);
   --body-text-color-03: hsl(221 0% 60%);
+  --body-text-color-04: hsl(221 0% 45%);
 
   --secondary-text-color: hsl(221 24% 50%);
   --accent-color: hsl(221 38% 36%);
@@ -22,6 +23,7 @@
     --body-text-color-01: hsl(197 50% 85%);
     --body-text-color-02: hsl(197 0% 75%);
     --body-text-color-03: hsl(197 0% 70%);
+    --body-text-color-04: hsl(197 0% 60%);
 
     --secondary-text-color: hsl(197 50% 70%);
     --accent-color: hsl(221 100% 75%);
