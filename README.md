@@ -1,20 +1,17 @@
 # Travel blog
 
-This will eventually be a home for all my travel blogs in one place, instead of
-being scattered around a bunch of different platforms today.
+This is a home for all my travel blogs in one place, instead of being scattered around a bunch of different platforms where they were oiginally created.
 
-## Status: WIP
-
-This is coming along but still needs some work
+MDX, a couple of custom components and (almost) all images hosted in Cloudinary (hopefully without exceeding the free quota).
 
 ## Notes
 
 - Upload files with existing filenames using the CLI like this:
 
 ```
-export CLOUDINARY_URL=cloudinary://NUMBER:SECRET@stevenocchipinti
+export CLOUDINARY_URL=cloudinary://NUMBER:SECRET@NAME
 
-cld uploader upload ./src/content/travel/2019-taiwan-vietnam/assets/3f69d771d8824ffe992991f4a6139544.jpg folder=2019-taiwan-vietnam use_filename=true unique_filename=false
+cld uploader upload ./src/content/travel/2019-taiwan-vietnam/assets/IMAGE.jpg folder=2019-taiwan-vietnam use_filename=true unique_filename=false
 ```
 
 Or with new names, in fish:
