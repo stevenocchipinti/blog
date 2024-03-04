@@ -11,8 +11,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 const title = Astro.props.title || SITE_TITLE
 const description = Astro.props.description || SITE_DESCRIPTION
 
-// TODO: Use a proper placeholder image
-// TODO: Use a proper favicon
 const image = Astro.props.image || "/blog-placeholder-1.jpg"
 
 const { originalLink } = Astro.props
@@ -30,7 +28,10 @@ const { originalLink } = Astro.props
     <!-- Global Metadata -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png">
+
     <meta name="generator" content={Astro.generator} />
 
     <!-- Canonical URL -->
