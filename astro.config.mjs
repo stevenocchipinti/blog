@@ -1,4 +1,4 @@
-import { defineConfig, squooshImageService } from 'astro/config';
+import { defineConfig, squooshImageService } from "astro/config"
 import mdx from "@astrojs/mdx"
 
 import sitemap from "@astrojs/sitemap"
@@ -9,5 +9,10 @@ export default defineConfig({
   integrations: [mdx(), sitemap()],
   image: {
     service: squooshImageService(),
+  },
+  markdown: {
+    shikiConfig: {
+      theme: "material-theme-ocean",
+    },
   },
 })
