@@ -1,0 +1,42 @@
+---
+title: "Search and replace in multiple files with Vim"
+date: "2011-05-30 09:11:00"
+categories: [vim, linux, regex]
+---
+
+**Update:** I have a newer version of this post available [here](https://blog.stevenocchipinti.com/2016/12/28/search-and-replace-vim-and-git/)
+
+There are plenty of ways of doing a search and replace in multiple files in linux, but this is how I do it with vim.
+
+```
+$> vim firstfile secondfile theothers*
+:all
+:windo %s/this/that/g
+```
+
+The :all will split the window to show you all the files at once.  
+This would not be the best option for lots of files, but for a small number you get to see the changes that are made.  
+The :windo will execute the given command for all the files in the current window.  
+Note this wont affect windows in other tabs.
+
+If you want to undo that change in all buffers, you can use the same method:
+
+```
+:windo undo
+```
+
+When your finished, you can save and quit with:
+
+```
+:wqall
+```
+
+There are plenty of variations, for more information checkout the help pages for these:
+
+```
+:tabdo
+
+:bufdo
+
+:argdo
+```

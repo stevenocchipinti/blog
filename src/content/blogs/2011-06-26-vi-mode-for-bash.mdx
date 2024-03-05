@@ -1,0 +1,48 @@
+---
+title: "Vi mode for Bash"
+date: "2011-06-26 23:22:00"
+categories: [vim, linux, bash]
+---
+
+So it turns out bash has a vi mode! (Can’t believe I didn’t know about this
+earlier)
+
+To enable vi mode, just type this into your shell:
+
+```
+$> set -o vi
+```
+
+That will enable it for this shell so you can try it out, and if you like it,
+add that line to your ~/.bashrc file for future.
+
+One really useful vi-mode command is pressing ’v’ from command mode. This will
+put your current command line into vim to modify.
+
+To get more help on the commands available in vi-mode, take a look at the bottom
+of this man page:
+
+```
+$> man 3 readline
+```
+
+To get more information on the various options available for bash, take a look
+at:
+
+```
+$> help set
+```
+
+I’m going to give it ago in the coming weeks to see if its actually useful or
+not.
+
+So far, I’ve found one small annoyance, I use ctrl+l to clear the terminal, but
+with the vi key bindings enabled, this only works from command mode (you have to
+hit ESC first). To fix this, I added this to my ~/.bashrc file:
+
+```
+bind -m vi-insert ‘Control-l: clear-screen’
+```
+
+These commands could also be added to `/etc/inputrc`, but I’m happy to leave these
+2 lines together in my `~/.bashrc` so its easier to remember.

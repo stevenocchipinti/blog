@@ -1,0 +1,48 @@
+---
+title: "Pencil for UI design"
+date: "2011-07-09 13:34:00"
+categories: [xul, linux, design, ui, ubuntu]
+---
+
+I’m designing software!
+
+I’m currently in the early stages of design and have developed some basic requirements, a feature list, some rough UI sketches and a very rough roadmap.
+
+I’m putting a fair bit of thought into the user-friendliness of the app and I have gone through quite a few different idea’s for the UI.
+
+During this sort-of brainstorming activity, I got really sick of trying to change my sketches on paper and asked my self _“why aren’t I doing this electronically!?”_ - so I started looking into freeware mockup software.
+
+My searches lead me to this page:  
+[](http://stackoverflow.com/questions/54606/what-free-software-can-i-use-to-create-ui-mockups)[http://stackoverflow.com/questions/54606/what-free-software-can-i-use-to-create-ui-mockups](http://stackoverflow.com/questions/54606/what-free-software-can-i-use-to-create-ui-mockups)
+
+Which lead me to **Pencil**:  
+[](http://pencil.evolus.vn/en-US/Home.aspx)[http://pencil.evolus.vn/en-US/Home.aspx](http://pencil.evolus.vn/en-US/Home.aspx)
+
+**Pencil** is an [XUL](http://en.wikipedia.org/wiki/Xul) based application for making UI mockups - and its free!
+
+For those of you that have used professional UI mocking tools, I’m not sure you’ll find this to suit your needs, but as I have never used any software like this, this was basic enough for me (and faster than using The GIMP).
+
+Pencil is advertised as a firefox plugin, but the .xpi is configured for FF3.5 (which is a little old!) so instead of hacking at this, the [downloads page](http://pencil.evolus.vn/en-US/Downloads/Application.aspx) offers a “stand-alone” option that you can run with [xulrunner](http://en.wikipedia.org/wiki/Xulrunner).
+
+Please note at the time of this blog, this app requires xulrunner 1.9.
+
+In Ubuntu, xulrunner can be easily installed with this command:
+
+```
+sudo apt-get install xulrunner-1.9.2
+```
+
+Once you’ve downloaded and extracted Pencil, and you have xulrunner 1.9 installed, you can run Pencil by giving xulrunner the `application.ini` file, for example:
+
+```
+xulrunner /opt/Pencil-1.2-0-linux-gtk/application.ini
+```
+
+The UI for Pencil is pretty intuitive and judging by the menus, there isn’t a whole bunch of advanced features (or at least from what I can tell), but I do like the simplicity and I was able to sketch up my UI design quite quickly.
+
+By deafult (on Ubuntu) it comes with a number of “Collections” of widgets to start playing with.  
+I particularly like the “Sketchy GUI” collection for mockups, so the end result does not allow the viewer to let any preconceived opinions about the look and feel affect their judgement (some people dont like the look of the Windows XP widgets and may get turned off straight away).
+
+This also means if you change the implementation (from desktop app to web app for example) the mockups may possibly stay the same without too much confusion.
+
+If you are after more complete mockup software, that StackOverflow article has some good references, and I have heard [Balsamiq](http://www.balsamiq.com/products/mockups) is quite good, but Pencil suited my needs just fine.

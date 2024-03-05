@@ -26,4 +26,11 @@ const trips = defineCollection({
     }),
 })
 
-export const collections = { travel, trips }
+const blogs = defineCollection({
+  type: "content",
+  schema: z.object({
+    title: z.string(),
+  }),
+})
+
+export const collections = { travel, trips, blogs }

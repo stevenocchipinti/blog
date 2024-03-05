@@ -1,0 +1,76 @@
+---
+title: "Rake task with an arbitrary number of arguments"
+date: 2013-10-18 14:10
+categories: programming ruby
+---
+
+Rake gives you a way of specifying arguments for a given task like this:
+
+```ruby
+desc "A task that can accept a optional 'foo' argument"
+task :thing, [:foo] do |task, args|
+  puts args[:foo]
+end
+```
+
+This will make the value of `foo` available in the `args` variable.
+When you run `rake -T`, it will show you that argument like this:
+
+```bash
+$> rake -T
+rake thing[foo]  # A task that can accept a optional 'foo' argument
+```
+
+But what if you want to allow an arbitrary number of arguments, like a list of
+usernames to report on?
+
+## A solution
+
+You could use an alternative method of passing arguments in, such as `ARGV` or
+Environment Variables, but Rake does provide a way.
+The `args` block parameter behaves like a hash, but it is actually a
+`Rake::TaskArguments` object. This object responds to an `#extras` method that
+will return an array of any extra arguments.
+
+For example:
+
+```ruby
+task :thing, [:foo] do |task, args|
+  puts args[:foo]     # First argument
+  puts args.extras    # The rest of the arguments
+end
+```
+
+This will allow you to call the task like this:
+
+```bash
+$> rake thing[foo]
+foo
+
+$> rake thing[foo,extra1,extra2]
+foo
+extra1
+extra2
+```
+
+## Caveats
+
+While you can specify many arguments on the command line, (unless they are
+quoted) the arguments can not be separated by spaces, for example:
+
+```bash
+$> rake thing[foo,extra1]    # GOOD
+foo
+extra1
+$> rake thing[foo, extra1]   # BAD
+Don't know how to build task 'thing[foo,'
+```
+
+This means you may want to include some explanation in the `desc` section.
+
+Also, `rake -T` will not show the "extra" arguments, only the named arguments:
+
+```bash
+$> rake -T
+rake thing[foo]  # A task that can accept a optional 'foo' argument
+```

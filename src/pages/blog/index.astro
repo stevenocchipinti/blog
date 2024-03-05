@@ -1,0 +1,63 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content"
+import { getImage } from "astro:assets"
+import FormattedDate from "../../components/FormattedDate.astro"
+import NextPrev from "../../components/NextPrev.astro"
+import BaseLayout from "../../layouts/BaseLayout.astro"
+
+const posts = await getCollection("blogs")
+
+type Props = {
+  post: CollectionEntry<"blogs">
+}
+
+---
+
+<BaseLayout>
+<h1>Posts</h1>
+
+<ul>
+  {posts.map(post => (
+    <li><a href={`/blog/${post.slug}`}>{post.data.title}</a></li>
+  ))}
+</ul>
+</BaseLayout>
+
+<style>
+  main {
+    width: 100%;
+    max-width: 100%;
+    padding: 5rem 1rem 1rem;
+  }
+
+  h1 {
+    text-align: center;
+    margin: 3rem;
+  }
+
+  ul {
+    display: grid;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-width: 60ch;
+    margin-inline: auto;
+  }
+
+  li {
+    background-color: var(--surface-background-color);
+    border: 1px solid var(--subtle-background-color);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    font-size: 1.25rem;
+    padding: 1rem 1.5rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: currentColor;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+</style>

@@ -1,0 +1,68 @@
+---
+title: "Changing the default boot option with GRUB2"
+date: "2012-09-19 11:33:00"
+categories: [linux, ubuntu]
+---
+
+Gone are the days of the nice `/boot/grub/menu.lst` file, but with new tools comes
+new features.
+
+## Changing the default boot item
+
+In Grub2 you can change the default boot entry by editing the
+`/etc/default/grub` file.  
+In this file you’ll see something like this near the top:
+
+```
+GRUB_DEFAULT=0
+#GRUB_HIDDEN_TIMEOUT=0
+GRUB_HIDDEN_TIMEOUT_QUIET=true
+GRUB_TIMEOUT=10
+GRUB_DISTRIBUTOR=`lsb_release -i -s 2> /dev/null || echo Debian`
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+GRUB_CMDLINE_LINUX=""
+```
+
+The first line above tells Grub to boot the first boot entry by default (menu
+item with index `0`).
+
+You can simply change this to menu entry you prefer, but whenever you make any
+change to this file you need to run the following command to make the changes
+take effect:
+
+```
+$> sudo update-grub
+```
+
+## Changing the default boot entry from the command line
+
+A new feature that Grub2 provides is to change this option dynamically from the
+command-line.
+
+In order for this to work, instead of setting the `GRUB_DEFAULT` option to the
+desired index, set it to `saved` instead, like this:
+
+```
+GRUB_DEFAULT=saved
+```
+
+And run `update-grub` to make the changes take effect:
+
+Now you can use the `grub-set-default` and the `grub-reboot` commands.
+
+Both commands take the index of the boot entry you want as a command line
+argument:
+
+```
+$> grub-set-default <entry>
+```
+
+This command will permanently set the default boot entry to the index specified
+on the command line, useful if you tend to change the default regularly.
+
+```
+$> grub-reboot <entry>
+```
+
+This command will reboot the machine and boot into the specified boot entry, but
+only that once. The following boot will use the default.

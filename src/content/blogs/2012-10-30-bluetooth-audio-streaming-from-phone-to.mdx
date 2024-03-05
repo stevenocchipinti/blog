@@ -1,0 +1,80 @@
+---
+title: "Bluetooth audio streaming from phone to Ubuntu"
+date: "2012-10-30 11:27:00"
+categories:
+---
+
+I was toying with the idea of making my own "Car Computer" and one of the
+crucial parts is a Bluetooth connection, but not for P2P file transfer (although
+that could be useful), I would want this computer to appear the same way a
+Bluetooth stereo or headset does, so once connected it will stream the audio
+from my phone through the car speakers. Turns out it's quite easy with Ubuntu :)
+
+PulseAudio is pretty awesome!  
+First step is ensure Pulse has the Bluetooth module loaded (mine did by
+default), you can check this by looking at this file `/etc/pulse/default.pa`
+
+The next step is to configure the Bluetooth daemon to enable `Source` (and/or
+`Gateway` mode).  
+To do this, I added the following line to `/etc/bluetooth/audio.conf`:
+
+```bash
+Enable=Gateway,Source,Socket
+```
+
+Then restart the Bluetooth daemon:
+
+```
+$> sudo service bluetooth restart
+```
+
+Now you'll have to pair the computer with the phone as per normal. Once the
+devices are paired, an `Audio Source` connection needs to be created. For this,
+the easiest way is via DBus, but so we don't have to write a script, an easy way
+to test this in an ad-hoc manner is to use a tool called `d-feet`, which is
+available in the Ubuntu repos.
+
+```
+$> sudo apt-get install d-feet
+```
+
+Using `d-feet`, navigate to the `system bus` and find the `org.bluez` key. In
+here, there will be another key that has a device number in it. (for me this
+was `/org/bluez/1002/hci0/dev_xx_xx_xx_xx_xx_xx`) Under this key, execute
+`org.bluez.AudioSource > methods > Connect()` without any parameters and your
+phone should now indicate that it is connected to the computer as an audio
+device.
+
+At this point, I started playing some music so I could tell when it was working, but you probably won't be able to hear anything just yet.  
+That is because Pulse does not automatically send every source to every output - that could get messy!  
+To configure pulse to send the audio from the Bluetooth connection to your speakers you need to determine the name of the audio source and the name of the "_sink_" (or output) and join them together.  
+You can do this with the PulseAudio shell like this:
+
+```
+$> pacmd
+>>> list-sources
+>>> list-sinks
+>>> load-module module-loopback source=bluez_source.xxxx sink=alsa_output.pci-xxxx
+```
+
+(Replace the `source=` and `sink=` parts with the names from the preceding two
+commands)
+
+Now all audio from your phone should be streaming through your computer. DBus
+makes it really simple to do this programmatically, so it could easily be
+(mostly) automated and even controlled by a nice touch friendly GUI to pick the
+source device, etc.
+
+I thought I would write up a quick post on this because when I finally got my
+music streaming through my laptop, it was exciting to know that I could actually
+use this to make a car computer with bluetooth functionality quite easily. I
+used `AudioSource` in this example, but the other fun option is the
+`HandsFreeGateway`, where instead of streaming stereo sound for music, it will
+also connect the microphone from the computer to the phone to be used in-call,
+etc.
+
+The resources that helped me with this where:
+
+- http://jprvita.wordpress.com/2009/
+- http://ubuntuforums.org/showthread.php?t=1464189
+- http://ubuntuforums.org/showthread.php?t=1904447

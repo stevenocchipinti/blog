@@ -1,0 +1,33 @@
+---
+title: "Script to transfer photos in linux"
+date: "2013-01-04 16:38:00"
+categories: [photography, bash]
+---
+
+Every time I go on holiday, I end up writing the same bash script! … I know, how
+nerdy is that, I code on holidays.
+
+I really should save the script and bring it with me each time, instead I just
+re-invent the wheel everytime, so I thought I would write a quick post to record
+it for next time.  
+Luckily it’s a really simple script to write, all it does is
+move the photos from my camera’s memory card to the laptop HDD, but it puts them
+in a sub-directory for that particular day, then sorts the files into a `jpg` or
+`raw` sub-directory.
+
+```
+#!/bin/bash
+
+DATE=`date +%Y%m%d`
+SDCARD="/media/steve/NIKON D90/DCIM"
+
+mkdir -p $DATE/{jpg,raw}
+find "$SDCARD" -name "*.JPG" -exec mv -v {} "$DATE/jpg" \;
+find "$SDCARD" -name "*.NEF" -exec mv -v {} "$DATE/raw" \;
+notify-send "Finished transferring photos!"
+```
+
+The script is quite dumb, it just creates a directory for the current date. On
+one of the trips, I had the script pull the date the photo was taken from the
+EXIF information, but when a series of photos goes over mid-night, it splits
+them up and I didn’t really like that.

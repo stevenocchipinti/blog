@@ -1,0 +1,44 @@
+---
+title: "Windows starting up by itself at random times"
+date: 2016-12-28 01:53
+categories: [windows, faststart]
+---
+
+## The Machine
+
+My gaming computer runs Microsoft Windows 10 and has the following hardware:
+
+**Case:** Corsair Carbide Air 240  
+**CPU:** Intel Core i5 4690  
+**Motherboard:** ASUS Z97M-PLUS  
+**RAM:** Corsair Vengence Pro 1600C9R (2x4GB)  
+**GPU:** Sapphire R9 280X Dual-X OC 3GB  
+**PSU:** Silverstone Strider Gold 750w ST75F-GS  
+**SSD:** Corsair Force LS 120GB  
+**Cooler:** Corsair H100i  
+**Fans:** Corsair AIR SP120 Twin Pack
+
+## The Problem
+
+Sometimes my computer would turn it self on at some random time. It
+wasn't at a particular repeatable time, but just every now and then.
+
+## What I Tried
+
+- Disabling the _Fast Boot_ app
+- Uninstalling the _Fast Boot_ app
+- Experimenting with various BIOS settings
+- Disabling _boot from network_ (from BIOS boot priorities)
+- Power options -> power-plan -> advanced -> PCIe -> link state power management
+- (... and a few more that I can't remember)
+
+But after all that, it would still turn on every couple of days.
+
+## The Solution
+
+Eventually I found and disabled _Windows Fast Start_:
+
+- Power options -> system (choose buttons) -> fast startup
+
+This turned out to be the culprit and now my computer and I can both stop
+working through the night!

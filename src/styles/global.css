@@ -161,6 +161,7 @@ pre {
   padding: 1.5rem;
   border-radius: 1rem;
   font-size: 1rem;
+  margin: 1rem 0;
 }
 
 pre > code {

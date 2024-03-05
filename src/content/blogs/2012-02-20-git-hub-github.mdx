@@ -1,0 +1,50 @@
+---
+title: "Git + Hub = GitHub"
+date: "2012-02-20 02:37:00"
+categories: [git, github]
+---
+
+As mentioned in a [previous
+post](https://blog.stevenocchipinti.com/2011/09/code-review-workflow-with-github.html),
+we use [GitHub-Flow](http://scottchacon.com/2011/08/31/github-flow.html) at work
+and I really like it. In essence, it involves doing work in feature branches,
+while maintaining an _always deployable_ `master` branch, then opening a pull
+request to merge a new feature / bugfix into `master`, which provides a great
+mechanism for code review / sign-off.
+
+So a fairly typical situation would be as follows:
+
+- Bug found in app
+- Create an issue on GitHub with description, assignee, etc.
+- Create a new branch off `master` for the fix
+- Code it up, test locally, etc.
+- Push branch to GitHub
+- Open pull request to merge back into `master`
+- Get review / sign-off inside of the pull request
+- Deploy
+
+When a pull request is opened on GitHub, it automatically creates an issue for
+that pull request, which would normally be helpful, but we already created an
+issue when the bug was discovered. So now we have 2 issues and 1 pull request.
+What’s nice is that if I push more commits to that branch, it will appear in the
+pull request automatically, but not the initial issue.
+
+After looking into this, it seems (AFAIK) GitHub do not provide a way of
+attaching a pull request to an existing issue via the site, but they do provide
+that functionality via their API.
+
+That is when I discovered [Hub](http://defunkt.io/hub/), which is a wrapper for
+git and while it adds more power to alot of the standard git commands, hub adds
+one command that is really useful for me:
+
+```
+git pull-request -i 49
+```
+
+This basically means _"Open a pull request to merge the current branch into
+`master` and attach the pull request to issue 49"_.
+
+This means that the initial bug description, the commits, the review
+conversation and the merge are all encapsulated in a single issue - fantastic!  
+I don’t know why this isn’t built in to the web interface (or maybe it is and I
+just don’t know how).

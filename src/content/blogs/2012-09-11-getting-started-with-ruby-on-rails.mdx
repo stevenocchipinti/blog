@@ -1,0 +1,76 @@
+---
+title: "Getting started with Ruby on Rails"
+date: "2012-09-11 13:29:00"
+categories: [ruby, rails, programming]
+---
+
+I've been using Ruby on Rails for about a year and half now and I'm really enjoying it! At the time of writing (at least in Melbourne) there is lots of demand for Rubyist's, so it's great time to get involved.  
+I have a couple of friends who are interested in making the switch from Java to Ruby so I wrote them an email with some pointers on how to get started and then realized it would make a good blog post :)
+
+## Join the community!
+
+Ruby and Rails are quite well known for their excellent communities, so the first step is to join your local group. For us in Australia, that group is _Ruby On Rails Oceania_ (aka RORO).  
+They have meetups on the _last Thursday of every month_ in Melbourne and a pretty active mailing list:
+
+- [Ruby On Rails Oceania Mailing List](https://groups.google.com/forum/?fromgroups#%21forum/rails-oceania)
+- [Ruby.org.au](http://ruby.org.au/)
+
+## Ruby and Rails resources:
+
+- [Rails Guides](http://guides.rubyonrails.org/) - I use these almost everyday!
+- [ApiDock](http://apidock.com/) - API's for Ruby, Rails and RSpec in one place
+- [Rails For Zombies](http://railsforzombies.org/) - A great beginners tutorial for rails
+- [Rails Casts](http://railscasts.com/) - Regular video podcast all about rails
+- [Ruby5](http://ruby5.envylabs.com/) - Regular 5 minute audio podcast on the latest news
+- ... a plethora of good books, such as "The RSpec Book", "Design Patterns in Ruby", etc. (alot of which I still need to read)
+
+## Getting started:
+
+To get started you'll need to set up your development environment, here's what I use:
+
+- Vim... of course... although there are lots of alternatives, the most popular ones would probably be:
+  - RubyMine (IDE) - used alot at work (commercial software)
+  - Sublime Text 2 (Text editor)
+  - TextMate (Text editor)
+- RVM (Ruby Version Manager)
+  - Get from here: [https://rvm.io](https://rvm.io/)
+  - Follow the instructions to configure your shell to use RVM
+- Use RVM to install the latest ruby
+  - `rvm install 1.9.3`
+  - A newer alternative to RVM is RBenv
+- Once you have ruby installed, you will have the 'gem' command available
+  - Gems are roughly equivalent to jars in the Java world
+  - Use gem to install the latest rails
+    - `gem install rails`
+- Once you have rails installed, you will have the 'rails' command available
+  - Use the rails command to start a new project
+    - `rails new todolist`
+    - `rails server`
+    - browse to [http://localhost:3000](http://localhost:3000/)
+- Now you can read the readme, the rails guides and make a simple app with scaffolding!
+
+## Things to keep in mind for RoR dev:
+
+- Rails is just a framework written in Ruby, so it will help to learn some straight Ruby too.
+  - [ruby-lang.org](http://ruby-lang.org/) is a good place to start
+- Ruby on Rails strongly supports DRY principles
+  - Don't reinvent the wheel, theres problably a gem that already does what you want
+  - To find gems, good places to look are:
+    - [Ruby-Toolbox.com](http://ruby-toolbox.com/)
+    - [RailsCasts.com](http://railscasts.com/)
+    - [RubyGems.org](http://rubygems.org/)
+    - [GitHub.com](http://github.com/)
+- The majority of Ruby projects are:
+  - Developed using TDD/BDD, so you'll need to learn the testing frameworks:
+    - Test::Unit (default with rails)
+    - RSpec (a popular replacement for Test::Unit)
+    - Cucumber (BDD)
+  - Developed on MacOSX - for new comers (like myself) some essentials are:
+    - brew - a mac package manager (like apt or yum)
+    - iterm2 - really good terminal emulator
+  - Deployed on Linux
+    - Basic Linux foo is really useful
+  - Version controlled with git
+    - If you need to learn git, I highly recommend [Pro git](http://git-scm.com/book)
+
+That's a quick overview of what I can recommend to get going based on my own experience, things will obviously change over time, and others may have other opinions, if so feel free to leave comments below.

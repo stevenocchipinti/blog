@@ -1,0 +1,20 @@
+---
+title: "Bash auto-complete"
+date: "2011-06-20 05:40:00"
+categories: [linux, bash, ubuntu]
+---
+
+There are a ton of extended auto-completions that come with Ubuntu, but they are disabled by default.
+
+Have a look in the `/etc/bash_completion.d/` directory for the programs that have specific auto-completes (such as `apt-get`, `git`, `apache2ctl`, etc.).
+
+To get all the extra auto-completion-goodness, all you have to do is source `/etc/bash_completion` in your profile.
+
+I added this is my `.bashrc`, but there may already be a commented out block for this in the stock .bashrc file for ubuntu:
+
+```
+# Enable bash completion in interactive shells
+if \[ -f /etc/bash_completion \] && ! shopt -oq posix; then
+    . /etc/bash_completion
+fi
+```

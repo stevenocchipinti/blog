@@ -1,0 +1,105 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content"
+import { getImage } from "astro:assets"
+import NextPrev from "../../components/NextPrev.astro"
+
+import placeholder from "../../assets/placeholder-trip.jpg"
+import Cover from "../../components/Cover.astro"
+import BaseLayout from "../../layouts/BaseLayout.astro"
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blogs")
+
+  return posts.map(post => {
+    const slug = post.slug
+
+    return {
+      params: { slug },
+      props: { post }
+    }
+  })
+}
+
+type Props = {
+  post: CollectionEntry<"blogs">
+}
+
+const { post } = Astro.props
+const { title, pubDate } = post.data
+const { Content } = await post.render()
+---
+
+<script>
+  import GLightbox from "glightbox"
+  import "glightbox/dist/css/glightbox.min.css"
+
+  document.addEventListener("astro:page-load", () =>
+    GLightbox({
+      dragToleranceY: 10, // This doesn't seem to work
+    })
+  )
+</script>
+
+<BaseLayout>
+
+
+  <main>
+    <article transition:animate="none" transition:name="article">
+      <div class="article-header">
+        <div class="title">
+          <h1>{title}</h1>
+        </div>
+        <hr />
+      </div>
+
+      <div class="prose">
+        <Content />
+      </div>
+
+    </article>
+  </main>
+</BaseLayout>
+
+<style>
+  main {
+    width: 100%;
+    max-width: 100%;
+  }
+  article {
+    background-color: var(--surface-background-color);
+    border-radius: 2rem;
+    margin: -3.5rem auto 0 auto;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 70ch;
+    padding: 1em;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  }
+
+  .article-header {
+    margin-bottom: 2rem;
+    padding-top: 1.5rem;
+    text-align: center;
+    line-height: 1;
+  }
+
+  .prose {
+    margin-bottom: 1rem;
+  }
+
+  .date {
+    margin: 1rem 0 2rem 0;
+    color: var(--secondary-text-color);
+  }
+
+  .title {
+    display: grid;
+    gap: 1.5rem;
+    margin: 3rem 0 4rem 0;
+  }
+
+  h2 {
+    color: var(--body-text-color-03);
+  }
+</style>

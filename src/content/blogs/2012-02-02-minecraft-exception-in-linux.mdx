@@ -1,0 +1,40 @@
+---
+title: "Minecraft exception in linux"
+date: "2012-02-02 12:25:00"
+categories: [java, linux, minecraft, ubuntu]
+---
+
+I finally decided to install Minecraft on my new shiny [Toshiba Portege z830](https://blog.stevenocchipinti.com/2011/12/toshiba-portege-z830.html).  
+Ubuntu ships with an open-source version of Java, which did run Minecraft, but the graphics were terrible, even on the lowest settings. There were artefacts everywhere!
+
+So as recommended, I switched to the official JRE. Now the login screen works, but that's about it. After logging in, I just got a black screen and the following exception in the console:
+
+```
+Exception in thread "Minecraft main thread"
+java.lang.ExceptionInInitializerError at
+net.minecraft.client.Minecraft.a(SourceFile:180) at
+net.minecraft.client.Minecraft.run(SourceFile:648) at
+java.lang.Thread.run(Thread.java:662)<div class="de2">Caused by: java.lang.ArrayIndexOutOfBoundsException: 0 at
+org.lwjgl.opengl.XRandR$Screen.&lt;init&gt;(XRandR.java:234) at
+org.lwjgl.opengl.XRandR$Screen.&lt;init&gt;(XRandR.java:196) at
+org.lwjgl.opengl.XRandR.populate(XRandR.java:87) at
+org.lwjgl.opengl.XRandR.access$100(XRandR.java:52)at
+org.lwjgl.opengl.XRandR$1.run(XRandR.java:110) at
+java.security.AccessController.doPrivileged(Native Method) at
+org.lwjgl.opengl.XRandR.getConfiguration(XRandR.java:108) at
+org.lwjgl.opengl.LinuxDisplay.init(LinuxDisplay.java:618) at
+org.lwjgl.opengl.Display.&lt;clinit&gt;(Display.java:135)
+... 3 more
+```
+
+After discussing the problem in IRC, the solution was quite simple. It turns out `lwjgl` is a "_Light Weight Java Game Library_" and the version I had wasn't behaving.  
+On the advice of the helpful IRC'ers, I downloaded the latest `lwjgl` from [here](http://sourceforge.net/projects/java-game-lib/files/Official%20Releases/) (which at time of writing is 2.8.3) to get it all to work nicely.
+
+To install it, I downloaded the zip file, extracted it to a temporary directory, then copied across these files:
+
+```
+cp lwjgl-2.8.3/jar/lwjgl.jar ~/.minecraft/bin
+cp lwjgl-2.8.3/native/linux/* ~/.minecraft/bin/natives
+```
+
+Done! Now it works nicely.

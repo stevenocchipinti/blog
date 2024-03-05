@@ -1,0 +1,77 @@
+---
+title: "Configuring a HDMI-CEC remote in Kodi"
+date: 2015-04-04 21:39
+categories: [xbmc, kodi, raspberrypi]
+---
+
+I've been using Raspbmc for a while now, but I only just saw that it has been
+superseded by [OSMC](https://osmc.tv/) (and XBMC is now called [Kodi](http://kodi.tv/),
+so with the long weekend I thought I'd upgrade.
+
+The upgrade process is really simple. I backed up my existing installtion of
+Raspbmc, downloaded the offical [OSMC installer](https://osmc.tv/download/)
+from their site, installed it over the top and booted it up.
+
+From here, there are only a few things to do. I entered my [MPG2 and WVC1 codecs](https://osmc.tv/help/wiki/pi-buycodec),
+setup my video sources and kicked off the scrapers and installed a few addons.
+The only other thing is setting up my TV remote.
+(I did this last time but forgot how, so this time I thought I'd blog it!)
+
+Out of the box, my Samsung _"Smart Touch"_ Remote ([this one](http://reviews.lcdtvbuyingguide.com/samsung-lcd-tv/pictures/samsung-f6400-remote.jpg)
+if you're wondering) mostly just works, the only problem is the back button
+opens the context menu instead of going back!
+
+To fix this, the first step is to find out what each button on the remote maps
+to in Kodi. Thanks to this great [forum post](http://forum.kodi.tv/showthread.php?tid=139145&pid=1285390#pid1285390)
+by a user called "Knapster" this is really easy.
+
+Just SSH to the pi, create a new file `~/.kodi/userdata/keymaps/remote.xml` and
+paste [this contents](https://gist.github.com/stevenocchipinti/42f2eca2a9f04ed9e52f)
+in it. Now reboot Kodi and everytime you press a button, you'll get a
+notification on the screen of what command it is sending.
+
+A quick way of doing that from an SSH session is like this:  
+(The default username and password are both `osmc`)
+
+```
+ssh osmc@<kodi-ip-address>
+curl https://gist.githubusercontent.com/stevenocchipinti/42f2eca2a9f04ed9e52f/raw/remote.xml > ~/.kodi/userdata/keymaps/remote.xml
+sudo reboot
+```
+
+In my case, everything seemed to make sense except the back button, which was
+actually sending `title` instead of `back`. As I don't have a _title_ button,
+I'm going to reassign that to be a back button instead.
+
+First, lets replace our `remote.xml` with the default configuration, you can get
+these mappings from the installed Kodi files:
+
+```
+cp /usr/share/kodi/system/keymaps/remote.xml ~/.kodi/userdata/keymaps/remote.xml
+```
+
+This file has what every command does in every context and makes it easy to
+modify. Here is a diff of the changes I made for my remote:
+
+```
+58c58
+<       <title>ContextMenu</title>
+---
+>       <title>Back</title>
+74c74
+<       <guide>ActivateWindow(TVGuide)</guide>
+---
+>       <guide>ActivateWindow(Home)</guide>
+79c79
+<       <red>ActivateWindow(TVChannels)</red>
+---
+>       <red>ContextMenu</red>
+```
+
+I've made the _"title"_ button send the `back` command and because I don't have
+a TV tuner connected, I've also re-assigned the _"TV Guide"_ button to go to the
+home screen and the _"Red"_ button to be the context menu button.  
+Interestingly, the channel up and down buttons on my remote we already assigned
+to page up and page down, which suits me great while I don't have a TV Tuner.
+
+After rebooting, I now have a functional remote control!

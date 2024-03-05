@@ -1,0 +1,97 @@
+---
+title: "Installing Minecraft in Linux"
+date: 2013-11-10 12:26
+categories: minecraft linux java ubuntu game
+---
+
+import Img from "../../components/CloudinaryImg.astro"
+
+## 1. Download Oracle Java
+
+First you will need the official Oracle version of Java (the open source
+alternatives will probably not work as well for Minecraft). I think you can
+just download the runtime, but I personally opt for installing the complete
+Java Development Kit (JDK).
+
+You can download the [official JDK here](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html).  
+If you run a RedHat based distro, there is a `.rpm`, otherwise just get the
+`.tgz` for your system.
+
+## 2. Installing Oracle Java
+
+At the time of writing, the version of java is 7u45.  
+I move this `.tar.gz` file from my downloads folder to `/opt` and unzip it
+there, like this:
+
+```
+mv ~/Downloads/jdk-7u45-linux-x64.tar.gz /opt
+cd /opt
+tar xzvf jdk-7u45-linux-x64.tar.gz
+```
+
+This will create a new directory called `jdk1.7.0_45`.  
+As there is a good chance we will be updating java in the future, I create a
+symlink that we can easily change to the new versions in the future like this:
+
+```
+ln -s jdk1.7.0_45 jdk
+```
+
+Now when ever you want to find java, it will be in `/opt/jdk`.
+
+All we have to do now is make the executables available on the `PATH`.  
+Edit your `.bashrc` (or `.profile`, etc.) and add this line:
+
+```
+export PATH=$PATH:/opt/jdk/bin/
+```
+
+## 3. Install Minecraft
+
+Get Minecraft from the [official Minecraft download page](https://minecraft.net/download).
+Under the "Minecraft for Linux / Other" there is a link to download the
+official Minecraft `.jar` file. I also put this in `/opt`:
+
+```
+mkdir /opt/minecraft
+mv ~/Downloads/Minecraft.jar /opt/minecraft
+```
+
+At this point we can start Minecraft with this:
+
+```
+java -jar Minecraft.jar
+```
+
+## 4. Setting up an Application Launcher for Gnome
+
+I use Gnome Shell and if I'm not in a terminal, I normally use Gnome's
+_Activities Overview_ to launch apps by pressing the 'super' key, typing
+"Minecraft" and pressing 'enter'.
+
+We want Minecraft to be installed just like any other app, so we will need to
+add a launcher for Minecraft, but before we do that, we need an icon for it.
+I just found one online, so lets download it to our `/opt/minecraft` directory.
+
+```
+cd /opt/minecraft
+wget http://images.wikia.com/yogbox/images/d/dd/Minecraft_Block.svg
+```
+
+Then to make an application launcher, you can use this:
+
+```
+gnome-desktop-item-edit --create-new ~/.local/share/applications
+```
+
+<Img originalAspectRatio src="blog/v2zcs03jldb0milxeom1.jpg" />
+
+You can assign it the logo we downloaded earlier and use this for the command:
+
+```
+/opt/jdk/bin/java -jar /opt/minecraft/Minecraft.jar
+```
+
+## 5. Have fun!
+
+Now you can launch Minecraft just like the other apps in Gnome Shell!

@@ -1,0 +1,53 @@
+---
+title: "Google Calendar - Repeating an event on the last <weekday> of the month"
+date: "2012-05-23 12:19:00"
+categories: [calendar, Google]
+---
+
+I regularly attend [RORO - The Ruby on Rails Oceania](http://ruby.org.au/)
+meetups. They currently occur on the last Thursday of every month and so
+naturally I put the event in my calendar. I added the usual details and then
+selected the "repeat" option and set it to repeat monthly by the day of the
+week.
+
+This worked well for a while, until one day when I rocked up and it wasn't on.
+A later realised that in that particular month there were 5 Thursdays instead of
+4 and my calendar event was actually set to repeat _"Monthly on the fourth
+Thursday"_. It turns out that the interface Google provide to set recurring
+events does not allow you to change this.. or at least not intuitively.
+
+After some searching around I found a few solutions:
+
+## Use English!
+
+The simplest way is to just write out the event in plain English. For example:
+
+> RORO at Inspire9, Richmond on the last Thursday of every month
+
+This will create an event called "RORO at Inspire9, Richmond", with the location
+field set to "Inspire9, Richmond" and the repetition set to _"Monthly on the
+last Thursday"._
+
+## Start repeating from an appropriate month
+
+Another fairly easy way is to find a month that actually has 5 Thursdays and
+make the event start from there. This will set the recurrence to repeat
+_"Monthly on the last Thursday"_, instead of _"Monthly on the fourth Thursday"_.
+
+## Hack the ICS
+
+This solution is probably the hardest, but because the
+[iCalendar](http://en.wikipedia.org/wiki/ICalendar) format does support this,
+you could write the code manually. To do this you would have to export the
+calendar to a file, hack it and import it back. While it's nice to know this,
+seems like more effort that just typing what you want in English!
+
+## A better solution
+
+.. would be if Google provided an additional option in the little "repeat" popup
+to allow this!
+
+Or maybe the RORO organiser should maintain there own calendar feed that we
+could all subscribe to. This would also mean that if a particular meetup was
+moved or cancelled, all the subscribers calendars would automatically be
+updated!

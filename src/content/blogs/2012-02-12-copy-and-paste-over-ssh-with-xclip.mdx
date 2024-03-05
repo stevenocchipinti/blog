@@ -1,0 +1,36 @@
+---
+title: "Copy and Paste over SSH with Xclip"
+date: "2012-02-12 12:59:00"
+categories: [linux, xclip]
+---
+
+Have you ever SSH’ed to a server and found you need to copy some data back where
+a simple selection copy and paste just doesn’t seem practical? When this
+happens to me, I normally dump that data to a temp file, start up another
+terminal and SCP the file back before going back to delete the temp file, but I
+recently found a better way.
+
+I discovered `xclip`. Using the `-X` option of SSH to enable X11 forwarding,
+`xclip` allows you to interact with the _“X selections”_ clipboard.
+
+To use it, log on to a remote server via ssh `-X` and ensure `xclip` is
+installed, then simply pipe data to `xclip` and you will be able to paste it
+anywhere locally with the usual X selection paste (mouse wheel click,
+shift-insert, etc.).
+
+Here is an example:
+
+```
+ssh -X steve@example.com
+sudo apt-get install xclip
+ps -ef | xclip
+```
+
+Now anywhere on your local linux machine, you can press `<shift>` `<insert>` (or
+mouse wheel click) to paste the content. If you need to pipe this data to
+another process locally, you can retrieve the clipboard from the command like
+with `xclip` like this:
+
+```
+xclip -o | less
+```

@@ -1,0 +1,64 @@
+---
+title: "Code review workflow with GitHub"
+date: "2011-09-18 10:06:00"
+categories: [git, github, programming]
+---
+
+The more I use Git, the more I love it and less I prefer my once trusty SVN.
+
+A while back I read the book _"[Pro
+Git](https://www.amazon.com/gp/product/1430218339?ie=UTF8&tag=prgi-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=1430218339)"_
+by [Scott Chacon](https://twitter.com/#%21/chacon). The book provides a really
+good explanation of how Git works and how to use it effectively. I then found
+that this book is [available online](http://progit.org/) for free and it is now
+a commonly visited bookmark for me.
+
+Recently my boss sent me a link to a [blog
+post](http://scottchacon.com/2011/08/31/github-flow.html) by Scott Chacon that
+explains the Git workflow that is used at GitHub on a daily basis as we are
+going to give it a go for our own projects.
+
+In the post, Scott contrasts this to the commonly known
+"[Git-Flow](http://nvie.com/posts/a-successful-git-branching-model/)" and
+describes how they are both good, but Git-Flow is alot more involved, where the
+aptly known "GitHub-Flow" is a lot simpler and therefore easier to follow.
+
+For full details, I highly recommend reading the post but basically it involves
+keeping a master branch that is always stable (and deployable) and using topic
+branches for development. Once a topic branch is tested locally you open a pull
+request to have others review it and merge it in to master.
+
+Using pull requests within a single repository for code reviews are really
+useful! It allows a discussion thread to take place, commenting on individual
+lines of code and keeps a history of the rational for any changes.
+
+A good aspect of this approach is that these topic branches can be pushed to
+GitHub constantly as it will not affect anyone else’s work, and allows the team
+to have visibility of who is working on what by simply looking at the branch
+list page. This of course means that your branches should be descriptively
+named.
+
+We have been using this workflow for a little while now and have felt compelled
+to make a small modification. We have a staging environment which closely
+matches the production environment and is externally available to show clients
+new features, etc. To cater for this we have introduced an additional long-term
+branch called `staging`.
+
+This doesn’t affect our existing workflow for the majority of cases, but every
+now and then we will merge `master` into `staging`, then the topic branch into
+staging to `test`/`preview`/etc. (without the need for pull requests/code
+review). Once the change is tested/previewed in staging and proven to be good, a
+pull request is opened for the topic branch to be merged into `master` (as per
+usual).
+
+One thing to note here is that it’s the topic branch to be merged and not the
+`staging` branch. Although in most cases this wont matter, if multiple merges
+from `staging` into `master` occur it can become confusing. Also the merge
+commit description will contain `repo/staging` instead of something more
+descriptive, like `repo/bundler-upgrade`.
+
+I have really enjoyed using this workflow and it seems to be working quite well
+so far. In the process of implementing this you really get to see how useful
+GitHub can be with using pull requests for code reviews and the branch list and
+network graph features for visualising not only your own progress, but the
+entire project too.

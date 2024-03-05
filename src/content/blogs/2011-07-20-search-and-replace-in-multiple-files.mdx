@@ -1,0 +1,74 @@
+---
+title: "Search and replace in multiple files with Sed"
+date: "2011-07-20 04:25:00"
+categories: [linux, bash, regex, sed]
+---
+
+Back on the 30th of May, I put up a blog post on how to do a [search and replace
+in multiple files with
+Vim](https://blog.stevenocchipinti.com/2011/05/search-and-replace-in-multiple-files.html).
+I think this is a great way of doing substitutions in multiple files because you
+get to see a preview of what it looks like before you actually writing it to
+disk.
+
+This is great for a small number of files, but to do a large directory of files,
+you don’t really gain any advantages as you’re probably not going to open every
+file in a vim buffer and review each one separately.
+
+This is where sed and find come in handy!
+
+This command will replace every occurrence of the word "foo" with the word "bar"
+in all html files recursively from the current directory:
+
+```
+find . -name "*.html" -exec sed -i "s/foo/bar/g" '{}' \;
+```
+
+## The explanation:
+
+This might look a little confusing, but it essentially 2 parts:
+
+The first part will list all the .html files recursively and for each one,
+execute the command specified by the `-exec` option:
+
+```
+find . -name "*.html" -exec ...
+```
+
+The second part is the command to execute for each found file, which in this
+case is sed:
+
+```
+sed -i "s/foo/bar/g" <TheFile>
+```
+
+The `{}` represents the current file and the `\;` represents the end of the
+command to execute as part of the `-exec` option.
+
+## Doing more:
+
+As you can see, the \-name option to the find command takes a [glob
+pattern](https://en.wikipedia.org/wiki/Glob_%28programming%29). If you wanted
+to be more specific about which files should have the substituion, you could use
+a regular expression instead, like this:
+
+```
+find . -regex ".*[.]html\|.*[.]js" -exec sed -i "s/foo/bar/g" '{}' \;
+```
+
+This regex will match all files that end with `.html` or `.js`.
+
+If you wanted to preview your changes before they are actually written to disk,
+there are a few ways of accomplishing this, but the simpliest is probably to
+modify the command as follows:
+
+```
+find . -name "*.html" -exec sed "s/foo/bar/g" '{}' \; | less
+```
+
+Removing the `-i` will mean that instead of writing the changes "in place", the
+changed output will be written to STDOUT instead of the files. Then to capture
+this (potentially large) output, we pipe it to less. From within less you will
+be able to do searches (with the ”/” key) and scroll through the output to do a
+quick sanity check. Once your happy, you can remove the pipe and add the `-i`
+option again to make it permanent!

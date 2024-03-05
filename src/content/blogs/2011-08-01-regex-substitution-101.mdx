@@ -1,0 +1,116 @@
+---
+title: "Regex substitution 101"
+date: "2011-08-01 07:42:00"
+categories: [vim, linux, bash, regex, sed]
+---
+
+A while ago I was helping a friend with a regex.  
+He wanted to extract parts of the `/etc/passwd` file, so I explained my basic thought process to him so he could understand how I came up with the pattern.  
+I thought I would (paraphrase and) blog this explanation, as it might just help others out too.
+
+**The Explanation:**  
+First you have to write a regex that matches as much of the string (in this case the lines in the passwd file) as you need (or all of it to be safe):
+
+```
+[^:\]      # will match a character that is not a colon
+```
+
+You can repeat this pattern with the `*` operator to match everything up to the first colon (because that wont match the pattern):
+
+```
+[^:\]\*     # will match everything up to the colon
+```
+
+That pattern obviously doesnt have the bit you want, so you need to keep matching…  
+The next character you need to match is the colon itself:
+
+```
+[^:\]\*:    # will match everything up to the colon, and then one colon character too
+```
+
+This isn’t enough either, but now you just need to repeat your self for as many sections as you want.  
+There is 6 colons and 7 fields in your example of the passwd file, so repeat the pattern to suit:
+
+```
+[^:\]\*:\[^:\]\*:\[^:\]\*:\[^:\]\*:\[^:\]\*:\[^:\]\*:\[^:\]\*
+```
+
+Now this pattern will match the entire string by going through section-by-section.  
+Of course `\*` would also match the whole string, but now we have parts of the pattern that represent parts of the string.  
+Using these parts, we can wrap the bit you want to use with backreferences (brackets) so we can use them later.
+
+Lets say you only wanted the 5th field (the username).  
+First, wrap the 5th field in a backreference.  
+Note you have to escape the brackets with a backslash otherwise it will look for an actual bracket character:
+
+```
+[^:\]\*:\[^:\]\*:\[^:\]\*:\[^:\]\*:\\(\[^:\]\*\\):\[^:\]\*:\[^:\]\*
+```
+
+Now you can use it in a substitution, which will replace everything that is matched with what you tell it to:
+
+```
+:%s/\[^:\]\*:\[^:\]\*:\[^:\]\*:\[^:\]\*:\\(\[^:\]\*\\):\[^:\]\*:\[^:\]\*/hello
+```
+
+This will replace what it has matched (which is everything) with the word `hello`  
+Now you can add that part that you captured earlier with the backreference
+
+```
+:%s/\[^:\]\*:\[^:\]\*:\[^:\]\*:\[^:\]\*:\\(\[^:\]\*\\):\[^:\]\*:\[^:\]\*/hello \\1
+```
+
+The `\1` means the first backreference, if you had 2 sets of backets, you could also use `\2`  
+Running this substition will result in this line:
+
+```
+apache:x:48:48:Apache:/var/www:/sbin/nologin
+```
+
+becoming this line:
+
+```
+hello Apache
+```
+
+To extend this further, you could add stuff like this:
+
+```
+:%s/\[^:\]\*:\[^:\]\*:\[^:\]\*:\[^:\]\*:\\(\[^:\]\*\\):\\(\[^:\]\*\\):\[^:\]\*/hello \\1, I know you home is \\2 because I know regex
+```
+
+Which would result in this line:
+
+```
+hello Apache, I know you home is /var/www because I know regex
+```
+
+Obviously you wouldnt want to make these substitutions in your passwd file, but you could use this regex substitution in a pipeline with sed, like this:
+
+```
+> cat /etc/passwd | sed “s/\[^:\]\*:\[^:\]\*:\[^:\]\*:\[^:\]\*:\\(\[^:\]\*\\):\\(\[^:\]\*\\):\[^:\]\*/hello \\1, I know you home is \\2 because I know regex/” > ~/regexed.txt
+```
+
+Note that unlike vim, sed requires the substitution to be terminated with a trailing separator, so valid syntaxes are:
+
+sed
+
+```
+sed ‘s/PATTERN/REPLACEMENT/’
+```
+
+vim
+
+```
+:s/PATTERN/REPLACEMENT/
+:s/PATTERN/REPLACEMENT
+```
+
+The last separator is useful for putting additional options, such as g for global replaces (multiple times on one line), etc.
+
+Another helpful note is that the separator does not have to be `/` it could be (almost) any character.  
+For example, `/` might be cumbersome if your dealing with paths that have a lot of `/`'s, so you could use # instead:
+
+```
+:%s#this#that#g
+```

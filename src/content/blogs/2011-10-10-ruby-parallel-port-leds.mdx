@@ -1,0 +1,88 @@
+---
+title: "Ruby + parallel port + LEDs"
+date: "2011-10-10 03:49:00"
+categories: [tank, ruby, linux, programming, hardware, parallel port]
+---
+
+import Img from "../../components/CloudinaryImg.astro"
+
+In the initial R&D stages for our [Tank
+Project](http://tank.stevenocchipinti.com/) we have to work out the most
+suitable way to interface from software to hardware - which I have never done
+before!
+
+## The parallel port
+
+One of those options is to use the parallel port, which allows us 8 data pins
+that we can use for controlling motors, etc. The layout of a parallel port is
+quite easy, there are 8 "D" pins for data with 8 matching "Ground" pins (shown
+in green below).
+
+<Img originalAspectRatio src="blog/uvgti3lzvasyba20vy8h.jpg" />
+_Original image from [linuxgazette.net](http://linuxgazette.net/118/misc/chong/parallel_port_diagram.jpg)_
+
+## The test rig
+
+As the output from the parallel port is about 5 volts, I though LED’s were a
+suitable was of testing this out, so I went searching through our garage to find
+a parallel cable from an old printer and a bunch of LED’s. I found a bunch of
+tristate LED’s - tristates have 3 legs instead of 2 and provide 2 different
+colors depending on which legs have power to them. For example, if the circuit
+connects the left leg and the middle leg, it produces green light, whereas the
+right leg and middle leg produce red light. Soldering 4 of these LEDs to a
+board meant I could join all the middle legs together which would be what I
+connect the ground wire from the parallel port to and the other 8 legs to the 8
+data wires.
+
+## The software
+
+In order to control when each of the data pins has power to it or not, you
+simply have to write 8 bits (a byte) to the parallel port where each bit
+corresponds to a data pin. In linux this is quite simple as you can write to
+/dev/port just like any other file.  
+To test this out, I wrote a little Ruby script to play a fancy little sequence a
+few times. The code is quite simple considering some [other
+examples](http://yueda.issp.u-tokyo.ac.jp/weda/ruby/parport.rb) on the net:
+
+```rb
+p = open('/dev/port', 'w')
+p.sync = true
+
+sequence = [
+  0b00000000,
+  0b00000010, 0b00001010, 0b00101010,
+  0b10101010,
+  0b00101010, 0b00001010, 0b00000010,
+  0b00000000,
+  0b00000001, 0b00000101, 0b00010101,
+  0b01010101,
+  0b00010101, 0b00000101, 0b00000001,
+  0b00000000,
+]
+
+3.times do
+  sequence.each do |s|
+    p.seek(0x378, IO::SEEK_SET)
+    p.putc(s)
+    sleep 0.1
+  end
+end
+```
+
+## The fun part!
+
+So my computer doesn’t have a parallel port, but we have some older machines
+that do. So I found an old pc and booted off a linux live distro that has ruby,
+plugged in the cable with the LEDs on it, and ran my script, and this is what
+happens:
+
+_Video deleted_
+
+## The conclusion
+
+This is the first time I have ever written a program that uses hardware, albeit
+really basic hardware, but this has a lot of potential. Instead of turning on
+lights, this small current could trigger relays to do more exciting things, or
+in our case power transistors using
+[PWM](https://en.wikipedia.org/wiki/Pulse-width_modulation) to control motor
+speed for our tank - and its so simple!

@@ -1,0 +1,30 @@
+---
+title: "ssh-copy-id with an alternative port"
+date: "2011-07-14 16:05:00"
+categories: [linux, bash, ssh]
+---
+
+If you use ssh on a regular basis, you probably already know about setting up
+ssk-keys. If you dont know about ssh-keys, you should! - its worth reading up
+on.
+
+`ssh-copy-id` is a helper script that will copy your public key across to the
+remote machine and append it to the authorized_keys file.
+
+This is all well and good if the server is on port 22, but for non-standard
+ports, this script does not support a \-p option.
+
+Instead of copying across the key manually, I googled for workarounds and came
+across [this
+post](https://mikegerwitz.com/2009/10/07/ssh-copy-id-and-sshd-port/) where the
+author explains that the arguments to `ssh-copy-id` are simply passed on to the
+ssh command.
+
+This means by using quotes, everything inside of them will be passed straight
+through and that allows a command like this to achieve the desired result:
+
+```
+ssh-copy-id -i ~/.ssh/id_rsa.pub '-p xxxx username@host'
+```
+
+Kudos to Mike Gerwitz for the tip.

@@ -1,0 +1,51 @@
+---
+title: "Spam defence"
+date: "2012-03-07 11:14:00"
+categories: [email]
+---
+
+For quite a long time I used to use Yahoo! Mail. Even though I was lucky enough
+to get an invite for Gmail in its early stages, Yahoo! Mail had (IMO) one killer
+feature: _Address Guard_
+
+The idea behind _Address Guard_ was simple, you make your primary email address,
+say `john.smith@yahoo.com`, and then a secondary _"base name"_, such as
+`johno007`. This _base name_ was not just another email address, infact all mail
+sent to `johno007@yahoo.com` would get dropped. Instead, use that base name to
+create an unlimited number of _"disposable addresses"_, such as
+`johno007-facebook@yahoo.com`, etc.
+
+The idea was that if you follow the simple 3 click process (settings ->
+addressGaurd -> add new address!) to create a new disposable email address every
+time you signed up for a new website, if ever they spammed you, you simply
+delete that address and they wont be able to bother you any more - brilliant!
+
+I avoided Gmail because they didn’t have the same _"whitelist"_ approach to
+email addresses, but when I bought my domain name and started using Google Apps
+for email, I decided to use Gmail as my primary email provider. Naturally this
+forced me to look for a similar way to defend again spam (albeit Gmails spam
+filtering is quite good).
+
+Google Apps provides _"nicknames"_, which works in much the same way, you can
+have an unlimited number of aliases for an account, except the process was a bit
+longer (settings -> manage domain -> users -> Your user -> Add a nickname) and I
+got too lazy for that after a little while. I still use nicknames for certain
+things, but not for every website I sign up for.
+
+That’s when I discovered the `+` symbol in Gmail. Unlike Yahoo! Mail that uses
+the _"whitelist"_ approach (only addresses you created will accept mail), you
+can use Gmail with a _"blacklist"_ approach (all addresses accept mail unless
+you block them).
+
+Assume your email address is `john.smith@gmail.com`, you can append a `+` and
+then any (valid) characters you like to the end, such as
+`john.smith+facebook@gmail.com` and it will still get delivered.
+
+If some rogue website starts sending spam to `john.smith+dodgysite@gmail.com`,
+then you can go into the Gmail settings and setup a filter to delete all mail
+that is sent to: `john.smith+dodgysite@gmail.com`.
+
+I don’t think it’s quite as nice as _Address Guard_, but it is a bit more
+convenient because there is no set up. The biggest downside is that quite a few
+websites consider an email address to be invalid if it has a `+` symbol in it,
+but most are fine.
