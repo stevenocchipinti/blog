@@ -1,8 +1,9 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content"
 import { getImage } from "astro:assets"
-import NextPrev from "../../components/NextPrev.astro"
+import FormattedDate from "../../components/FormattedDate.astro"
 
+import NextPrev from "../../components/NextPrev.astro"
 import placeholder from "../../assets/placeholder-trip.jpg"
 import Cover from "../../components/Cover.astro"
 import BaseLayout from "../../layouts/BaseLayout.astro"
@@ -49,6 +50,9 @@ const { Content } = await post.render()
         <div class="title">
           <h1>{title}</h1>
         </div>
+        <div class="date">
+          <FormattedDate date={pubDate} />
+        </div>
         <hr />
       </div>
 
@@ -68,12 +72,12 @@ const { Content } = await post.render()
   article {
     background-color: var(--surface-background-color);
     border-radius: 2rem;
-    margin: -3.5rem auto 0 auto;
+    margin: 3rem auto 0 auto;
     position: relative;
     z-index: 1;
     width: 100%;
-    max-width: 70ch;
-    padding: 1em;
+    max-width: 75ch;
+    padding: 2rem;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
   }
 
@@ -89,14 +93,14 @@ const { Content } = await post.render()
   }
 
   .date {
-    margin: 1rem 0 2rem 0;
+    margin: 1rem 0 3rem 0;
     color: var(--secondary-text-color);
   }
 
   .title {
     display: grid;
     gap: 1.5rem;
-    margin: 3rem 0 4rem 0;
+    margin: 2rem 0 3rem 0;
   }
 
   h2 {
