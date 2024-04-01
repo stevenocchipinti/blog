@@ -2,16 +2,16 @@
 import { type CollectionEntry, getCollection } from "astro:content"
 import BaseLayout from "../../layouts/BaseLayout.astro"
 
-type Blog = CollectionEntry<"blogs">
-const byDescendingPubDate = (a: Blog, b: Blog) =>
+type Post = CollectionEntry<"posts">
+const byDescendingPubDate = (a: Post, b: Post) =>
   b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 
-type PostsByYear = Record<string, Blog[]>
-type PostsByYearEntry = [string, Blog[]]
+type PostsByYear = Record<string, Post[]>
+type PostsByYearEntry = [string, Post[]]
 const byDescendingYear = (a: PostsByYearEntry, b: PostsByYearEntry) =>
   Number.parseInt(b[0]) - Number.parseInt(a[0])
 
-const posts = await getCollection("blogs")
+const posts = await getCollection("posts")
 
 const postsByYear = posts.reduce<PostsByYear>((result, post) => {
   const year = post.data.pubDate.toLocaleString("default", {
@@ -45,7 +45,7 @@ const postsByYear = posts.reduce<PostsByYear>((result, post) => {
               return (
                 <>
                   <li>
-                    <a href={`/blog/${post.slug}`}>
+                    <a href={`/posts/${post.slug}`}>
                       <span class="post-date">{date}</span>
                       <span class="post-month">{month}</span>
                       <div class="post-name">

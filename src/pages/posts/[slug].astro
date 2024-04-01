@@ -1,15 +1,11 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content"
-import { getImage } from "astro:assets"
 import FormattedDate from "../../components/FormattedDate.astro"
 
-import NextPrev from "../../components/NextPrev.astro"
-import placeholder from "../../assets/placeholder-trip.jpg"
-import Cover from "../../components/Cover.astro"
 import BaseLayout from "../../layouts/BaseLayout.astro"
 
 export async function getStaticPaths() {
-  const posts = await getCollection("blogs")
+  const posts = await getCollection("posts")
 
   return posts.map(post => {
     const slug = post.slug
@@ -22,7 +18,7 @@ export async function getStaticPaths() {
 }
 
 type Props = {
-  post: CollectionEntry<"blogs">
+  post: CollectionEntry<"posts">
 }
 
 const { post } = Astro.props

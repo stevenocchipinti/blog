@@ -3,17 +3,55 @@ import BaseLayout from "../layouts/BaseLayout.astro"
 ---
 
 <BaseLayout>
-  <meta http-equiv="refresh" content="0; url=/travel" slot="head" />
-
   <main>
-    <p>Redirecting to the travel blogs...</p>
+    <h1>Blogs</h1>
+    <ul>
+      <li><a href="/posts">Ramblings</a></li>
+      <li><a href="/travel">Travel blogs</a></li>
+    </ul>
   </main>
 </BaseLayout>
 
 <style>
   main {
+    width: 100%;
+    max-width: 100%;
+    padding: 2rem;
+  }
+
+  h1, h2 {
+    text-align: center;
+    margin: 2rem 0 4rem;
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 0 auto;
+    max-width: 1000px;
+  }
+
+  li {
     display: grid;
     place-items: center;
-    height: calc(100svh - 200px);
+    list-style-type: none;
+    margin-block: 1rem;
+    min-height: 200px;
+  }
+
+  a {
+    display: grid;
+    place-items: center;
+    min-height: 100%;
+    min-width: 100%;
+    text-decoration: none;
+    font-size: 1.5rem;
+    background-color: var(--surface-background-color);
+    border-radius: 2rem;
+  }
+
+  a:hover {
+    color: var(--primary-color);
   }
 </style>

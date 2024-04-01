@@ -51,6 +51,7 @@ body {
   text-wrap: pretty;
   line-height: 1.7;
   color-scheme: dark light;
+  min-height: 100svh;
 }
 
 @media (max-width: 60ch) {
