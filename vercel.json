@@ -6,27 +6,27 @@
       "destination": "https://github.com/stevenocchipinti"
     },
     {
-      "source": "/2011/04/24-70mm-f28-vs-17-50mm-f28.html/",
+      "source": "/2011/04/24-70mm-f28-vs-17-50mm-f28.html",
       "destination": "/posts/2011-04-16-24-70mm-f28-vs-17-50mm-f28/"
     },
     {
-      "source": "/2011/04/intro-to-braindumping.html/",
+      "source": "/2011/04/intro-to-braindumping.html",
       "destination": "/posts/2011-04-16-intro-to-braindumping/"
     },
     {
-      "source": "/2011/04/minecraft-and-arch-linux-ftw.html/",
+      "source": "/2011/04/minecraft-and-arch-linux-ftw.html",
       "destination": "/posts/2011-04-16-minecraft-and-arch-linux-ftw/"
     },
     {
-      "source": "/2011/05/cleaning-up-indicator-applet-in-ubuntu.html/",
+      "source": "/2011/05/cleaning-up-indicator-applet-in-ubuntu.html",
       "destination": "/posts/2011-05-23-cleaning-up-indicator-applet-in-ubuntu/"
     },
     {
-      "source": "/2011/05/dhcp-fixedhosts-to-etchosts-file.html/",
+      "source": "/2011/05/dhcp-fixedhosts-to-etchosts-file.html",
       "destination": "/posts/2011-05-17-dhcp-fixedhosts-to-etchosts-file/"
     },
     {
-      "source": "/2011/05/multi-monitor-keyboard-shortcuts-in.html/",
+      "source": "/2011/05/multi-monitor-keyboard-shortcuts-in.html",
       "destination": "/posts/2011-05-23-multi-monitor-keyboard-shortcuts-in/"
     },
     {
@@ -34,7 +34,7 @@
       "destination": "/posts/2011-05-16-multiple-google-accounts-at-once/"
     },
     {
-      "source": "/2011/05/tank-project.html/",
+      "source": "/2011/05/tank-project.html",
       "destination": "/posts/2011-05-22-tank-project/"
     },
     {
@@ -42,27 +42,27 @@
       "destination": "/posts/2011-05-30-search-and-replace-in-multiple-files/"
     },
     {
-      "source": "/2011/06/bash-auto-complete.html/",
+      "source": "/2011/06/bash-auto-complete.html",
       "destination": "/posts/2011-06-20-bash-auto-complete/"
     },
     {
-      "source": "/2011/06/cant-open-file-for-writing.html/",
+      "source": "/2011/06/cant-open-file-for-writing.html",
       "destination": "/posts/2011-06-18-cant-open-file-for-writing/"
     },
     {
-      "source": "/2011/06/phpremoteadmin.html/",
+      "source": "/2011/06/phpremoteadmin.html",
       "destination": "/posts/2011-06-24-phpremoteadmin/"
     },
     {
-      "source": "/2011/06/vi-mode-for-bash.html/",
+      "source": "/2011/06/vi-mode-for-bash.html",
       "destination": "/posts/2011-06-26-vi-mode-for-bash/"
     },
     {
-      "source": "/2011/07/pencil-for-ui-design.html/",
+      "source": "/2011/07/pencil-for-ui-design.html",
       "destination": "/posts/2011-07-09-pencil-for-ui-design/"
     },
     {
-      "source": "/2011/07/python-fu-for-gimp.html/",
+      "source": "/2011/07/python-fu-for-gimp.html",
       "destination": "/posts/2011-07-03-python-fu-for-gimp/"
     },
     {
@@ -70,27 +70,27 @@
       "destination": "/posts/2011-07-20-search-and-replace-in-multiple-files/"
     },
     {
-      "source": "/2011/07/ssh-copy-id-with-alternative-port.html/",
+      "source": "/2011/07/ssh-copy-id-with-alternative-port.html",
       "destination": "/posts/2011-07-14-ssh-copy-id-with-alternative-port/"
     },
     {
-      "source": "/2011/08/mounting-nfs-in-ubuntu.html/",
+      "source": "/2011/08/mounting-nfs-in-ubuntu.html",
       "destination": "/posts/2011-08-05-mounting-nfs-in-ubuntu/"
     },
     {
-      "source": "/2011/08/poweroff-without-password.html/",
+      "source": "/2011/08/poweroff-without-password.html",
       "destination": "/posts/2011-08-21-poweroff-without-password/"
     },
     {
-      "source": "/2011/08/regex-substitution-101.html/",
+      "source": "/2011/08/regex-substitution-101.html",
       "destination": "/posts/2011-08-01-regex-substitution-101/"
     },
     {
-      "source": "/2011/09/code-review-workflow-with-github.html/",
+      "source": "/2011/09/code-review-workflow-with-github.html",
       "destination": "/posts/2011-09-18-code-review-workflow-with-github/"
     },
     {
-      "source": "/2011/09/git-diff-and-patch.html/",
+      "source": "/2011/09/git-diff-and-patch.html",
       "destination": "/posts/2011-09-21-git-diff-and-patch/"
     },
     {
@@ -98,83 +98,83 @@
       "destination": "/posts/2011-09-08-gtalksms/"
     },
     {
-      "source": "/2011/09/meta-contacts-in-pidgin.html/",
+      "source": "/2011/09/meta-contacts-in-pidgin.html",
       "destination": "/posts/2011-09-03-meta-contacts-in-pidgin/"
     },
     {
-      "source": "/2011/10/disabling-unity-global-menu.html/",
+      "source": "/2011/10/disabling-unity-global-menu.html",
       "destination": "/posts/2011-10-20-disabling-unity-global-menu/"
     },
     {
-      "source": "/2011/10/recursive-search-with-vimgrep.html/",
+      "source": "/2011/10/recursive-search-with-vimgrep.html",
       "destination": "/posts/2011-10-12-recursive-search-with-vimgrep/"
     },
     {
-      "source": "/2011/10/ruby-parallel-port-leds.html/",
+      "source": "/2011/10/ruby-parallel-port-leds.html",
       "destination": "/posts/2011-10-10-ruby-parallel-port-leds/"
     },
     {
-      "source": "/2011/11/13-core-i7-samsung-series-9-ultrabook.html/",
+      "source": "/2011/11/13-core-i7-samsung-series-9-ultrabook.html",
       "destination": "/posts/2011-11-28-13-core-i7-samsung-series-9-ultrabook/"
     },
     {
-      "source": "/2011/11/motion-detection.html/",
+      "source": "/2011/11/motion-detection.html",
       "destination": "/posts/2011-11-05-motion-detection/"
     },
     {
-      "source": "/2011/11/removing-geotag-data-from-jpgs.html/",
+      "source": "/2011/11/removing-geotag-data-from-jpgs.html",
       "destination": "/posts/2011-11-05-removing-geotag-data-from-jpgs/"
     },
     {
-      "source": "/2011/12/toshiba-portege-z830.html/",
+      "source": "/2011/12/toshiba-portege-z830.html",
       "destination": "/posts/2011-12-10-toshiba-portege-z830/"
     },
     {
-      "source": "/2012/02/copy-and-paste-over-ssh-with-xclip.html/",
+      "source": "/2012/02/copy-and-paste-over-ssh-with-xclip.html",
       "destination": "/posts/2012-02-12-copy-and-paste-over-ssh-with-xclip/"
     },
     {
-      "source": "/2012/02/git-hub-github.html/",
+      "source": "/2012/02/git-hub-github.html",
       "destination": "/posts/2012-02-20-git-hub-github/"
     },
     {
-      "source": "/2012/02/minecraft-exception-in-linux.html/",
+      "source": "/2012/02/minecraft-exception-in-linux.html",
       "destination": "/posts/2012-02-02-minecraft-exception-in-linux/"
     },
     {
-      "source": "/2012/03/rooting-htc-desire-hd-cyanogenmod-7.html/",
+      "source": "/2012/03/rooting-htc-desire-hd-cyanogenmod-7.html",
       "destination": "/posts/2012-03-31-rooting-htc-desire-hd-cyanogenmod-7/"
     },
     {
-      "source": "/2012/03/spam-defence.html/",
+      "source": "/2012/03/spam-defence.html",
       "destination": "/posts/2012-03-07-spam-defence/"
     },
     {
-      "source": "/2012/03/xkcd-beyondpod.html/",
+      "source": "/2012/03/xkcd-beyondpod.html",
       "destination": "/posts/2012-03-04-xkcd-beyondpod/"
     },
     {
-      "source": "/2012/04/1-year-and-40-posts.html/",
+      "source": "/2012/04/1-year-and-40-posts.html",
       "destination": "/posts/2012-04-16-1-year-and-40-posts/"
     },
     {
-      "source": "/2012/04/xbmc-eden-ubuntu.html/",
+      "source": "/2012/04/xbmc-eden-ubuntu.html",
       "destination": "/posts/2012-04-06-xbmc-eden-ubuntu/"
     },
     {
-      "source": "/2012/05/google-calendar-repeating-event-on-last.html/",
+      "source": "/2012/05/google-calendar-repeating-event-on-last.html",
       "destination": "/posts/2012-05-23-google-calendar-repeating-event-on-last/"
     },
     {
-      "source": "/2012/05/password-management.html/",
+      "source": "/2012/05/password-management.html",
       "destination": "/posts/2012-05-16-password-management/"
     },
     {
-      "source": "/2012/07/arduino-web-server-with-sd-card-reader.html/",
+      "source": "/2012/07/arduino-web-server-with-sd-card-reader.html",
       "destination": "/posts/2012-07-27-arduino-web-server-with-sd-card-reader/"
     },
     {
-      "source": "/2012/08/adding-network-printer-in-ubuntu-1204.html/",
+      "source": "/2012/08/adding-network-printer-in-ubuntu-1204.html",
       "destination": "/posts/2012-08-05-adding-network-printer-in-ubuntu-1204/"
     },
     {
@@ -182,35 +182,35 @@
       "destination": "/posts/2012-08-21-samsung-galaxy-s3/"
     },
     {
-      "source": "/2012/09/changing-default-boot-option-with-grub2.html/",
+      "source": "/2012/09/changing-default-boot-option-with-grub2.html",
       "destination": "/posts/2012-09-19-changing-default-boot-option-with-grub2/"
     },
     {
-      "source": "/2012/09/getting-started-with-ruby-on-rails.html/",
+      "source": "/2012/09/getting-started-with-ruby-on-rails.html",
       "destination": "/posts/2012-09-11-getting-started-with-ruby-on-rails/"
     },
     {
-      "source": "/2012/10/bluetooth-audio-streaming-from-phone-to.html/",
+      "source": "/2012/10/bluetooth-audio-streaming-from-phone-to.html",
       "destination": "/posts/2012-10-30-bluetooth-audio-streaming-from-phone-to/"
     },
     {
-      "source": "/2012/12/a-few-photography-tips.html/",
+      "source": "/2012/12/a-few-photography-tips.html",
       "destination": "/posts/2012-12-14-a-few-photography-tips/"
     },
     {
-      "source": "/2013/01/script-to-transfer-photos-in-linux.html/",
+      "source": "/2013/01/script-to-transfer-photos-in-linux.html",
       "destination": "/posts/2013-01-04-script-to-transfer-photos-in-linux/"
     },
     {
-      "source": "/2013/03/how-to-make-tomato-sauce.html/",
+      "source": "/2013/03/how-to-make-tomato-sauce.html",
       "destination": "/posts/2013-03-17-how-to-make-tomato-sauce/"
     },
     {
-      "source": "/2013/05/safe-mode-on-samsung-galaxy-s3.html/",
+      "source": "/2013/05/safe-mode-on-samsung-galaxy-s3.html",
       "destination": "/posts/2013-05-12-safe-mode-on-samsung-galaxy-s3/"
     },
     {
-      "source": "/2013/06/removing-previously-printed-lines.html/",
+      "source": "/2013/06/removing-previously-printed-lines.html",
       "destination": "/posts/2013-06-08-removing-previously-printed-lines/"
     },
     {
