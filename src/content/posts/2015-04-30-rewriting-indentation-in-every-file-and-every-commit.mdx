@@ -1,0 +1,57 @@
+---
+title: "Rewriting indentation in every file and every commit"
+pubDate: "2015-04-30"
+categories: [git]
+---
+
+It seems the JavaScript community is divided into two camps when it comes to
+indentation conventions: two spaces or four?
+
+I personally prefer two spaces mainly because its what I'm used to in Ruby, I
+find it easier on the eyes and just that little bit easier to keep my lines
+under 80 characters long (yes, I still think this is good practice).
+
+Our team had come to a general consensus for using two spaces, but when we were
+starting a new project based on an existing project that used four spaces, we
+thought it would be nice to fix all the whitespace in one go.
+
+In a rush, we made a commit that literally replaced all the whitespace with the
+following command:
+
+```bash
+find . -type f -exec sed -i "" "s/    /  /g" {} \;
+```
+
+The problem with this approach is that it makes going through commit messages
+harder. It means that when you use `git annotate`, every line with indentation
+is going to have the whitespace fix as the last commit, so then you would have
+to jump back another commit to get the actual commit message for that line,
+which can be fairly annoying.
+
+Luckily, if you are forking an existing repository for a new project you have
+the luxury of being able to rewrite history without causing any pain to others
+as no one else would have checked it out yet.
+
+Git provides a powerful command called `filter-branch`. It is designed to
+rewrite large amounts of history in one go. This can be useful to purge
+sensitive information from every commit or update an email address in the
+commit data, etc. The only problem with this is, just like rebasing, any
+existing checkouts will not be able to simply use `git pull` cleanly after the
+history has been rewritten upstream, but this isn't a problem for new projects.
+
+In order to execute the command above for every commit in our repo, we can make
+use of the `--tree-filter` option like this:
+
+```bash
+git filter-branch --tree-filter 'find . -type f -exec sed -i "" "s/    /  /g" {} \;' HEAD
+```
+
+Please note, this can take quite some time, especially for large repositories.
+You should also make sure there are no files that specifically need four spaces
+(like markdown files, etc.), otherwise you may want to restrict the `find`
+command to only effect files you know are safe to change (`*.js` for example).
+
+For more information on rewriting history and `git filter-branch`, see this
+[article](https://git-scm.herokuapp.com/book/en/v2/Git-Tools-Rewriting-History#The-Nuclear-Option:-filter-branch)
+and the
+[documentation](https://git-scm.herokuapp.com/docs/git-filter-branch).

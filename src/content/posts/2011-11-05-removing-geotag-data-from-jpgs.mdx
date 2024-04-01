@@ -1,0 +1,40 @@
+---
+title: "Removing geotag data from JPGs"
+pubDate: "2011-11-05"
+categories: [photography, linux, ubuntu]
+---
+
+Just a quick note, these days most cameras automatically geotag photos which is
+pretty cool, especially when taking travel photos, but sometimes you may not
+want everyone to know where a photo was actually taken. For example, a photo of
+your backyard could give away your home address which is probably not a great
+thing.
+
+Its really easy to clear the geotag data with a great little tool called
+`exiftool`. I used this tool in an [earlier blog
+post](https://blog.stevenocchipinti.com/2011/04/24-70mm-f28-vs-17-50mm-f28.html)
+too and I find it really useful!
+
+To install `exiftool` in Ubuntu:
+
+```
+$> sudo apt-get install libimage-exiftool-perl
+```
+
+Then executing `exiftool` followed by a jpg filename will output a whole bunch
+of exif data for you - some of which may have geolocation data:
+
+```
+$> exiftool image.jpg
+ExifTool Version Number         : 8.60
+File Name                       : image.jpg
+Directory                       : .
+File Size                       : 14 kB
+…
+```
+
+The clear this geotag data out, simply issue this command:
+
+```
+$> exiftool -gps:all= image.jpg
+```

@@ -1,0 +1,156 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content"
+import BaseLayout from "../../layouts/BaseLayout.astro"
+
+type Post = CollectionEntry<"posts">
+const byDescendingPubDate = (a: Post, b: Post) =>
+  b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+
+type PostsByYear = Record<string, Post[]>
+type PostsByYearEntry = [string, Post[]]
+const byDescendingYear = (a: PostsByYearEntry, b: PostsByYearEntry) =>
+  Number.parseInt(b[0]) - Number.parseInt(a[0])
+
+const posts = await getCollection("posts")
+
+const postsByYear = posts.reduce<PostsByYear>((result, post) => {
+  const year = post.data.pubDate.toLocaleString("default", {
+    year: "numeric",
+  })
+
+  result[year] = [...(result[year] || []), post]
+
+  return result
+}, {})
+---
+
+<BaseLayout>
+  <h1>Posts</h1>
+
+  <ul>
+    {
+      Object.entries(postsByYear)
+        .sort(byDescendingYear)
+        .map(([year, posts]) => (
+          <>
+            <h2>{year}</h2>
+            {posts.sort(byDescendingPubDate).map(post => {
+              const date = post.data.pubDate.toLocaleString("default", {
+                day: "2-digit",
+              })
+              const month = post.data.pubDate.toLocaleString("default", {
+                month: "short",
+              })
+
+              return (
+                <>
+                  <li>
+                    <a href={`/posts/${post.slug}`}>
+                      <span class="post-date">{date}</span>
+                      <span class="post-month">{month}</span>
+                      <div class="post-name">
+                        <span class="post-title">{post.data.title}</span>
+                      </div>
+                    </a>
+                  </li>
+                </>
+              )
+            })}
+          </>
+        ))
+    }
+  </ul>
+</BaseLayout>
+
+<style>
+  main {
+    width: 100%;
+    max-width: 100%;
+    padding: 5rem 1rem 1rem;
+  }
+
+  h1 {
+    text-align: center;
+    margin: 3rem;
+  }
+
+  h2 {
+    margin-top: 2rem;
+  }
+
+  ul {
+    display: grid;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-width: 60ch;
+    margin-inline: auto;
+  }
+
+  li {
+    background-color: var(--surface-background-color);
+    border: 1px solid var(--subtle-background-color);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    font-size: 1.25rem;
+  }
+
+  a {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    grid-template-areas:
+      "date name"
+      "month name";
+    grid-gap: 0 0.5rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    color: currentColor;
+    min-height: 80px;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .post-date {
+    grid-area: date;
+    font-size: 1.75rem;
+    color: var(--body-text-color-03);
+    text-align: center;
+    line-height: 2rem;
+    transform: translateY(7px);
+  }
+
+  .post-month {
+    grid-area: month;
+    font-size: 1rem;
+    color: var(--body-text-color-03);
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .post-name {
+    display: grid;
+    grid-area: name;
+    line-height: 2rem;
+    align-self: center;
+    transform: translateY(0.25rem);
+    text-wrap: balance;
+  }
+
+  .post-title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .post-subtitle {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--body-text-color-02);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+</style>

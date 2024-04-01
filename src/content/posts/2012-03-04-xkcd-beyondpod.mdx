@@ -1,0 +1,50 @@
+---
+title: "XKCD + BeyondPod"
+pubDate: "2012-03-04"
+categories: [android]
+---
+
+import Img from "../../components/CloudinaryImg.astro"
+
+On my Android phone, I use an app called
+"[BeyondPod](https://market.android.com/details?id=mobi.beyondpod&hl=en%20)".
+
+BeyondPod is great because unlike [Google
+Reader](https://market.android.com/details?id=com.google.android.apps.reader&feature=search_result#?t=W251bGwsMSwxLDEsImNvbS5nb29nbGUuYW5kcm9pZC5hcHBzLnJlYWRlciJd)
+and
+[Pulse](https://market.android.com/details?id=com.alphonso.pulse&feature=search_result#?t=W251bGwsMSwxLDEsImNvbS5hbHBob25zby5wdWxzZSJd)
+(which are other great RSS readers), BeyondPod will download video and audio
+podcasts on a schedule.
+
+What this means for me, is that at 2:30 AM, my phone will use my home ADSL2’s
+off-peak downloads and fetch a bunch of regular podcasts so when I wake up and
+make my way into work, I will have all the latest episodes of my favourite shows
+to watch and listen to on the train.
+
+One of the feeds that I’m subscribed to is [XKCD](http://xkcd.com/%20). If you
+look at the comics online, you probably already know that if hover your mouse
+over the image, you get to see an extra message about the comic.
+
+On Google Reader, you can tap and hold the image and use the menu to get to the
+tooltip, but with BeyondPod, there is no such option.
+
+This means that the tooltip is actually included in the
+[feed](http://xkcd.com/atom.xml), so I thought it would be pretty easy to write
+a little proxy that pulls out the `title=` attribute and appends it to the body.
+
+Before I started coding, I thought that surely someone would have already done
+this, so after a quick Google search I came across a [Yahoo!
+Pipe](http://pipes.yahoo.com/pipes/pipe.info?_id=upJ5TUni3BGUZU9yLO2fWQ) from
+"[Benjamin
+Cook](http://pipes.yahoo.com/pipes/person.info?guid=D4HQ7VIJ2YNE6NZRH3VHJOBREA)"
+that does exactly that.
+
+Ben’s Pipe appends a `<br />` and then the tooltip, but the `<br />` seems to be
+getting escaped, so I copied the pipe and removed the `<br />` and the end
+result was exactly what I wanted.
+
+If you have a similar problem, you can add [my version of the
+pipe](http://pipes.yahoo.com/pipes/pipe.info?_id=61e54ab0572541bd03cd44f3e601482e)
+to your reader and here’s what it’ll look like:
+
+<Img originalAspectRatio src="blog/cagzs6buve7s3yjtbirv.jpg" />

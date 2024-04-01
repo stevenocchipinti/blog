@@ -1,0 +1,31 @@
+---
+title: "Default values for environment variables"
+pubDate: "2013-07-22 22:51"
+categories: [bash]
+---
+
+In ruby, the `||=` operator will assign a given value to a variable, if that
+variable does not already have a value.
+For example:
+
+```ruby default_value.rb
+puts foo  # => nil
+foo ||= "bar"
+puts foo  # => "bar"
+foo ||= "baz"
+puts foo  # => "bar"
+```
+
+This will assign `"bar"` to `foo`, unless `foo` is already set.
+In other words, it will make `"bar"` the _default value_ of `foo`.
+
+I recently had to do this is bash, and it turns out bash has similar
+functionality. This is the bash equivalent:
+
+```bash default_value.sh
+echo $FOO  # => ""
+export FOO=${FOO:-"bar"}
+echo $FOO  # => "bar"
+export FOO=${FOO:-"baz"}
+echo $FOO  # => "bar"
+```

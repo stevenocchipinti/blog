@@ -1,0 +1,88 @@
+---
+title: "PhpRemoteAdmin"
+pubDate: "2011-06-24"
+categories: [mysql, linux, lamp, php, apache]
+---
+
+If you’ve ever used PhpMyAdmin before, you’ll know it can be quite handy,
+especially for people like me who always forget SQL’s syntax. I even use it for
+simple tasks just so I can see what SQL it generated and it even has a handy
+“Create PHP Code” button to give me a baseline to start hacking the query to
+suit my situation.
+
+This is great for local setups, but sometimes I need to do a query a production
+database where PhpMyAdmin is not installed and its alot easier to inspect the
+data of big tables with a gui (at least for me anyway).
+
+Another helpful tip that I picked up from my new work place (thanks Rich) is to
+make PhpMyAdmin connect to a remote database via an SSH tunnel. It requires a
+small config change to PhpMyAdmin, but it works a charm!
+
+To differentiate between a tunnelled database and the local one, you need to
+configure your web server to serve up PhpMyAdmin from an additional URL, such as
+`http://localhost/phpremoteadmin` in addition to the standard
+`http://localhost/phpmyadmin.`
+
+I added a second alias for PhpMyAdmin in `/etc/apache2/conf.d/phpmyadmin.conf`
+to look like this:
+
+```
+Alias /phpmyadmin /usr/share/phpmyadmin
+Alias /phpremoteadmin /usr/share/phpmyadmin
+```
+
+Then, I modified my `/etc/phpmyadmin/config.inc.php` to include this:
+
+```
+// If phpremoteadmin is requested, use an ssh tunnel on 6666
+// Note: This doesn’t create the tunnel, use ~/bin/mysql_remote
+if (substr_count($\_SERVER\[“REQUEST\_URI”\], “phpremoteadmin”) > 0) {
+    $cfg\[‘Servers’\]\[$i\]\[‘connect\_type’\] = ‘tcp’;
+    $cfg\[‘Servers’\]\[$i\]\[‘port’\] = ‘6666’;
+    $cfg\[‘Servers’\]\[$i\]\[‘host’\] = ‘127.0.0.1’;
+}
+```
+
+Basically that means if the request is for `/phpremoteadmin`, look for the
+database on port 6666 instead of the preconfigured database port.
+
+You’l have to reload apache for these changes to take effect:
+
+```
+sudo /etc/init.d/apache2 reload
+```
+
+Then you need a SSH tunnel from your local port 6666 to the servers port 3306
+(where mysql is normally listening). To create this tunnel, you can use:
+
+```
+ssh -L 6666:localhost:3306 $USER@$HOST
+```
+
+But, to make it easier, I use (a slight variation) of this script:
+
+```
+#!/bin/sh
+
+if \[ $# -lt 1 \] || \[ $# -gt 2 \]; then
+  echo “Usage: $0 host1 \[host2\]”
+  exit 2
+fi
+
+USER=”steve”
+HOST=$1
+
+DBHOST=”localhost”
+\[ -z “$2” \] || DBHOST=”$2”
+
+echo “Browse to: http://localhost/phpremoteadmin”
+ssh -L 6666:$DBHOST:3306 $USER@$HOST
+```
+
+The script also allows you to pass in an optional argument of the host where the
+database is. By default, that is localhost (the remote server’s localhost).
+This is useful if you can only ssh to a gateway server and the database is on
+another server within that remote network that you wouldn’t normally be able to
+ssh directly to.
+
+This has been really helpful, so I wanted to share :)

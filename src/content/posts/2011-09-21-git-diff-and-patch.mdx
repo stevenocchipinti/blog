@@ -1,0 +1,74 @@
+---
+title: "Git stash, diff and patch"
+pubDate: "2011-09-21"
+categories: [bash, git, programming, patch, diff]
+---
+
+I recently found myself in a situation where I need to comment out certain lines
+in my code in order to test a particular set of features.
+
+These commented out lines are only for my local development environment but will
+be useful in the future if this set of features needs work again. In this
+situation, checking them into Git or making a personal `.gitignore` file are not
+really suitable solutions.
+
+I have found two good ways of accomplishing this.
+
+## Git stash
+
+Starting from a clean checkout, I put my temporary changes in place, then run
+this command:
+
+```
+git stash
+```
+
+Then I continue on with my work. I selectively leave these changes out of all my
+commits using `git add -i` then once everything is checked in except my
+temporary changes, I revert these temporary changes with `git checkout -- .` so
+I'm left with a clean repository.
+
+When I need to work on a related feature again, I can list my stashes with:
+
+```
+git stash list
+```
+
+Then, apply the most recent stash by running this command:
+
+```
+git stash apply
+```
+
+If you have more than one stash, you can specify which stash you want to apply
+on the command line. See `git stash --help` to see more information.
+
+## Git diff and patch:
+
+`diff` and `patch` are very useful tools to be familiar with if you ever deal
+with text. Git's `diff` output is much the same, and so the `patch` tool is
+still very handy!
+
+Starting from a clean checkout, I put my temporary changes in place, then run
+this command:
+
+```
+git diff > ~/patches/temp_workaround.patch
+```
+
+Then I continue on with my work. I selectively leave these changes out of all my
+commits using `git add -i` then once everything is checked in except my
+temporary changes, I revert these temporary changes with `git checkout -- .` so
+I'm left with a clean repository.
+
+When I need to work on a related feature again, I can apply my patch by running
+this command from the project root:
+
+```
+patch -p1 < ~/patches/temp_workaround.patch
+```
+
+Both of these methods will put my temporary work arounds in place again which
+saves me trying to work out which lines I needed to comment out everytime.
+Saving the stashes and/or patch files with descriptive names means you can find
+and re-use these temporary changes quite easily in the future.

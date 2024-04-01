@@ -1,0 +1,144 @@
+---
+title: "Using netrw instead of NERDTree for Vim"
+pubDate: "2016-12-28 09:36"
+categories: [vim]
+---
+
+I'm going to attempt to use netrw exclusively for a while instead of NERDTree.
+Mainly because not everyone has NERDTree, but everyone I work with will
+generally have netrw installed by default so I thought I should be become more
+proficient with it.
+
+This post should provide me something I can quickly refer back to when I get
+stuck. Netrw has a lot of features and the help page is pretty comprehensive.
+It's worth a quick look, at least at the table of contents. It's available by
+typing `:help netrw`.
+
+There is also a quick reference for the mapping by typing `:help netrw-quickmap`
+and one for the commands by typing `:help netrw-quickcom`.
+
+## Navigation
+
+Navigating around netrw is pretty intuitive, you use the arrows (or hjkl) to
+move around and `enter` to open files or directories. These windows are just
+like any other window in vim so most of the usual motions, etc. work except
+netrw adds some default mappings. Here are the basics for navigation:
+
+`enter` - Open files/directories  
+`-` - Go up one directory  
+`u` - Go back to previously visited directory (like `<C-o>` in vim)  
+`U` - Go forward to subsequently visited directory (like `<C-i>` in vim)
+
+`enter` works just fine to open files and directories, but there are some other
+options available too:
+
+`o` - Open file/directory in new horizontal split  
+`v` - Open file/directory in new vertical split  
+`t` - Open file/directory in new tab  
+`p` - Preview file without (moving the cursor from netrw)  
+`x` - Open the file/directory with the default system app
+
+## Appearance and Behaviour
+
+One of the first things I noticed when making the switch was when you press
+`enter` on a directory, instead of displaying the contents of the sub-directory
+inline, it would replace the whole buffer with the contents of the
+sub-directory.
+
+This is because by default netrw doesn't use a tree to display the
+files/directories, its more like doing an `ls` but you can configure netrw to
+print a tree and have the same behaviour as NERDTree with this mapping:
+
+`i` - Cycle between different listing modes (one of them is tree mode)
+
+- In normal mode, `enter` will move into and show the given file/directory
+- In tree mode, `enter` will show the contents of the sub-directory in addition
+
+While netrw doesn't look as nice as NERDTree, it still has a lot of options to
+customize the way it looks and works.
+
+`I` - Toggle the banner  
+`c` - Make the browsing directory the current working directory  
+`gn` - Make the directory under the cursor the top of the tree  
+`gh` - Toggle hidden files on or off  
+`a` - Cycle between all files, not hidden files or just hidden files visible  
+`s` - Cycle sort order between name, time or filesize  
+`r` - Reverse sort order
+
+## File Operations
+
+It's also pretty easy to do basic file operations:
+
+`%` - Create a new file  
+`d` - Create a new directory  
+`D` - Delete the file/directory under the cursor (or marked files/dirs)  
+`R` - Rename/move file/directory
+
+Copying files however is a little more involved. You need to mark the files you
+want to copy, mark the destination, then execute the operation (a little
+tedious):
+
+`mf` - Toggle whether the file/directory is marked  
+`mt` - Mark the directory under the cursor as the copy target  
+`mc` - Execute the copy operation  
+`mu` - Unmark all marked items
+
+## Commands
+
+To open netrw is easy. You can use all the same commands you would use to open a
+file except give them a directory. You can use the command line with `vim .` or
+within vim with the commands below. These commands don't even need a space
+between it and its arguments, so its very few keystrokes:
+
+`:e.` - Open the current directory normally  
+`:sp.` - Open the current directory in a horizontal split  
+`:vs.` - Open the current directory in a vertical split  
+`:tabe.` - Open the current directory in a new tab
+
+These will all work, unless you have installed an alternative explorer plugin
+(like NERDTree), in which case you can explicitly open netrw with `:Ntree`.
+
+Netrw also provides a lot of different ways to launch an explorer window. The
+most common command is `:Explore` which will open netrw in the directory of the
+currently open file, much like the `:NERDTreeFind` command. Here are some
+variations of that command:
+
+`:Ex` - Use current buffer if available, otherwise split horizontally  
+`:Ex!` - Use current buffer if available, otherwise split vertically
+
+`:Sex!` - Horizontal split  
+`:Hex` - Horizontal split  
+`:Hex!` - Horizontal split (opposite side)
+
+`:Sex` - Vertical split  
+`:Vex` - Vertical split  
+`:Vex!` - Vertical split (opposite side)
+
+`:Tex` - New tab, directory of currently open buffer
+
+There is another variation that doesn't use the directory of currently open
+buffer but uses the current working directory. This is one is the most similar
+to the default `:NERDTree` command.
+
+`:Lex` - Vertical split full height, current working directory  
+`:Lex!` - Vertical split, current working directory (opposite side)
+
+All these commands can also take a directory as an argument.
+
+## Basic Configuration
+
+I didn't want to customize too much because that would defeat the purpose of the
+learning the defaults, but I did want to turn off that banner (it was handy
+having the basic operations on display, but I don't think I need it anymore).
+
+```vim
+let g:netrw_banner=0
+let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+,\(^\|\s\s\)ntuser\.\S\+'
+autocmd FileType netrw set nolist
+```
+
+## More Features
+
+There is more to explore with netrw, such as working with bookmarks and pattern
+listings, but this post should have enough of the basics to be productive.
+Checkout `:help netrw` for more features.

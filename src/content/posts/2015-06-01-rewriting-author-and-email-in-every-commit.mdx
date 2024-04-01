@@ -1,0 +1,62 @@
+---
+title: "Rewriting author and email in every commit"
+pubDate: "2015-06-01 00:08"
+categories: git
+---
+
+Following on from a previous post about [rewriting indentation for an entire git repo](http://blog.stevenocchipinti.com/2015/04/30/rewriting-indentation-in-every-file-and-every-commit/),
+another reason to rewrite the history of a whole repo is to change the email
+address or name mentioned in commits.
+
+Once again, be aware that rewriting history will cause problems if other people
+have clones of the repo so make sure you understand the risks before doing
+this!
+
+To change the author name and email address for every commit, you can run this:
+
+```bash
+git filter-branch -f --env-filter "
+  GIT_AUTHOR_NAME='YOUR_NAME'
+  GIT_AUTHOR_EMAIL='YOUR_EMAIL'
+  GIT_COMMITTER_NAME='YOUR_NAME'
+  GIT_COMMITTER_EMAIL='YOUR_EMAIL'
+" HEAD
+```
+
+This will blindly replace all the commits with the details given, but if other
+people have contributed, you may need to be a bit more careful and only replace
+your own:
+
+```bash
+git filter-branch --commit-filter "
+  if [ "$GIT_COMMITTER_NAME" = 'YOUR_ORIGINAL_NAME'];
+  then
+    GIT_AUTHOR_NAME='YOUR_NEW_NAME'
+    GIT_AUTHOR_EMAIL='YOUR_NEW_EMAIL'
+    GIT_COMMITTER_NAME='YOUR_NEW_NAME'
+    GIT_COMMITTER_EMAIL='YOUR_NEW_EMAIL'
+    git commit-tree "$@";
+  else
+    git commit-tree "$@";
+  fi
+" HEAD
+```
+
+If you understand the risks of rewriting history for a shared repository, you
+can force push with the `-f` flag:
+
+```
+git push -f
+```
+
+Then, to ensure future commits don't use the wrong name and email, you can set
+it explicity for this particular repo (instead of globally) with these
+commands:
+
+```
+git config user.email "your_email@example.com"
+git config user.email "your_email@example.com"
+```
+
+Keep in mind this will only work for this particular clone as the details will
+be stored locally in `.git/config`.

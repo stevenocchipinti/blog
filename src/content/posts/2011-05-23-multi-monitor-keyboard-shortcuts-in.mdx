@@ -1,0 +1,35 @@
+---
+title: "Multi monitor keyboard shortcuts in Ubuntu"
+pubDate: "2011-05-23"
+categories: [compiz, linux, ubuntu]
+---
+
+I’m now using Ubuntu 11.04 with Unity as my primary OS for my desktop at work.
+I’m still coming to grips with Unity - somethings I like, others I don’t.
+
+One of the things I do like is the compiz plugin called "Grid". At first I
+thought it was just a clone of Windows 7 where you can drag a window to the left
+and it will fill the left half of the screen, drag it to the top and it will
+maximize, but after taking a look at the key bindings it does a bit more!
+
+Using `alt` + `ctrl` + the number pad, you get more options! `Alt` + `ctrl` +
+`4` will make the window fill the left half (like dragging), 6 will do right, 8
+will do the top half, 2 will do the bottom half and 7, 9, 1 and 3 will put the
+window in the appropriate corner, 5 will put it in the middle and 0 will
+maximize it. On top of this, if you press the key repeatedly it will adjust from
+1/2 screen, to a 1/3, to 1/4, to 3/4 and to 2/3. This is surprisingly easy to
+use and really helpful!
+
+The only thing I couldn’t work out how to do was move a window from one monitor
+to the other as these actions occur per monitor (i.e. 1/2 of one screen).
+
+The answer was quite easy though, I just needed to enable one more plugin:
+"Put". The "Put" plugin looks like it does similar actions to "Grid", so before
+I enabled it, I disabled all the key bindings (there was only about 2 enabled
+anyway). Then I set the keyboard binding for "Put To Next Output" to
+`<Control><Alt>KPEnter`.
+
+When I enabled it, the Unity panel got a little screwed up (which is evidently
+not hard to break), so I restarted X and everything worked how I expected it to.
+Now atl+ctrl+keypad-enter will move the window between my left monitor and my
+right monitor!

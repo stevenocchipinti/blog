@@ -1,0 +1,21 @@
+---
+title: "How to keep environment variables when using sudo"
+pubDate: "2015-05-26 13:03"
+categories: bash
+---
+
+By default, the `sudo` command does not pass your current shell environment to
+the new process.
+
+I've added the function below to my bash configuration which will gives me an
+`esudo` command. This command works much like `sudo` but it will pass my current
+environment to the new process.
+
+```bash
+function esudo { sudo -E bash -c "$*"; }
+```
+
+If you use a ruby version manager, you'll know that they generally rely on
+environment variables, so `rvm` provide the `rvmsudo` command for this purpose.
+I've since switched to `chruby` and I couldn't seem to find an equivalent, but
+this has solved the issue for me.

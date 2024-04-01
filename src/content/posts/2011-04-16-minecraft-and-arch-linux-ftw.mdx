@@ -1,0 +1,49 @@
+---
+title: "(Minecraft and) Arch Linux FTW!"
+pubDate: "2011-04-16"
+categories: [arch linux, linux, bash, htpc, minecraft]
+---
+
+import Img from "../../components/CloudinaryImg.astro"
+
+I haven't really played a game properly since back in my Counter Strike days, but recently my brother and I started playing [Minecraft](http://www.minecraft.net/)… and its incredibly addictive!
+
+Minecraft give you the option of running a Java based dedicated server and so as we were starting out, my brother would start up a dedicated server and we would both connect to it.  
+As time went on, we thought it would be really cool to have a dedicated Minecraft box and thought we could build one out of some old hardware, which brings me to the HTPC!
+
+A little while ago, my brother built this (the black box):
+
+<Img originalAspectRatio src="blog/wsapymsmrojnylpfeyb2.jpg" />
+
+He did an awesome job!  
+Basically gutted our very first dvd player (which was great for its time) and got some cheap (physically small) hardware off eBay and managed to fit it all inside!  
+It involved making alot of little brackets, extender cables, etc. but with a lot of effort it turned out pretty impressive!
+
+Unfortunately, using it as a media pc was a bit tough as it wasn't the most powerful of machines around and the graphics drivers weren't working too well so this got left in the dust for a while… until Minecraft came along!
+
+Last weekend we decided to make this our dedicated server :)  
+A while ago a friend of a friend was talking about how good Arch Linux was for its simplicity and ease of administration, so I started reading up on it and I am impressed!
+
+On the [Arch Linux wiki](https://wiki.archlinux.org/) they have a couple of [guides](https://wiki.archlinux.org/index.php/Beginners%27_Guide) to help you get going, but my favorite page was the [explanation of the boot process](https://wiki.archlinux.org/index.php/Boot).  
+After a bit of reading I worked out my plan of attack:
+
+- Burn ISO to cd
+- Install Arch Linux
+- Install sudo (via pacman)
+- Setup `minecraft` user with sudo access to the poweroff command
+- Install Java (via pacman)
+- Install rungetty (via AUR)
+- Replace `agetty` with `rungetty` and make the minecraft server startup on tty1, followed by a `poweroff`
+- Configure Wake-On-Lan
+
+After the server was all setup, I wrote a little client side wrapper that will:
+
+- Launch minecraft
+- Broadcast a magic-packet to power on the server
+- Start pinging it and when it is available, notify me via Ubuntu's `notify-send` command
+
+So now when I want to play Minecraft, I launch my script and it will power on the server and launch the client, I log in, wait about 5 seconds until my fancy fade-in notification appears, then join the server, play, and when im done, I issue the `/stop` command in Minecraft and it will stop the server and power it self off!
+
+This was a great first experiment with Arch Linux and I didn't even know what getty was before this day.
+
+Needless to say I was pretty happy with this setup and all in a days work :)

@@ -1,0 +1,25 @@
+---
+title: "Sending email from the command line"
+pubDate: "2014-12-29 12:50"
+categories: [mac, linux, bash]
+---
+
+It's so easy to write little scripts and execute them at a later time with
+the standard command-line tooling available in unix-like operating systems, but
+if you plan on having them execute while you are out and about, it would be nice
+to get a notification on your phone that it worked (or didn't work).
+
+If you're happy with a simple email notification, then luckily this can be done
+with one simple line of code!
+
+On a mac:
+
+```sh
+echo "Hello" | mail -s "Your alert" to-addr@example.com -f from-addr@example.com
+```
+
+On \*nix:
+
+```sh
+echo "Hello" | mail -s "Your alert" to-addr@example.com -aFrom:from-addr@example.com
+```

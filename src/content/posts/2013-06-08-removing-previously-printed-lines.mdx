@@ -1,0 +1,122 @@
+---
+title: "Printing over previously printed characters and lines"
+pubDate: "2013-06-08"
+categories: [ruby, linux, bash, programming]
+---
+
+I recently wrote small [Ruby
+Gem](https://github.com/stevenocchipinti/tramtracker) that provides a command
+line interface to Melbourne's [TramTracker
+service](http://yarratrams.com.au/tramtracker).
+
+One main feature I wanted was to allow the script to poll TramTracker on a
+regular basis.  
+In the past, I used the command line utility watch to achieve this, but I
+couldn't find a way to enforce a "max iterations" option. If it gets forgotten
+about in the background, TramTracker will eventually block that IP address!
+
+So I turned to Ruby. Now instead of printing the same block of text over and
+over again and filling up the terminal, I thought it would be better to just
+have that text overwrite itself in place.
+
+In this post, I'll outline a couple of ways of achieving this.
+
+## Using the \b (backspace) character
+
+Printing a \b character does a similar thing as pressing backspace, except
+instead of removing the character, it nondestructively shifts the cursor back
+which allows you to then overwrite previously written characters. This is really
+simple to use and is great for little "progress" spinners.  
+For example, a character that cycles through `|`, `/`, `-`, `\`:
+
+```ruby
+puts "foo\b"
+# => foo
+puts "foo\bx"
+# => fox
+puts "foo\b\b\bbar"
+# => bar
+1.step {|i| sleep 0.2; print "\b" + "|/-\\"[i%4] }
+# => Cheesy, old-school spinner
+```
+
+There are two main shortfalls with this approach, one is that it only works on a
+single line and two is that if you want to overwrite lots of characters, you'd
+need just as many `\b` characters (you would probably introduce a loop).
+
+```ruby
+puts "foo\n\b\b\bbar"
+# => foo\nbar
+```
+
+## Using the \r (carriage return) character
+
+To avoid having to repeat just as many `\b` characters, a simple alternative
+would be to return the cursor to the start of the line and write over the top of
+the existing characters. For example:
+
+```ruby
+100.times {|p| print "\rDownloading %#{p+1}..."; sleep 1}
+```
+
+This approach still won't work across multiple lines, but it has another subtle
+shortfall too, it doesn't clear the entire line. For example:
+
+```
+puts "foo\rp"
+# => poo
+```
+
+A common work around for this is to pad the end of the string with spaces, but
+there are better ways (keep reading ;) )
+
+## Using curses
+
+The most common answer to overwriting characters across multiple lines, is to
+use [curses](http://en.wikipedia.org/wiki/Curses_(programming_library\)). Curses
+allows you to pick exactly with character you want to update and makes [menu
+driven Text User
+Interfaces](https://www.google.com.au/search?hl=en&q=command+line+curses&bav=on.2,or.r_cp.r_qf.&bvm=bv.47534661,d.aGc&biw=1366&bih=679&um=1&ie=UTF-8&tbm=isch&source=og&sa=N&tab=wi&ei=r0WzUbyWF4T-iAfn8IH4DA)
+(TUI's) easier to develop. Ruby happens to have a [curses
+module](http://www.ruby-doc.org/stdlib-2.0/libdoc/curses/rdoc/Curses.html) built
+in to its standard library, which provides a simple API, for example:
+
+```ruby
+setpos(lines/2, cols/2) # Start in the middle
+addstr("Hello world")
+```
+
+I created a more complete (simple) example of using curses in a [gist
+here](https://gist.github.com/stevenocchipinti/5703381).
+
+Curses is pretty good for this sort of stuff, it gives you a lot for free. The
+thing that I didn't like about using the curses library was that when it
+initialises, it clears the screen. This behaviour suits a TUI, and the old
+contents is still restored when you return, but I was being picky and didn't
+want that.
+
+## Using individual cursor movement characters
+
+This last option is the most fundamental of the bunch. Terminals generally
+support characters that will allow you to move the cursor around at will and
+would be the basis of things like curses, although not as commonly used. Here
+are the most common characters to move the cursor around:
+
+```
+\033[<L>;<C>H # Move the cursor to line L, column C
+\033[<N>A     # Move the cursor up N lines
+\033[<N>B     # Move the cursor down N lines
+\033[<N>C     # Move the cursor forward N columns
+\033[<N>D     # Move the cursor backward N columns
+\033[2J       # Clear the screen, move to (0,0)
+\033[K        # Erase to end of line
+```
+
+You can read more about these "escape sequences"
+[here](http://www.linuxselfhelp.com/howtos/Bash-Prompt/Bash-Prompt-HOWTO-6.html#ss6.2).
+I ended up using the `\033[K` ("Erase to end of line") and the `\033[A` ("Move
+the cursor up") [characters in my TramTracker
+gem](https://github.com/stevenocchipinti/tramtracker/blob/master/lib/formatters/polling_formatter.rb)
+and it worked a treat!
+
+Now go and make a cool retro user interface! :)

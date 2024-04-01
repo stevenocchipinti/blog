@@ -1,0 +1,35 @@
+---
+title: "Recursive search with vimgrep"
+pubDate: "2011-10-12"
+categories: [vim, regex]
+---
+
+Usually when I need to find things in multiple files, I would use `grep` or
+`ack` from a terminal and then open those files in vim to do whatever it is that
+I have to do.
+
+This is ok, but sometimes this can be a little annoying.  
+Vim has a `:grep` function which will use the system `grep` command, but it also has
+a `:vimgrep` function that is built in to vim.
+
+I had left a bunch of `TODO`s through out my code as a reminder to come back to
+them, so using `:vimgrep` I was able to quickly jump between them:
+
+```
+:vimgrep TODO **/*
+```
+
+This tells vim to search for the pattern `TODO` recursively from the current
+directory.  
+The `**/` means recursive and the `*` means any file - therefore `**/*.rb`
+would just search the ruby scripts.
+
+The results are loaded into the "quickfix window". This means if you want to see
+all the occurences, you can open the list with `:copen` Naturally, `:cnext`,
+`:cprevious`, `:cfirst`, `:clast`, etc. will allow you to jump between them or
+you can use the quicklist window and press enter on the filename, or in gvim you
+can even use the mouse.
+
+In addition, I use [Tim Pope’s Unimpaired vim
+plugin](https://github.com/tpope/vim-unimpaired), which provides the easy
+shortcuts `[q` and `]q` for `:cprevious` and `:cnext` (respectively).

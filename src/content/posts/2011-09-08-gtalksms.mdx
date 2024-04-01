@@ -1,0 +1,130 @@
+---
+title: "GTalkSMS"
+pubDate: "2011-09-08"
+categories: [pidgin, android, ubuntu]
+---
+
+import Img from "../../components/CloudinaryImg.astro"
+
+Continuing on from my last post, I found another great use for Pidgin!
+
+GTalkSMS is an Android app that turns your phone into a chat bot. Here is an
+extract from the [GTalkSMS website](https://code.google.com/p/gtalksms/):
+
+> _GTalkSMS enables you to **control your android phone through GTalk/XMPP**
+> (send/receive SMS, make calls, locate your phone, etc.). It can be useful for
+> those who prefer typing sms on a real keyboard. The app also notifies you
+> about new "events" on the phone, like a new text message (SMS) or an incoming
+> call._
+
+Although initially skeptical about security (it has the same functions as a
+would-be trojan) you have to be buddies with the bot to talk to it, so here is
+what I did…
+
+## Basic Setup
+
+- Downloaded and installed GTalkSMS from the
+  [market](https://market.android.com/details?id=com.googlecode.gtalksms)
+- Created a google account for GTalkSMS
+- Configured Pidgin with my personal gmail account (obviously)
+- Added this new account as a buddy on my personal gmail account
+- Configured GTalkSMS to send notifications to my personal gmail account
+
+## Basic Usage
+
+With this done, once I start the bot, it will send me a instant message when I
+get an SMS, phone call or the battery state changes.
+
+What is even better is that if I want to reply to a recently received SMS, I can
+send the bot an instant message like this:
+
+```
+reply:Hey, I got your message
+```
+
+If I want to initiate an SMS to someone else, I can send this command:
+
+```
+sms:mymate:Hey, how you goin?
+```
+
+That will lookup mymate in my phonebook and send the SMS to them.  
+If you have multiple people with the same name, you can search your phonebook
+using this command:
+
+```
+contact:john
+```
+
+This will list all the _John’s_ then you can just copy and paste the phone
+number you want in place of the name, like this:
+
+```
+sms:04041111111:Hey John!
+```
+
+## Doing more
+
+There are [heaps of
+commands](https://code.google.com/p/gtalksms/wiki/FeaturesAndCommands) available
+and you can get a list of them all at any time with this command:
+
+```
+help:all
+```
+
+Some other cool commands allow you to change your ringer volume, take a photo,
+share clipboards, get geolocation, launch a given URL in the browser and lots
+more.
+
+It also has some options to make GTalkSMS start automatically when the phone
+boots, or when it is charging, or when its on wifi. I personally only want this
+connected while I’m in front of my pc, so I have it set to start when charging
+and stop when not charging anymore (I use a USB charging dock at my desk).
+
+One other noteworthy feature is the "Incoming SMS" setting "In separated
+conversations". When you receive an sms, not only does the bot send you an IM,
+but it will start a new "chat room" for that particular contact and send you an
+invite. From within this chat room, you dont need to worry about sending
+commands, whatever you send in there will be sent as an sms to that client. It
+makes it look seamlessly like any other chat.
+
+## Pidgin fun
+
+As you may already know, I like Pidgin because of its configurability. I have
+Pidgin using the libnotify plugin, which means I get the fancy Ubuntu
+notifications from Pidgin, but I soon realised there are too many notifications
+by default (everytime a buddy signs in or out is a bit much with 4 chat accounts
+signed in at once!) - so I turned those notifications off.
+
+But! I wanted these notifications to see when my phone is available to chat, so
+I set up some little recurring buddy pounces:
+
+1.  When my GTalkSMS account signs in, execute this command:
+
+```
+notify-send -i `/usr/share/pixmaps/pidgin/emblems/scalable/bot.svg` "Droid online" "Your Android is now contactable via GTalkSMS"
+```
+
+2.  When my GTalkSMS account signs out, execute this command:
+
+```
+notify-send -i "/usr/share/pixmaps/pidgin/emblems/scalable/unavailable.svg" "Droid offline" "Your Android has now signed off GTalkSMS"
+```
+
+Now when I dock my phone, it starts charging, GTalkSMS starts up and signs in
+and I get this notification appear:
+
+<Img originalAspectRatio src="blog/ea04gad5jczfji8lcvya.jpg" />
+
+Then when I pull it off the dock, GTalkSMS signs out and I get this
+notification:
+
+<Img originalAspectRatio src="blog/g2dcpvhxa36qfdqkvtcj.jpg" />
+
+Note: The `notify-send` command is available from the `libnotify-bin` package,
+which can be installed in Ubuntu with this command:
+
+```
+sudo apt-get install libnotify-bin
+```

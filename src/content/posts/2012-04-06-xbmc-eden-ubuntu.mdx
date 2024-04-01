@@ -1,0 +1,52 @@
+---
+title: "XBMC Eden + Ubuntu"
+pubDate: "2012-04-06"
+categories: [xbmc, ubuntu]
+---
+
+Back when I started uni, I bought a new [Asus A6J laptop](http://www.notebookreview.com/default.asp?newsID=2886). It was one of the first laptops available with a dual core CPU (Core Duo, not Core 2 Duo) and decently powerful graphics (ATI X1600).  
+The A6J is very dated now and weighing in at 2.85kg, its not very portable by today's standard (considering my [Toshiba Portege](/2011/12/toshiba-portege-z830.html) weighs just 1.13kg).  
+A couple of years after I bought it, I got sick of carrying it around, so I bought an Asus EeePc as a replacement for uni, so the A6J stayed at home and was rarely used - it was just a spare for a long time.
+
+Up until recently, I was using I used it as a (stationary) desktop replacement at work but I now have a new job where I am provided a Macbook Pro so this old machine is now spare once again. This with the recent release of [XBMC 11 Eden](http://xbmc.org/natethomas/2012/03/24/xbmc-11-0-eden/), I thought I may as well re-purpose it as a permanent HTPC.
+
+I considered quite a few options, such as running Arch Linux, OpenElec or Ubuntu with XBMC installed, or going with the recently improved XBMCbuntu (formerly known as XBMC Live).
+
+## XBMCbuntu
+
+I downloaded the iso and had a bit of a play. I love how it boots directly into XBMC without the need to startup Unity or anything like that, although it does let you exit to the login screen and select either "XBMCbuntu" (LXDE) or "OpenBox" which is nice.
+
+Once it had booted, it behaved so slow! I figured it mustn't have the correct drivers installed, so I tried to use the restricted drivers from the repo and after hitting quite a few problems I consulted the AMD site.  
+The [AMD site explains](http://support.amd.com/us/gpudownload/linux/Legacy/Pages/radeon_linux.aspx?type=2.4.1&product=2.4.1.3.12&lang=English) that my ATI X1600 is now "legacy" and is supported by the ATI Catalyst 9.3 proprietary linux driver.  
+So I downloaded that and yet again hit a bunch of other issues.
+
+I spent a fair portion of the day battling with this and couldn't help but think back to how easy Ubuntu Desktop handled all this, so I thought I'd just give that another go.
+
+## Ubuntu Desktop + XBMC
+
+I downloaded the Ubuntu 11.10 iso and installed that over the top of XBMCbuntu and configured the user account as 'xbmc' and to automatically login at startup.  
+I then followed the [instructions to install XBMC from their PPA](http://wiki.xbmc.org/index.php?title=Installing_XBMC_for_Linux). I did a quick update, installed SSH, reconfigured grub to auto-boot in 1 second (instead of 10) and rebooted the machine.
+
+When I launched XBMC, it was perfect! It was very snappy and there was no lag whatsoever.  
+I noticed that the power menu was missing the shutdown options that were in XBMCbuntu and that the suspend option did not work.  
+After a bit if research, I found a [wiki page](http://wiki.xbmc.org/index.php?title=HOW-TO:Suspend_and_wake_in_Ubuntu) that explains how to modify `policykit` to allow xbmc access to all the power functions.  
+With this change, shutdown, suspend and hibernate were all working great.
+
+I had already configured Wake-On-Lan in the past, so all that I needed to do was setup the [Android XBMC remote app](https://play.google.com/store/apps/details?id=org.xbmc.android.remote&feature=search_result#?t=W251bGwsMSwxLDEsIm9yZy54Ym1jLmFuZHJvaWQucmVtb3RlIl0.) on my phone. After configuring the app with the laptops IP address, MAC address, etc. I was now able to use the "Turn your XBMC's Power On" button from the mobile app to fire up the laptop.  
+Of course to actually allow control of XBMC I needed to go into the settings screen and enable control via HTTP, etc.
+
+So now I can power up the laptop and shut it down from my phone, but when it boots, I am brought into a Unity environment. In the past I would add XBMC to the startup applications, but with XBMC Eden, there is a better way.  
+XBMC Eden adds it self to the choice of desktop environments from the login screen (in other words, you get a choice: Unity or straight into XBMC like the live cd).  
+Unfortunately it doesn't remember the last choice with XBMC, so if I boot straight into it and then shut it down, next time it will still automatically boot in to Unity.
+
+I then came across an [Ubuntu community page](https://help.ubuntu.com/community/AutoLogin#For_Ubuntu_10.04_.28Lucid_Lynx.29) that pointed in the direction the the LightDM config file. (LightDM is the thing that manages the login screen).  
+I opened `/etc/lightdm/lightdm.conf` and saw this line:
+
+```
+user-session=ubuntu
+```
+
+I replaced the `ubuntu` part of this line with `XBMC`, rebooted and low and behold, it booted straight into XBMC!
+
+I now have a fully functional HTPC that I can completely control from my phone.  
+The only things left to do now are configure my media sources, install some plugins and maybe play with some new skins.

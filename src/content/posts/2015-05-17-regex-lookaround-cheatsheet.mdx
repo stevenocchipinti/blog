@@ -1,0 +1,25 @@
+---
+title: "Regex lookaround cheatsheet"
+pubDate: "2015-05-17 18:16"
+categories: regex
+---
+
+I have a fairly terrible memory but I've found writing and referring back to
+cheatsheets to be a pretty effective way to memorize things.
+
+I ended up referring back to my previous
+[cheatsheet on `git reset`](http://blog.stevenocchipinti.com/2015/03/24/git-reset-cheatsheet/)
+quite a few times soon after I wrote it, so when I came across
+[this great post on regex features in ruby](http://idiosyncratic-ruby.com/11-regular-extremism.html)
+I thought I'd share the lookarounds section because I _always_ forget those too!
+
+| Syntax   | Description         | Example                | Result |
+| -------- | ------------------- | ---------------------- | ------ |
+| `(?=X)`  | Positive lookahead  | `"Ruby"[/.(?=b)/]`     | `"u"`  |
+| `(?!X)`  | Negative lookahead  | `"Ruby"[/.(?!u)/]`     | `"u"`  |
+| `(?<=X)` | Positive lookbehind | `"Ruby"[/(?<=u)./]`    | `"b"`  |
+| `(?<!X)` | Negative lookbehind | `"Ruby"[/(?<!R\|^)./]` | `"b"`  |
+
+Checkout the [original blog post](http://idiosyncratic-ruby.com/11-regular-extremism.html)
+for the rest of the regex tips or the
+[Idiosyncratic Ruby site](http://idiosyncratic-ruby.com) for more ruby tips!

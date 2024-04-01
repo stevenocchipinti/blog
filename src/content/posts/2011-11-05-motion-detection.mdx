@@ -1,0 +1,75 @@
+---
+title: "Motion detection"
+pubDate: "2011-11-05"
+categories: [webcam, unity, gnome3, linux, ubuntu]
+---
+
+import Img from "../../components/CloudinaryImg.astro"
+
+The way my desk is positioned means that when I’m on my computer I face the
+corner of the room, which means the door is behind me. Quite often I’ll stay up
+late working away till early hours of the morning and usually music comes
+hand-in-hand with coding (for me anyway), so when it’s late, I use headphones so
+I don’t disturb anyone else.
+
+This has caused me some grief as sometimes someone will come into my room for
+whatever reason and find me with my back to the them and headphones in, so
+knocking at the door or saying my name does not get my attention. This leaves
+the last resort of tapping me on the shoulder which scares the crap out of me!
+
+A while ago I invested in a convex mirror designed to go on your computer screen
+so you can see who’s coming up from behind. Well, with a 24-inch screen and
+deep concentration, this small mirror doesn’t catch me eye at all, so I still
+hit the ceiling when someone taps me on the shoulder.
+
+<Img originalAspectRatio src="blog/g5j3okybngzcb0zmixu3.jpg" />
+
+For my birthday I got this amazing [Astro
+A40](http://www.astrogaming.com/a40-audio-system-astro-edition) headset. Sound
+clarity is absolutely stunning, they are really comfortable to wear and they
+block out a lot of surrounding background noise. While I absolutely love the
+headset and wear it all the time, you can probably guess this adds to my
+jumpy-ness!
+
+So I finally found a solution!
+
+There is a package in the Ubuntu repositories called `motion` - which is a
+really simple motion detection server that utilises a webcam. I had a look at
+`zoneminder` too, but it seems very over-kill for my needs. `motion` will detect
+movement (above a configurable threshold), store `movement` snapshots and video
+files, log to a database and more importantly it provides a few hooks to fire
+commands upon events such as `on_event_start`, `on_motion_detected`, etc.
+
+I disabled almost every option except the `on_event_start` hook. This hook will
+execute the given command when motion has been detected after a (configurable)
+`gap` period of time of no motion - which I set to 10 seconds.
+
+The command I set it to execute is this:
+
+```
+sudo -u steve notify-send –hint=int:transient:1 -i ‘/usr/share/icons/hicolor/scalable/mimetypes/text-x-apport.svg’ ‘LOOK BEHIND YOU!’
+```
+
+As mentioned in an [earlier blog
+post](https://blog.stevenocchipinti.com/2011/09/gtalksms.html), notify-send can
+be found in the libnotify-bin package
+
+Note: the `–hint=int:transient:1` is for Gnome-Shell which has introduced
+persistent notifcations and I didn’t want to acknowledge a notification
+everytime someone walks past!
+
+The end result of this little hack is when someone walks anywhere near my
+doorway, that command gets my attention with a standard Gnome-Shell notification
+from the bottom of the screen like this:
+
+<Img originalAspectRatio src="blog/wkypzeknlxtfgw3qipe1.jpg" />
+
+The reason I am using sudo here is that motion needs to be run as root, and so
+the `notify-send` command will also be run as root. I guess because I had Unity
+installed before Gnome-Shell, when root runs `notify-send` I get the Unity style
+notifications - which is still nice, but as I’m road testing Gnome-Shell, I
+figured I may as well use its notification look-n-feel too.
+
+Here’s what it looks like if you leave out the `sudo -u steve` part:
+
+<Img originalAspectRatio src="blog/wtp6wi25kgucbgexea2g.jpg" />

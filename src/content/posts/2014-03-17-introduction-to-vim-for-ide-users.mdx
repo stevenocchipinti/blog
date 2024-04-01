@@ -1,0 +1,208 @@
+---
+title: "Introduction to Vim for IDE users"
+pubDate: "2014-03-17 17:23"
+categories: vim
+---
+
+> I'd love to learn Street Fighter 2, but there are just so many combos!  
+> —[The Vim Learning Curve is a Myth](http://robots.thoughtbot.com/the-vim-learning-curve-is-a-myth), Thoughtbot
+
+A lot of people are scared of learning of vim because of the initial learning
+curve.
+
+When learning vim for the first time there are lots of approaches, but two
+common ways are:
+
+1. Learn "pure" vi/vim, then introduce vimrc options and then plugins
+2. Start with an existing "customization" (from someone else), then learn what
+   things do
+
+Once upon a time, I would have suggested learning the basic features of vim
+before getting into customization, but there are quite a lot of people who are
+not interested in learning the tool unless they can be productive straight away.
+When coming from an IDE, the apparent shortcomings of a less integrated text
+editor will scare them away before they have discovered the power of editing
+text with vim.
+
+This guide is aimed at those people. I want to outline some steps to learn vim
+that makes the transition from IDE to vim as easy as possible with the hope of
+making vim a less scary step.
+
+## Installing Vim
+
+Most systems will come with a version of vim, but you may want to get the latest
+version from the systems package manager for a more complete feature set.
+
+On a mac, the standard install of `vim` is missing clipboard support so I would
+recommend installing MacVim, here is how I do it with homebrew:
+
+```
+brew install macvim
+brew linkapps
+```
+
+This package provides `mvim` on the command line, but `vim` will still refer to
+the system version, so I setup a couple of aliases in my `.bash_profile`:
+
+```
+alias vim="mvim -v"
+alias vi="vim"
+```
+
+## Basic Usage
+
+This guide is more about setting up vim in a manner that won't seem too
+crippling when coming from an IDE, so I won't focus too much on editing
+effectively with vim here.
+
+If vim is completely new to you and you don't know the basics such as the
+difference between _command mode_ and _insert mode_ or how to quit vim, I would
+recommend pausing the guide here and running `vimtutor` in your terminal to
+learn the basics.
+
+## Configuring Vim
+
+Vim uses a `.vimrc` configuration file in your home directory. There is a
+plethora of configuration options you can put here, but I thought I would offer
+some basic options to get you started.
+
+My [`.vimrc`](https://github.com/stevenocchipinti/dotvim/blob/master/vimrc) is
+quite large, but here is a snippet for some basic options that you can put into
+your own `.vimrc` to get started:
+
+```
+filetype plugin indent on
+syntax on
+
+set ts=2 sw=2         " Use 2 spaces for tabs
+set expandtab         " Use spaces instead of tab characters
+set wrap              " Wrap the display lines (not actual text)
+set linebreak
+set backspace=indent,eol,start
+set incsearch         " Show matching search results as typing
+set ruler             " Show row and column in status bar
+set wildmenu          " Nicer tab completion for :ex commands
+set ignorecase        " Case insensitive search by default
+set smartcase         " Use case sensitive search in a capital letter is used
+set warn              " Show what mode your in (insert, etc.)
+set scrolloff=3       " Number of lines to always show at at the top and bottom
+set autoindent        " Copy the indentation from the previous line
+set colorcolumn=81    " Highlight the 81st column (shorthand = :set cc=81)
+set cursorline        " Highlight the line which the cursor is on
+set laststatus=2      " Always show a status bar
+set mouse=a           " Make the mouse work - even in terminals
+set list              " Show `listchars` characters
+set listchars=tab:=»,trail:·
+
+" Easier way to copy and paste from the global clipboard
+map <leader>p "+p
+map <leader>y "+y
+```
+
+## Navigating code
+
+Vim has builtin support for `ctags`, which indexes your code and allows you to
+jump to the definition of a method or class. As usual, on a mac you will have a
+standard version of `ctags` installed, but it's not very good, so I recommend
+installing the _exuberant ctags_ package from homebrew:
+
+```
+brew install ctags
+sudo mv /usr/bin/ctags{,-bsd}
+sudo ln -s /usr/local/Cellar/ctags/5.8/bin/ctags /usr/bin/ctags
+```
+
+To make use of ctags, in the root of a project run the following command:
+
+```
+ctags -R .
+```
+
+This will need to be run when the code changes to keep the tags file up to date,
+so I have setup [git
+hooks](http://tbaggery.com/2011/08/08/effortless-ctags-with-git.html) to
+automate this. If you don't want to setup git hooks, you can execute this
+command from within vim with `:!ctags -R .`
+
+Now if you open some code, move your cursor over an occurrence of a method or
+class, you can jump into the definition of that method or class with the
+following key bindings:
+
+`crtl` + `]` = Jump to definition (of what is under the cursor)  
+`crtl` + `T` = Jump back from following a tag
+
+The following key bindings are also useful for navigation and do _not_ require
+ctags:
+
+`/foo` = Search for `foo`  
+`*` = Search for the word under the cursor  
+`n` = Jump to the next occurrence of the search  
+`N` = Jump to the previous occurrence of the search  
+`crtl` + `o` = Go back from the last jump  
+`crtl` + `i` = Go forward to the recent jump
+
+## Vim Plugins
+
+Vim has a plugin system, but by default it does not do a good job of keeping
+plugins isolated from each other. To improve this, there are plugins that manage
+plugins. I recommend using [Vundle](https://github.com/gmarik/vundle), here is
+how to set it up along with a few useful vim plugins:
+
+```
+git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+```
+
+Then place the following at the top of your `.vimrc`:
+
+```
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Plugin 'gmarik/vundle'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-rake'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
+Plugin 'vim-scripts/matchit.zip'
+Plugin 'scrooloose/syntastic'
+Plugin 'bogado/file-line'
+
+call vundle#end()
+filetype plugin indent on
+```
+
+Then, I choose configure some of those plugins towards the bottom of the
+`.vimrc` like this:
+
+```
+" NERDTREE PLUGIN - (mnemonic: Files)
+nmap <leader>f :NERDTreeToggle<CR>
+nmap <leader>F :NERDTreeFind<CR>
+
+" CTRL-P PLUGIN
+let g:ctrlp_user_command = {
+\   'types': {
+\     1: ['.git/', 'cd %s && git ls-files'],
+\     2: ['.hg/', 'hg --cwd %s locate -I .'],
+\   },
+\   'fallback': 'find %s -type f'
+\ }
+```
+
+Now, from within vim, run `:BundleInstall`
+
+## Next steps
+
+At this point, you should have a somewhat powerful installation of vim, the next
+step is to learn how to use this power. Below are some resources to help you
+learn how to use vim effectively.
+
+- run `vimtutor` on the command line to learn
+- [vimcasts](http://vimcasts.org/)
+- [vimgolf](http://www.vimgolf.com/)
+- [my .vimrc](http://github.com/stevenocchipinti/dotvim)

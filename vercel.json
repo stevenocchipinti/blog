@@ -1,0 +1,293 @@
+{
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/projects/",
+      "destination": "https://github.com/stevenocchipinti"
+    },
+    {
+      "source": "/2011/04/24-70mm-f28-vs-17-50mm-f28.html",
+      "destination": "/posts/2011-04-16-24-70mm-f28-vs-17-50mm-f28/"
+    },
+    {
+      "source": "/2011/04/intro-to-braindumping.html",
+      "destination": "/posts/2011-04-16-intro-to-braindumping/"
+    },
+    {
+      "source": "/2011/04/minecraft-and-arch-linux-ftw.html",
+      "destination": "/posts/2011-04-16-minecraft-and-arch-linux-ftw/"
+    },
+    {
+      "source": "/2011/05/cleaning-up-indicator-applet-in-ubuntu.html",
+      "destination": "/posts/2011-05-23-cleaning-up-indicator-applet-in-ubuntu/"
+    },
+    {
+      "source": "/2011/05/dhcp-fixedhosts-to-etchosts-file.html",
+      "destination": "/posts/2011-05-17-dhcp-fixedhosts-to-etchosts-file/"
+    },
+    {
+      "source": "/2011/05/multi-monitor-keyboard-shortcuts-in.html",
+      "destination": "/posts/2011-05-23-multi-monitor-keyboard-shortcuts-in/"
+    },
+    {
+      "source": "/2011/05/multiple-google-accounts-at-once.html/",
+      "destination": "/posts/2011-05-16-multiple-google-accounts-at-once/"
+    },
+    {
+      "source": "/2011/05/tank-project.html",
+      "destination": "/posts/2011-05-22-tank-project/"
+    },
+    {
+      "source": "/2011/05/search-and-replace-in-multiple-files.html/",
+      "destination": "/posts/2011-05-30-search-and-replace-in-multiple-files/"
+    },
+    {
+      "source": "/2011/06/bash-auto-complete.html",
+      "destination": "/posts/2011-06-20-bash-auto-complete/"
+    },
+    {
+      "source": "/2011/06/cant-open-file-for-writing.html",
+      "destination": "/posts/2011-06-18-cant-open-file-for-writing/"
+    },
+    {
+      "source": "/2011/06/phpremoteadmin.html",
+      "destination": "/posts/2011-06-24-phpremoteadmin/"
+    },
+    {
+      "source": "/2011/06/vi-mode-for-bash.html",
+      "destination": "/posts/2011-06-26-vi-mode-for-bash/"
+    },
+    {
+      "source": "/2011/07/pencil-for-ui-design.html",
+      "destination": "/posts/2011-07-09-pencil-for-ui-design/"
+    },
+    {
+      "source": "/2011/07/python-fu-for-gimp.html",
+      "destination": "/posts/2011-07-03-python-fu-for-gimp/"
+    },
+    {
+      "source": "/2011/07/search-and-replace-in-multiple-files.html/",
+      "destination": "/posts/2011-07-20-search-and-replace-in-multiple-files/"
+    },
+    {
+      "source": "/2011/07/ssh-copy-id-with-alternative-port.html",
+      "destination": "/posts/2011-07-14-ssh-copy-id-with-alternative-port/"
+    },
+    {
+      "source": "/2011/08/mounting-nfs-in-ubuntu.html",
+      "destination": "/posts/2011-08-05-mounting-nfs-in-ubuntu/"
+    },
+    {
+      "source": "/2011/08/poweroff-without-password.html",
+      "destination": "/posts/2011-08-21-poweroff-without-password/"
+    },
+    {
+      "source": "/2011/08/regex-substitution-101.html",
+      "destination": "/posts/2011-08-01-regex-substitution-101/"
+    },
+    {
+      "source": "/2011/09/code-review-workflow-with-github.html",
+      "destination": "/posts/2011-09-18-code-review-workflow-with-github/"
+    },
+    {
+      "source": "/2011/09/git-diff-and-patch.html",
+      "destination": "/posts/2011-09-21-git-diff-and-patch/"
+    },
+    {
+      "source": "/2011/09/gtalksms.html/",
+      "destination": "/posts/2011-09-08-gtalksms/"
+    },
+    {
+      "source": "/2011/09/meta-contacts-in-pidgin.html",
+      "destination": "/posts/2011-09-03-meta-contacts-in-pidgin/"
+    },
+    {
+      "source": "/2011/10/disabling-unity-global-menu.html",
+      "destination": "/posts/2011-10-20-disabling-unity-global-menu/"
+    },
+    {
+      "source": "/2011/10/recursive-search-with-vimgrep.html",
+      "destination": "/posts/2011-10-12-recursive-search-with-vimgrep/"
+    },
+    {
+      "source": "/2011/10/ruby-parallel-port-leds.html",
+      "destination": "/posts/2011-10-10-ruby-parallel-port-leds/"
+    },
+    {
+      "source": "/2011/11/13-core-i7-samsung-series-9-ultrabook.html",
+      "destination": "/posts/2011-11-28-13-core-i7-samsung-series-9-ultrabook/"
+    },
+    {
+      "source": "/2011/11/motion-detection.html",
+      "destination": "/posts/2011-11-05-motion-detection/"
+    },
+    {
+      "source": "/2011/11/removing-geotag-data-from-jpgs.html",
+      "destination": "/posts/2011-11-05-removing-geotag-data-from-jpgs/"
+    },
+    {
+      "source": "/2011/12/toshiba-portege-z830.html",
+      "destination": "/posts/2011-12-10-toshiba-portege-z830/"
+    },
+    {
+      "source": "/2012/02/copy-and-paste-over-ssh-with-xclip.html",
+      "destination": "/posts/2012-02-12-copy-and-paste-over-ssh-with-xclip/"
+    },
+    {
+      "source": "/2012/02/git-hub-github.html",
+      "destination": "/posts/2012-02-20-git-hub-github/"
+    },
+    {
+      "source": "/2012/02/minecraft-exception-in-linux.html",
+      "destination": "/posts/2012-02-02-minecraft-exception-in-linux/"
+    },
+    {
+      "source": "/2012/03/rooting-htc-desire-hd-cyanogenmod-7.html",
+      "destination": "/posts/2012-03-31-rooting-htc-desire-hd-cyanogenmod-7/"
+    },
+    {
+      "source": "/2012/03/spam-defence.html",
+      "destination": "/posts/2012-03-07-spam-defence/"
+    },
+    {
+      "source": "/2012/03/xkcd-beyondpod.html",
+      "destination": "/posts/2012-03-04-xkcd-beyondpod/"
+    },
+    {
+      "source": "/2012/04/1-year-and-40-posts.html",
+      "destination": "/posts/2012-04-16-1-year-and-40-posts/"
+    },
+    {
+      "source": "/2012/04/xbmc-eden-ubuntu.html",
+      "destination": "/posts/2012-04-06-xbmc-eden-ubuntu/"
+    },
+    {
+      "source": "/2012/05/google-calendar-repeating-event-on-last.html",
+      "destination": "/posts/2012-05-23-google-calendar-repeating-event-on-last/"
+    },
+    {
+      "source": "/2012/05/password-management.html",
+      "destination": "/posts/2012-05-16-password-management/"
+    },
+    {
+      "source": "/2012/07/arduino-web-server-with-sd-card-reader.html",
+      "destination": "/posts/2012-07-27-arduino-web-server-with-sd-card-reader/"
+    },
+    {
+      "source": "/2012/08/adding-network-printer-in-ubuntu-1204.html",
+      "destination": "/posts/2012-08-05-adding-network-printer-in-ubuntu-1204/"
+    },
+    {
+      "source": "/2012/08/samsung-galaxy-s3.html/",
+      "destination": "/posts/2012-08-21-samsung-galaxy-s3/"
+    },
+    {
+      "source": "/2012/09/changing-default-boot-option-with-grub2.html",
+      "destination": "/posts/2012-09-19-changing-default-boot-option-with-grub2/"
+    },
+    {
+      "source": "/2012/09/getting-started-with-ruby-on-rails.html",
+      "destination": "/posts/2012-09-11-getting-started-with-ruby-on-rails/"
+    },
+    {
+      "source": "/2012/10/bluetooth-audio-streaming-from-phone-to.html",
+      "destination": "/posts/2012-10-30-bluetooth-audio-streaming-from-phone-to/"
+    },
+    {
+      "source": "/2012/12/a-few-photography-tips.html",
+      "destination": "/posts/2012-12-14-a-few-photography-tips/"
+    },
+    {
+      "source": "/2013/01/script-to-transfer-photos-in-linux.html",
+      "destination": "/posts/2013-01-04-script-to-transfer-photos-in-linux/"
+    },
+    {
+      "source": "/2013/03/how-to-make-tomato-sauce.html",
+      "destination": "/posts/2013-03-17-how-to-make-tomato-sauce/"
+    },
+    {
+      "source": "/2013/05/safe-mode-on-samsung-galaxy-s3.html",
+      "destination": "/posts/2013-05-12-safe-mode-on-samsung-galaxy-s3/"
+    },
+    {
+      "source": "/2013/06/removing-previously-printed-lines.html",
+      "destination": "/posts/2013-06-08-removing-previously-printed-lines/"
+    },
+    {
+      "source": "/2013/07/22/default-values-for-environment-variables/",
+      "destination": "/posts/2013-07-22-default-values-for-environment-variables/"
+    },
+    {
+      "source": "/2013/10/18/rake-task-with-an-arbitrary-number-of-arguments/",
+      "destination": "/posts/2013-10-18-rake-task-with-an-arbitrary-number-of-arguments/"
+    },
+    {
+      "source": "/2013/11/10/installing-minecraft-in-linux/",
+      "destination": "/posts/2013-11-10-installing-minecraft-in-linux/"
+    },
+    {
+      "source": "/2013/12/14/preparing-for-trailwalker/",
+      "destination": "/posts/2013-12-14-preparing-for-trailwalker/"
+    },
+    {
+      "source": "/2014/03/10/completely-removing-a-git-commit-due-to-sensitive-information/",
+      "destination": "/posts/2014-03-10-completely-removing-a-git-commit-due-to-sensitive-information/"
+    },
+    {
+      "source": "/2014/03/17/introduction-to-vim-for-ide-users/",
+      "destination": "/posts/2014-03-17-introduction-to-vim-for-ide-users/"
+    },
+    {
+      "source": "/2014/12/29/sending-email-from-the-command-line/",
+      "destination": "/posts/2014-12-29-sending-email-from-the-command-line/"
+    },
+    {
+      "source": "/2015/03/24/git-reset-cheatsheet/",
+      "destination": "/posts/2015-03-24-git-reset-cheatsheet/"
+    },
+    {
+      "source": "/2015/04/04/configuring-a-hdmi-cec-remote-in-kodi/",
+      "destination": "/posts/2015-04-04-configuring-a-hdmi-cec-remote-in-kodi/"
+    },
+    {
+      "source": "/2015/04/12/disabling-the-single-origin-policy-in-chrome/",
+      "destination": "/posts/2015-04-12-disabling-the-single-origin-policy-in-chrome/"
+    },
+    {
+      "source": "/2015/04/25/safely-rendering-newlines-in-html-with-css/",
+      "destination": "/posts/2015-04-25-safely-rendering-newlines-in-html-with-css/"
+    },
+    {
+      "source": "/2015/04/30/rewriting-indentation-in-every-file-and-every-commit/",
+      "destination": "/posts/2015-04-30-rewriting-indentation-in-every-file-and-every-commit/"
+    },
+    {
+      "source": "/2015/05/17/regex-lookaround-cheatsheet/",
+      "destination": "/posts/2015-05-17-regex-lookaround-cheatsheet/"
+    },
+    {
+      "source": "/2015/05/26/how-to-keep-environment-variables-when-using-sudo/",
+      "destination": "/posts/2015-05-26-how-to-keep-environment-variables-when-using-sudo/"
+    },
+    {
+      "source": "/2015/06/01/rewriting-author-and-email-in-every-commit/",
+      "destination": "/posts/2015-06-01-rewriting-author-and-email-in-every-commit/"
+    },
+    {
+      "source": "/2016/12/28/different-author-email-addresses-per-git-repository/",
+      "destination": "/posts/2016-12-28-different-author-email-addresses-per-git-repository/"
+    },
+    {
+      "source": "/2016/12/28/search-and-replace-vim-and-git/",
+      "destination": "/posts/2016-12-28-search-and-replace-vim-and-git/"
+    },
+    {
+      "source": "/2016/12/28/using-netrw-instead-of-nerdtree-for-vim/",
+      "destination": "/posts/2016-12-28-using-netrw-instead-of-nerdtree-for-vim/"
+    },
+    {
+      "source": "/2016/12/28/windows-starting-up-by-itself-at-random-times/",
+      "destination": "/posts/2016-12-28-windows-starting-up-by-itself-at-random-times/"
+    }
+  ]
+}

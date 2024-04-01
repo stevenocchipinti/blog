@@ -1,0 +1,117 @@
+---
+title: "24-70mm f2.8 VS 17-50mm f2.8"
+pubDate: "2011-04-16"
+categories: [photography, linux, bash]
+---
+
+A friend of mine has a Canon 24-70mm f2.8 'L' lens and after having a play with
+it and looking at his photos I have had a little bit of gear-envy. The extra
+speed and frequent bokeh was really nice! Naturally I started looking at
+prices.. and the Nikon equivalent is… not cheap!
+
+I cant justify
+[$1969](http://www.dwidigitalcameras.com.au/store/product.asp?idProduct=1917) on
+a lens! Especially considering that I dont actually need it, and I am just a
+hobbyist (therefore: return on investment == profit from my work == $0).
+
+I then read up on some more affordable
+[Sigma](http://www.dwidigitalcameras.com.au/store/product.asp?idProduct=2221)
+and
+[Tamron](http://www.dwidigitalcameras.com.au/store/product.asp?idProduct=374)
+lenses that were similar and liked the prices much better! … but im still
+really indecisive :(
+
+Then I saw the 17-50mm f2.8 lenses (from
+[Tamron](http://www.dwidigitalcameras.com.au/store/product.asp?idProduct=2416),
+[Sigma](http://www.dwidigitalcameras.com.au/store/product.asp?idProduct=3013)
+and
+[Tokina](http://www.dwidigitalcameras.com.au/store/product.asp?idProduct=2278)),
+and this made me think.. When I was travelling to Japan (with Sarma, the Canon
+guy) I remember him complaining about not being able to get a wide enough shot
+and he would often stand pretty far back to get the shot he wanted or swap to
+his 10-20mm lens. This probably wouldn't be an issue with a full-frame camera,
+but the 50d's smaller sensor means it is already quite "zoomed-in" at its widest
+setting.
+
+I started writing up an email to ask Sarma what he thought and realized I have
+all his photos from our Japan trip, so with a bit of linux command line fun, I
+came up with this:
+
+```
+> exiftool -p `$focallength` -q -f \`find -L .\` | sort -n | uniq -c
+```
+
+Now for the explanation:
+
+**``exiftool -p `$focallength` -q -f``**
+
+exiftool extracts exif information from jpg's.The -p prints a formatted string,
+which I inserted just the $focallength variable.The -q means quiet (basically,
+dont print too much).The -f is the list of files, which I use a sub-command
+(wrapped in backticks) to get.
+
+**`find -L .`**
+
+As all of our groups photos were kind-of mixed in together, I created a
+directory with symlinks to just Sarma's photos (hence the find -L, where -L will
+follow symlinks to the appropriate directories).
+
+**`sort -n`**
+
+This just sorts the data by numberic value (so 10 > 1), this is mainly so the
+uniq command works properly.
+
+**`uniq -c`**
+
+This will collapse the data down to unique values and with the -c, it will also
+print the number of occurences have been collapsed down.
+
+The output of this command included all of Sarma's photos (not just taken with
+the 24-70) but it still gave me a pretty good idea. The output looked like
+this:
+
+```
+86    10.0 mm
+2     11.0 mm
+2     15.0 mm
+14    16.0 mm
+2     18.0 mm
+108   20.0 mm
+2362  24.0 mm
+142   28.0 mm
+176   32.0 mm
+138   35.0 mm
+104   40.0 mm
+118   45.0 mm
+136   47.0 mm
+120   50.0 mm
+94    55.0 mm
+78    58.0 mm
+76    60.0 mm
+76    65.0 mm
+70    67.0 mm
+52    70.0 mm
+52    73.0 mm
+34    75.0 mm
+14    80.0 mm
+48    82.0 mm
+56    84.0 mm
+18    85.0 mm
+24    88.0 mm
+10    90.0 mm
+14    92.0 mm
+12    93.0 mm
+16    95.0 mm
+10    96.0 mm
+4     97.0 mm
+8     98.0 mm
+8     99.0 mm
+12    100.0 mm
+10    102.0 mm
+404   105.0 mm
+```
+
+With the majority of Sarma's photos clearly being taken at 24mm, it made me
+think that as I too have a cropped sensor camera, the wider 17-50mm lenses are
+probably a better choice for me as I really dont have any plans to lash out on a
+full frame camera anytime soon :P

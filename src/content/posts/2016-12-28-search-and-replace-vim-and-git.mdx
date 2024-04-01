@@ -1,0 +1,107 @@
+---
+title: "Search and replace, vim and git"
+pubDate: "2016-12-28 02:30"
+categories: [vim, git]
+---
+
+Git provides some nice utility functionality that can make a vim development
+environment much nicer. With recent updates to Vim it can now execute a command
+for every item in the quickfix list (`:cdo`) and location list (`:ldo`). These
+features work together quite nicely.
+
+This new functionality has been introduced to vim from version 7.4.858 and is
+therefore available in vim8 and also available in neovim.
+
+## The Old Way
+
+Back in 2011 I wrote a
+[post about doing search and replace across multiple files](http://blog.stevenocchipinti.com/2011/05/search-and-replace-in-multiple-files.html/)
+with just the basic vim functionality. It's quite common to use the arg list
+because its easy to add to:
+
+```vim
+:arg *.js
+:arg `git ls-files`
+```
+
+and it's easy to execute commands:
+
+```vim
+:argdo %s/foo/bar/gc
+```
+
+## The New Way
+
+Now that we can execute a command from the quickfix and location lists it is
+much easier to make larger, more controlled edits with the help of other
+features or plugins.
+
+If you use `syntastic` or `neomake` for linting, a compiler via the `:make`
+command, the built in `:grep` or `:vimgrep` commands or any number of other
+plugins that integrate with these lists, such as
+[vim-fugitive](https://github.com/tpope/vim-fugitive), you can take advantage of
+`:cdo` and `:ldo`.
+
+```vim
+:grep foo **/*.js
+```
+
+Then you can execute commands like this:
+
+```vim
+:cdo s/foo/bar/gc
+```
+
+## Git Is Awesome
+
+Git is incredibly powerful and I often use a couple of features that are often
+overlooked:
+
+- `git ls-files` - recursively list all the files in the repo
+- `git grep` - grep through all the files in the repo
+
+One of the reasons these commands are so good is because by default they will
+ignore the items in the `.gitignore` file.
+
+I tend to work with javascript a fair bit and having an easy way to avoid those
+nasty `node_modules` directories readily available is great! Best of all, these
+tools are available on just about every machine I work, on including the
+machines of other peoples that I pair with.
+
+## My Workflow
+
+I use `ctrl-p` in vim and rather than relying on yet another third party tool
+like `ack` or `ag`, I've configured `crtl-p` like this:
+
+```vim
+let g:ctrlp_user_command = [
+\  '.git',
+\  'cd %s && git ls-files . -co --exclude-standard',
+\  'find %s -type f'
+\]
+```
+
+It is super fast and I haven't come across a situation where I need ctrl-p for a
+large enough non-git repo and `find` wasn't good enough for... yet!
+
+If you use [vim-fugitive](https://github.com/tpope/vim-fugitive), there is also
+a `:Ggrep` command that behaves much like the builtin `:grep` command, but it
+will ignore the `.gitignore` items. I use this quite a lot too:
+
+```vim
+:Ggrep foo
+:Ggrep foo **/*.js
+```
+
+Then you can execute commands in the same manner as above:
+
+```vim
+:cdo s/foo/bar/gc
+```
+
+Because I use this so often, I've added the following mapping to my config to
+automatically search for the token under my cursor:
+
+```
+map <leader>g :Ggrep!  <Bar> copen
+```

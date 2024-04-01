@@ -51,6 +51,7 @@ body {
   text-wrap: pretty;
   line-height: 1.7;
   color-scheme: dark light;
+  min-height: 100svh;
 }
 
 @media (max-width: 60ch) {
@@ -161,6 +162,7 @@ pre {
   padding: 1.5rem;
   border-radius: 1rem;
   font-size: 1rem;
+  margin: 1rem 0;
 }
 
 pre > code {

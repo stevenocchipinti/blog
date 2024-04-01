@@ -1,0 +1,45 @@
+---
+title: "Mounting NFS in Ubuntu"
+pubDate: "2011-08-05"
+categories: [linux, nfs, ubuntu]
+---
+
+At home we have a NAS that supports NFS!
+
+Its quite easy to setup Ubuntu (11.04) as an NFS client - this will allow you to mount the NAS on your local filesystem and it will appear just like any other directory.
+
+First step is to install the `nfs-common` package:
+
+```
+sudo apt-get install nfs-common
+```
+
+You can now mount NFS volumes!  
+To do so temporarily, can use this command:
+
+```
+sudo mount.nfs <IPADDRESS>:<REMOTEPATH> <MOUNTPOINT>
+```
+
+The mount point needs to exist prior to mounting.  
+For example, my nas would be mounted as follows:
+
+```
+sudo mkdir /mnt/nas
+sudo mount.nfs 192.168.1.10:/nfs/Public /mnt/nas
+```
+
+To make this permanent, you would need to add the following line to `/etc/fstab`:
+
+```
+192.168.1.10:/nfs/Public  /mnt/NAS  nfs  defaults  0  0
+```
+
+As a bonus, this also allows you to use the mount and umount commands by just specifying the mount point as these commands will query the `/etc/fstab` file.
+
+For example, once your `/etc/fstab` file is up to date, these commands will work without specifying the remote host and path:
+
+```
+sudo umount /mnt/nas
+sudo mount /mnt/nas
+```

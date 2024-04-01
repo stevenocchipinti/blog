@@ -1,0 +1,116 @@
+---
+title: "Different author email addresses per git repository"
+pubDate: "2016-12-28 02:30"
+categories: [git]
+---
+
+Git v2.8 introduced a new configuration option called `user.useconfigonly`. This
+option prevents git from trying to guess your email address to use for the
+author metadata for a commit and forces you to have configured one.
+
+This is great news because with a good workflow in place you can be sure you
+always have the correct email addresses on your commits.
+
+## Global Configuration
+
+If `user.useconfigonly` is set to `true`, you will need to configure an email
+address. The simplest way is with this command:
+
+```
+git config --global user.name 'Steve Occhipinti'
+git config --global user.email steve@example.com
+```
+
+Which will result in a configuration like this saved in `~/.gitconfig`:
+
+```
+[user]
+  name = Steve Occhipinti
+  email = steve@example.com
+```
+
+This is great, but what if you want to work on personal projects and work
+projects on the same machine?
+
+## Per Repository Configuration
+
+Instead of using the global config in the home directory, git will first look
+for a local configuration in `./.git/config`. To set per repository
+configuration, all you have to do is `cd` to the repo and run the same commands
+but without the `--global` flag:
+
+```
+git config user.name 'Steve Occhipinti'
+git config user.email steve@example.com
+```
+
+## Mixing Work And Personal
+
+If you have a global configuration, all repositories will use that as a default
+unless you remember to set a per-repository config. If you don't set a global
+config, git will normally guess what your email is and use that if its valid.
+
+If you set the `useconfigonly` option and remove your global config, git will
+not allow you to make a commit until you've setup your user details and this
+will prevent accidentally using your work email address on a personal project or
+vice-versa.
+
+However, I do leave my name configured globally as that is not going to change
+between repositories.
+
+## Visual Queues
+
+Having that error appear when you haven't setup an email address is great, but
+rather than waiting for me to make a mistake, I added an exclamation mark
+indicator to my shell prompt to remind me to set up the user details.
+
+The basic idea is something like this:
+
+```bash
+local noauthor
+git config user.email > /dev/null || noauthor="!"
+export $PS1="$noauthor${PS1}"
+```
+
+## Quicker Configuration
+
+If this is something that I will have to do for every repo I create or clone, I
+want to it be pain free. Git makes it really easy to create new sub commands
+simply by putting a script named `git-xxxx` in the path, where `xxxx` is the
+sub command name.
+
+I created a `git-author` script like this:
+
+```bash
+#!/bin/bash
+set -e
+
+email_list_file="$HOME/.config/git/author-emails"
+has_pecorb=$(type pecorb > /dev/null 2>&1)
+
+echo "Current author: $(git config user.name) <$(git config user.email)>"
+
+if [ -f $email_list_file ] && $has_pecorb; then
+  email=$(pecorb $email_list_file)
+else
+  echo -n "Enter a new email address: "
+  read email
+fi
+
+git config user.email $email
+```
+
+Now when go to a repo and I see my `!` indicator, all I have to do is run `git
+author`.
+
+This allows me to put all my email addresses in a file and then select the one I
+want from a nice menu. Note, I'm using `pecorb` here which is a
+[gem I wrote](https://github.com/stevenocchipinti/pecorb) to generate selectable
+menus on the command line, but there are plenty of
+[alternatives](https://github.com/stevenocchipinti/pecorb#kudos) or you could
+just use `read` in `bash` and type it in (which my script falls back to).
+
+## My Bash Prompt
+
+The prompt I use may not be the tidiest, but its available
+[here](https://github.com/stevenocchipinti/homesync/blob/1a345e563afb47b81d405d47e4a6b45b63e82c98/data/.bash_git).

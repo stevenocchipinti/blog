@@ -1,0 +1,29 @@
+---
+title: "Disabling the Same Origin Policy in Chrome"
+pubDate: "2015-04-12 16:20"
+categories: security
+---
+
+If you ever needed to circumvent the browsers
+[Same Origin Policy (SOP)](https://en.wikipedia.org/wiki/Same-origin_policy)
+so you don't need to add
+[Cross Origin Resource Sharing (CORS)](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
+headers just to test out an idea, here is a quick little hack to open a new
+instance of Chrome that will not enforce these security features:
+
+```
+alias unsafe-chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --user-data-dir=~/Library/Application\ Support/Google/UnsafeChrome --disable-web-security 2> /dev/null'
+```
+
+The important options here are:
+
+`--disable-web-security` - This will disable the Same Origin Policy  
+`--user-data-dir=...` - This launches a separate instance, with its own user data
+directory.  
+This prevents you from needing to close any current instances of chrome,
+otherwise running this command will just bring the existing instance into focus.
+
+Another good thing about giving this instance its own `user-data-dir` is that
+you can give this instance its own settings. For example, this instance is not
+signed into my Google account and I've configured a bright red theme so I can
+easily tell the difference between my normal Chrome and my insecure Chrome!

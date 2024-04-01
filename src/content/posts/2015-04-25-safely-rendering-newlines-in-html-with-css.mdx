@@ -1,0 +1,37 @@
+---
+title: "Safely rendering newlines in HTML with CSS"
+pubDate: "2015-04-25 17:39"
+categories: [css, security]
+---
+
+We all know that if you are going to be rendering user provided content on a
+HTML page, it should be sanitized just in case they include a nasty script tag
+or something.
+
+[React](https://facebook.github.io/react/)
+will automatically sanitize any string being rendered to the screen unless you
+[jump through hoops](https://facebook.github.io/react/tips/dangerously-set-inner-html.html)
+first - which is great because making this difficult means its somewhat harder
+to inadvertently create a
+[XSS vulnerability](https://www.owasp.org/index.php/Cross-site_Scripting_%28XSS%29).
+
+However, if you get a string from a human source and want to display that in a
+`div` tag while maintaining its newlines, this becomes a little harder because
+you don't want to replace all `\n` characters with `<br />` tags because this
+would mean you would also need to disable the sanitizing.
+
+There are some libraries to deal with this sort of thing that implement white
+listing of tags, etc.  
+Another alternative would be using something like
+[Markdown](https://daringfireball.net/projects/markdown/).  
+Even a simple `<pre>` tag will get you pretty far, but today I read an article
+that shows how you can achieve this with a little CSS:
+
+```css
+.pre {
+  white-space: pre-line;
+}
+```
+
+For more details, I recommend having a read of
+[this article](https://css-tricks.com/almanac/properties/w/whitespace/).

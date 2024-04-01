@@ -1,0 +1,40 @@
+---
+title: "Disabling the Unity global menu"
+pubDate: "2011-10-20"
+categories: [unity, linux, ui, ubuntu]
+---
+
+The Unity global menubar in Ubuntu can take a bit of getting used to, especially
+if you don’t come from a Mac background, but once you do, the screen real estate
+saving is quite nice, especially on small screens like my eeepc.
+
+But sometimes it can be frustrating!  
+For example, if you use The Gimp, alot of its functionality is in the menu, but
+for that to show, you must have the main window (the one with your work in it)
+focused, but whenever you select a tool from the toolbox, that window loses
+focus, and therefore you can’t get to the menu.
+
+I know all it takes is a click in the main window and then a click on the global
+menu, but this can get quite annoying.
+
+Thankfully, there is an off-switch in the form of an env-var which you can
+either add to your profile to completely disable it, or just prefix it before
+you run commands like gimp.
+
+All you need to do to disable it is set this:
+
+```
+UBUNTU_MENUPROXY=0
+```
+
+I made an alias so its easier to remember:
+
+```
+alias dam=’UBUNTU_MENUPROXY=0 ’
+```
+
+Note that typing (or shouting) `dam gimp` is not only to relieve the frustration
+of the global menubar, but it also stands for "**D**isable **A**pp**M**enu" :)
+
+There is a full write up with more details over at
+[webupd8.org](http://www.webupd8.org/2011/03/disable-appmenu-global-menu-in-ubuntu.html)

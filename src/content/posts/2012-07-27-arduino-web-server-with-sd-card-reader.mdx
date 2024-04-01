@@ -1,0 +1,88 @@
+---
+title: "Arduino Web Server with SD card reader"
+pubDate: "2012-07-27"
+categories: [arduino, hardware]
+---
+
+import Img from "../../components/CloudinaryImg.astro"
+
+I've had an interest in electronics since a very young age, but I never really
+went further than building simple circuits as a kid and learning the theory and
+following diagrams through school. There's always the odd repair job, and
+plenty of theoretical knowledge from family, friends and university, but I
+wouldn't be able to design the electronics of anything complex.
+
+A little while back, a [friend of mine](http://michael.chandler.id.au/) got an
+email from [meetup.com](http://meetup.com/) with suggested meetups. One of them
+was the [Melbourne
+Hackduino](http://www.meetup.com/Hackduino-Electronics-Meetup-Group) meetup. So
+he forwarded it on to our group of friends and a few of us went along to check
+it out. I've always wanted to play with a microprocessor, but never really put
+the time aside for it. Being a software developer there was always this barrier
+between the programs I write and making them do something in the real world.
+
+Well, in the last week that barrier has been lifted! The meetup was great and
+hearing about other people's hobbies and projects provides plenty of motivation!
+We heard stories about everything from people trying to optimize solar hot water
+systems to building full size mechanical avatars. It was a lot of fun!
+
+[Mark Butt](http://au.linkedin.com/pub/mark-butt/28/507/539), the organiser of
+the event gave us a presentation of [some of the cool things he has done in the
+past](http://www.springrocket.com.au/portfolio/), such as an arduino powered bar
+counter top that detects what drink you put on it and a run down of some of the
+things he plans on doing in the future, all very cool!
+
+One really nice bonus was the generous offering from
+[Freetronics](http://www.freetronics.com/). There were a few people from
+Freetronics at the event and other than being very knowledgeable, they brought a
+big bunch of assorted hardware to give away! They had everything from RGB LEDs
+to full blown Arduino boards. I was lucky enough to score an [EtherMega
+2650](http://www.freetronics.com/products/ethermega-arduino-mega-2560-compatible-with-onboard-ethernet#.UA3bC3AwyGo),
+which from what I can tell is a beefed up Arduino with an Ethernet port (with
+power over Ethernet) and a MicroSD card reader. Some of my friends got a [LCD
+shield](http://www.freetronics.com/products/lcd-keypad-shield#.UA4RrXAwyGp) that
+can display 2 rows of 16 characters and has a few buttons on board. For those
+that aren't up with the lingo, a shield is an attachment for a standard Arduino
+board to add functionality.
+
+Together we had enough hardware to be able to make something cool! :-) Needless
+to say after some great conversations about hardware hacking and being given
+some gear to get going, we were all pretty keen to get started hacking, so on
+the following Saturday three of us got together for a hack night. The guys came
+around that night, we ordered pizzas and worked through the night till about
+5:30 AM! We had one experienced hardware guy,
+[@asellitt](https://twitter.com/asellitt), but the other two of us,
+[@optiks](https://twitter.com/optiks) and I, were completely new to this, but
+between Anthony, the sample code that comes with the IDE and the Internet we
+picked it up pretty fast! By the end of the night we had the first version of
+CarDuino!
+
+[CarDuino](https://github.com/HACD/CarDuino) is a simple game where you hold the
+screen in portrait orientation and move your car from side to side to avoid
+obstacles. It's a very simple game, and we have plenty more features in mind for
+the future, but it was a great first project!
+
+After sleeping in till about lunch time there next day, I wanted to put my
+EtherMega to use, so I spent the rest of the day fiddling with that. With
+network access, power over Ethernet and a card reader, this is a perfect
+platform for controlling things via a web interface. As my background is web
+development, this was right up my alley! Using various sample code, I put
+together a [really basic web
+server](https://github.com/stevenocchipinti/ArduinoWebServer) that can respond
+to different requests and serve files from its built in memory card reader.
+
+<Img
+  originalAspectRatio
+  src="blog/wkljpd1awd0cdmeinzba.jpg"
+  alt="My Freetronics EtherMega 2560 serving files from the memory card on a webserver! "
+/>
+
+In just a few days, we went from no Arduino experience to a working project (or
+two). Especially with basic programming experience, the entry level for getting
+into Arduino is really low. When you buy (or build) a board and download the
+software, you have enough sample code with the IDE to make things happen, and
+you can get a lot done by simply copying and pasting!
+
+I recommend having a play with this stuff, its really fun and more than likely,
+one day you will come across a problem that you will be able to solve with an
+Arduino!
