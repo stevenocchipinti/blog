@@ -20,7 +20,7 @@ const trips = await getCollection("trips")
           )
           .map(trip => (
             <li>
-              <a href={`travel/${trip.id}`}>
+              <a href={`/travel/${trip.id}`}>
                 <Image
                   transition:name={`cover-${trip.id}`}
                   width={400}
