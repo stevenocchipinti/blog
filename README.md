@@ -1,6 +1,6 @@
-# Travel blog
+# Blog
 
-This is a home for all my travel blogs in one place, instead of being scattered around a bunch of different platforms where they were oiginally created.
+This is a home for all my blogs in one place, instead of being scattered around a bunch of different platforms where they were oiginally created.
 
 MDX, a couple of custom components and (almost) all images hosted in Cloudinary (hopefully without exceeding the free quota).
 
