@@ -1,6 +1,6 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content"
-import BaseLayout from "../../layouts/BaseLayout.astro"
+import BaseLayout from "@/layouts/BaseLayout.astro"
 
 type Post = CollectionEntry<"posts">
 const byDescendingPubDate = (a: Post, b: Post) =>

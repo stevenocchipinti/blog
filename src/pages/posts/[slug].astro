@@ -1,8 +1,8 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content"
-import FormattedDate from "@components/FormattedDate.astro"
+import FormattedDate from "@/components/FormattedDate.astro"
 
-import BaseLayout from "../../layouts/BaseLayout.astro"
+import BaseLayout from "@/layouts/BaseLayout.astro"
 
 export async function getStaticPaths() {
   const posts = await getCollection("posts")

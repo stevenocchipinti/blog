@@ -1,9 +1,9 @@
 ---
 import { getCollection, type CollectionEntry } from "astro:content"
 import { getImage } from "astro:assets"
-import placeholder from "@assets/placeholder-trip.jpg"
-import Cover from "@components/Cover.astro"
-import BaseLayout from "../../../layouts/BaseLayout.astro"
+import placeholder from "@/assets/placeholder-trip.jpg"
+import Cover from "@/components/Cover.astro"
+import BaseLayout from "@/layouts/BaseLayout.astro"
 
 export async function getStaticPaths() {
   const allPosts = await getCollection("travel")
