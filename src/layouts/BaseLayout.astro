@@ -1,7 +1,8 @@
 ---
 import { ViewTransitions } from "astro:transitions"
+
+import Footer from "@components/Footer.astro"
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts"
-import Footer from "../components/Footer.astro"
 
 import "@fontsource-variable/mada"
 import "../styles/global.css"
@@ -30,7 +31,7 @@ const { originalLink } = Astro.props
     <meta name="viewport" content="width=device-width,initial-scale=1" />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="icon" type="image/png" href="/favicon.png" />
 
     <meta name="generator" content={Astro.generator} />
 

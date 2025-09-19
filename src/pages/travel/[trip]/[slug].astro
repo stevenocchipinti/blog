@@ -1,11 +1,10 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content"
 import { getImage } from "astro:assets"
-import FormattedDate from "../../../components/FormattedDate.astro"
-import NextPrev from "../../../components/NextPrev.astro"
-
-import placeholder from "../../../assets/placeholder-trip.jpg"
-import Cover from "../../../components/Cover.astro"
+import FormattedDate from "@components/FormattedDate.astro"
+import NextPrev from "@components/NextPrev.astro"
+import Cover from "@components/Cover.astro"
+import placeholder from "@assets/placeholder-trip.jpg"
 import BaseLayout from "../../../layouts/BaseLayout.astro"
 
 export async function getStaticPaths() {
